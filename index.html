@@ -67,6 +67,43 @@
             color: #080810;
         }
 
+        .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.project-card {
+    width: 350px;
+    text-decoration: none;
+    color: #f5f0e6;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 15px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #d49a3a;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.project-card h2 {
+    margin-top: 15px;
+}
+
+.project-card p {
+    color: #ccc;
+}
+
         footer {
             margin-top: 50px;
             font-size: 0.9rem;
@@ -91,10 +128,21 @@
             Qui nascono Ellan – Luce e Ombra, ASOS e altri progetti ludici.
         </p>
 
-        <div class="buttons">
-            <a class="button" href="ellan.html">ELLAN</a>
-            <a class="button" href="asos.html">ASOS</a>
-        </div>
+        <div class="projects">
+
+    <a class="project-card" href="ellan.html">
+        <img src="images/ellan_logo.png" alt="Ellan">
+        <h2>Ellan – Luce e Ombra</h2>
+        <p>Ambientazione fantasy originale.</p>
+    </a>
+
+    <a class="project-card" href="asos.html">
+        <img src="images/asos_logo.png" alt="ASOS">
+        <h2>ASOS</h2>
+        <p>Strategia, esplorazione e conquista nello spazio.</p>
+    </a>
+
+</div>
 
         <footer>
             © Compagnia della Fenice
