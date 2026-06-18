@@ -1,105 +1,107 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <img
-  src="images/logo_compagnia_della_fenice.png"
-  alt="Compagnia della Fenice"
-  class="logo">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compagnia della Fenice</title>
 
-<h1>Compagnia della Fenice</h1>
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #080810;
+            color: #f5f0e6;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Georgia, serif;
-      background: #080810;
-      color: #f5f0e6;
-    }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            background: #080810;
+        }
 
-    .logo {
-    width: 500px;
-    max-width: 90%;
-    margin-bottom: 20px;
-}
+        .logo {
+            width: 600px;
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
 
-    .hero {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 40px 20px;
-      background:
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)),
-        url("copertina.jpg");
-      background-size: cover;
-      background-position: center;
-    }
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
 
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 10px;
-    }
+        .subtitle {
+            font-size: 1.4rem;
+            max-width: 700px;
+            margin-bottom: 40px;
+            color: #ddd0b0;
+        }
 
-    .subtitle {
-      font-size: 1.4rem;
-      max-width: 700px;
-      margin-bottom: 40px;
-      color: #ddd0b0;
-    }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-    .buttons {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+        .button {
+            text-decoration: none;
+            color: #f5f0e6;
+            border: 2px solid #d49a3a;
+            padding: 18px 36px;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            background: rgba(20, 10, 5, 0.7);
+            transition: 0.2s;
+            border-radius: 8px;
+        }
 
-    .button {
-      text-decoration: none;
-      color: #f5f0e6;
-      border: 2px solid #d49a3a;
-      padding: 18px 36px;
-      font-size: 1.2rem;
-      letter-spacing: 2px;
-      background: rgba(20, 10, 5, 0.7);
-      transition: 0.2s;
-    }
+        .button:hover {
+            background: #d49a3a;
+            color: #080810;
+        }
 
-    .button:hover {
-      background: #d49a3a;
-      color: #080810;
-    }
-
-    footer {
-      position: absolute;
-      bottom: 15px;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-  </style>
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
 </head>
 
 <body>
-  <section class="hero">
-    <h1>🐦‍🔥 Compagnia della Fenice</h1>
 
-    <p class="subtitle">
-      Giochi, ambientazioni e mondi originali.  
-      Qui nascono Ellan – Luce e Ombra, ASOS e altri progetti ludici.
-    </p>
+    <section class="hero">
 
-    <div class="buttons">
-      <a class="button" href="ellan.html">ELLAN</a>
-      <a class="button" href="asos.html">ASOS</a>
-    </div>
+        <img
+            src="images/logo_compagnia_della_fenice.png"
+            alt="Compagnia della Fenice"
+            class="logo">
 
-    <footer>
-      Compagnia della Fenice
-    </footer>
-  </section>
+        <h1>Compagnia della Fenice</h1>
+
+        <p class="subtitle">
+            Giochi, ambientazioni e mondi originali.<br>
+            Qui nascono Ellan – Luce e Ombra, ASOS e altri progetti ludici.
+        </p>
+
+        <div class="buttons">
+            <a class="button" href="ellan.html">ELLAN</a>
+            <a class="button" href="asos.html">ASOS</a>
+        </div>
+
+        <footer>
+            © Compagnia della Fenice
+        </footer>
+
+    </section>
+
 </body>
+
 </html>
