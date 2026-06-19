@@ -1,23 +1,152 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-<meta charset="UTF-8">
-<title>ASOS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASOS</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Georgia, serif;
+            background: #080810;
+            color: #f5f0e6;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 520px;
+            max-width: 90%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.35rem;
+            color: #c8d8ff;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+        }
+
+        .section {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .section h2 {
+            color: #70a8ff;
+            margin-top: 0;
+        }
+
+        .section p, .section li {
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+
+        .button {
+            display: inline-block;
+            text-decoration: none;
+            color: #f5f0e6;
+            border: 2px solid #70a8ff;
+            padding: 16px 28px;
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            background: rgba(5, 15, 35, 0.75);
+            transition: 0.2s;
+            border-radius: 8px;
+            margin: 10px;
+        }
+
+        .button:hover {
+            background: #70a8ff;
+            color: #080810;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 40px;
+            color: #c8d8ff;
+            text-decoration: none;
+        }
+
+        .back:hover {
+            color: #70a8ff;
+        }
+    </style>
 </head>
-<body style="background:#080810;color:#f5f0e6;text-align:center;font-family:Georgia,serif;">
 
-<img src="images/asos_logo.png" style="max-width:500px;width:90%;">
+<body>
 
-<h1>ASOS</h1>
+    <main class="page">
 
-<p>
-Un gioco strategico spaziale ispirato alla fantascienza classica anime,
-con flotte, esplorazione e campagne dinamiche.
-</p>
+        <img src="images/asos_logo.png" alt="ASOS" class="logo">
 
-<p>
-<a href="index.html">← Torna alla Home</a>
-</p>
+        <h1>ASOS</h1>
+
+        <p class="subtitle">
+            Un gioco strategico spaziale solitario con flotte, esplorazione,
+            fazioni in guerra, navi eroiche e campagne dinamiche generate con il supporto di un'app.
+        </p>
+
+        <section class="section">
+            <h2>Cos'è ASOS?</h2>
+            <p>
+                ASOS è un progetto di gioco strategico spaziale pensato per unire
+                il fascino della fantascienza anime classica con una struttura da campagna solitaria.
+            </p>
+            <p>
+                Il giocatore controlla una fazione, esplora una mappa galattica,
+                gestisce risorse, navi, ufficiali e flotte, mentre le fazioni nemiche
+                si espandono e reagiscono attraverso un sistema automatizzato.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Cosa troverai</h2>
+            <ul>
+                <li>Campagne spaziali dinamiche.</li>
+                <li>Fazioni giocabili e fazioni nemiche automatizzate.</li>
+                <li>Navi eroiche con danni, ufficiali e progressione.</li>
+                <li>Flotte, basi, esplorazione e conquista di settori.</li>
+                <li>Supporto digitale tramite app di gestione della campagna.</li>
+                <li>Possibilità di usare miniature e modelli 3D stampabili.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Stato del progetto</h2>
+            <p>
+                ASOS è attualmente in sviluppo attivo. Il regolamento, l'app di supporto
+                e la struttura delle campagne sono in fase di espansione e revisione.
+            </p>
+        </section>
+
+        <a class="button" href="https://github.com/lames76/ASOS" target="_blank">
+            🚀 Vai al repository GitHub
+        </a>
+
+        <br>
+
+        <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
+
+    </main>
 
 </body>
+
 </html>
