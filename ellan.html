@@ -155,12 +155,70 @@ audio {
     text-decoration: none;
 }
 
+.ellan-player {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 320px;
+    background: rgba(8, 8, 16, 0.95);
+    border: 1px solid rgba(212,154,58,0.6);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    z-index: 999;
+}
+
+.player-title {
+    color: #d49a3a;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.ellan-player select {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 8px;
+    background: #120f18;
+    color: #f5f0e6;
+    border: 1px solid #d49a3a;
+    border-radius: 8px;
+}
+
+.ellan-player audio {
+    width: 100%;
+}
+
 .back:hover {
     color: #d49a3a;
 }
 </style>
 </head>
 
+<div class="ellan-player">
+    <div class="player-title">🎵 Musiche di Ellan</div>
+
+    <select id="trackSelect">
+        <option value="music/inno-ad-alidor.mp3">Inno ad Alidor</option>
+        <option value="music/nome-file-canzone-2.mp3">Titolo Canzone 2</option>
+        <option value="music/nome-file-canzone-3.mp3">Titolo Canzone 3</option>
+    </select>
+
+    <audio id="ellanAudio" controls loop>
+        <source src="music/inno-ad-alidor.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+<script>
+const trackSelect = document.getElementById("trackSelect");
+const ellanAudio = document.getElementById("ellanAudio");
+
+trackSelect.addEventListener("change", function() {
+    ellanAudio.src = this.value;
+    ellanAudio.play();
+});
+</script>
+    
 <body>
 
 <main class="page">
