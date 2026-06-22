@@ -188,31 +188,112 @@ audio {
 .back:hover {
     color: #d49a3a;
 }
+
+.music-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+
+.music-table th,
+.music-table td {
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding: 14px;
+    text-align: center;
+}
+
+.music-table th {
+    color: #d49a3a;
+}
+
+.music-table td:first-child {
+    text-align: left;
+    color: #f5f0e6;
+    font-weight: bold;
+}
+
+.play-button {
+    cursor: pointer;
+    border: 2px solid #d49a3a;
+    background: rgba(20, 10, 5, 0.7);
+    color: #f5f0e6;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-family: Georgia, serif;
+    font-size: 1rem;
+}
+
+.play-button:hover {
+    background: #d49a3a;
+    color: #080810;
+}
+
+.ellan-player {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 330px;
+    background: rgba(8, 8, 16, 0.96);
+    border: 1px solid rgba(212,154,58,0.6);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    z-index: 999;
+}
+
+.player-title {
+    color: #d49a3a;
+    font-weight: bold;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+#currentTrack {
+    font-size: 0.9rem;
+    color: #ddd0b0;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.ellan-player audio {
+    width: 100%;
+}
+
+@media (max-width: 700px) {
+    .ellan-player {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: auto;
+    }
+
+    .music-table th:nth-child(3),
+    .music-table td:nth-child(3) {
+        display: none;
+    }
+}
 </style>
 </head>
 
 <div class="ellan-player">
-    <div class="player-title">🎵 Musiche di Ellan</div>
+    <div class="player-title">🎵 Radio Ellan</div>
+    <div id="currentTrack">Nessun brano in riproduzione</div>
 
-    <select id="trackSelect">
-        <option value="music/inno-ad-alidor.mp3">Inno ad Alidor</option>
-        <option value="music/nome-file-canzone-2.mp3">Titolo Canzone 2</option>
-        <option value="music/nome-file-canzone-3.mp3">Titolo Canzone 3</option>
-    </select>
-
-    <audio id="ellanAudio" controls loop>
-        <source src="music/inno-ad-alidor.mp3" type="audio/mpeg">
+    <audio id="ellanAudio" controls>
+        <source src="" type="audio/mpeg">
+        Il tuo browser non supporta il player audio.
     </audio>
 </div>
 
 <script>
-const trackSelect = document.getElementById("trackSelect");
-const ellanAudio = document.getElementById("ellanAudio");
+function playTrack(file, title) {
+    const audio = document.getElementById("ellanAudio");
+    const currentTrack = document.getElementById("currentTrack");
 
-trackSelect.addEventListener("change", function() {
-    ellanAudio.src = this.value;
-    ellanAudio.play();
-});
+    audio.src = file;
+    currentTrack.textContent = title;
+    audio.play();
+}
 </script>
     
 <body>
@@ -325,38 +406,89 @@ trackSelect.addEventListener("change", function() {
 
     <section class="section center">
 
-        <h2>Musiche di Ellan</h2>
+    <h2>Archivio Musicale di Ellan</h2>
 
-        <p>
-            Canzoni, inni e ballate ispirate al mondo di Ellan.
-            Puoi ascoltarle direttamente o scaricare gli MP3.
-        </p>
+    <p>
+        Canzoni, inni e ballate ispirate al mondo di Ellan.
+        Premi ascolta per avviare il brano nel player in basso,
+        oppure scarica direttamente l'MP3.
+    </p>
 
-        <div class="music-track">
-            <h3>Inno ad Alidor</h3>
-            <audio controls>
-                <source src="music/inno-ad-alidor.mp3" type="audio/mpeg">
-                Il tuo browser non supporta il player audio.
-            </audio>
-            <br>
-            <a class="button" href="music/inno-ad-alidor.mp3" download>
-                🎵 Scarica MP3
-            </a>
-        </div>
+    <table class="music-table">
+        <thead>
+            <tr>
+                <th>Brano</th>
+                <th>Ascolta</th>
+                <th>Scarica</th>
+            </tr>
+        </thead>
 
-        <div class="music-track">
-            <h3>TITOLO CANZONE 2</h3>
-            <audio controls>
-                <source src="music/nome-file-canzone-2.mp3" type="audio/mpeg">
-                Il tuo browser non supporta il player audio.
-            </audio>
-            <br>
-            <a class="button" href="music/nome-file-canzone-2.mp3" download>
-                🎵 Scarica MP3
-            </a>
-        </div>
+        <tbody>
 
-    </section>
+            <tr>
+                <td>Inno ad Alidor</td>
+                <td>
+                    <button class="play-button"
+                            onclick="playTrack('music/inno-ad-alidor.mp3', 'Inno ad Alidor')">
+                        ▶️ Ascolta
+                    </button>
+                </td>
+                <td>
+                    <a class="button" href="music/inno-ad-alidor.mp3" download>
+                        ⬇️ MP3
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Ballata di Cristal ed Elena</td>
+                <td>
+                    <button class="play-button"
+                            onclick="playTrack('music/ballata-cristal-elena.mp3', 'Ballata di Cristal ed Elena')">
+                        ▶️ Ascolta
+                    </button>
+                </td>
+                <td>
+                    <a class="button" href="music/ballata-cristal-elena.mp3" download>
+                        ⬇️ MP3
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sigla Gruppo 1</td>
+                <td>
+                    <button class="play-button"
+                            onclick="playTrack('music/sigla-gruppo-1.mp3', 'Sigla Gruppo 1')">
+                        ▶️ Ascolta
+                    </button>
+                </td>
+                <td>
+                    <a class="button" href="music/sigla-gruppo-1.mp3" download>
+                        ⬇️ MP3
+                    </a>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Sigla Gruppo 2</td>
+                <td>
+                    <button class="play-button"
+                            onclick="playTrack('music/sigla-gruppo-2.mp3', 'Sigla Gruppo 2')">
+                        ▶️ Ascolta
+                    </button>
+                </td>
+                <td>
+                    <a class="button" href="music/sigla-gruppo-2.mp3" download>
+                        ⬇️ MP3
+                    </a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</section>
 
     <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
 
