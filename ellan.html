@@ -257,6 +257,40 @@ h1 {
     border-color: rgba(212,154,58,0.7);
 }
 
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.character-card {
+    background: rgba(20, 10, 5, 0.7);
+    border: 1px solid rgba(212,154,58,0.35);
+    border-radius: 16px;
+    padding: 22px;
+    text-align: left;
+}
+
+.character-card h3 {
+    color: #f5f0e6;
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+
+.character-card h4 {
+    color: #d49a3a;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: normal;
+}
+
+.character-card p {
+    color: #ddd0b0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
 
 @media (max-width: 700px) {
     h1 {
@@ -276,8 +310,12 @@ h1 {
     }
 
     .video-grid {
-    grid-template-columns: 1fr;
-}
+        grid-template-columns: 1fr;
+    }
+
+    .character-grid {
+        grid-template-columns: 1fr;
+    }
 }
     
 </style>
