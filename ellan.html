@@ -42,12 +42,7 @@ h1 {
 }
 
 .section {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px;
-    padding: 30px;
-    margin: 30px 0;
-    text-align: left;
+    overflow: visible;
 }
 
 .section.center {
@@ -72,12 +67,8 @@ h1 {
 }
 
 .download-card {
-    background: rgba(20, 10, 5, 0.7);
-    border: 1px solid rgba(212,154,58,0.35);
-    border-radius: 16px;
-    padding: 18px;
-    text-align: center;
-    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
 }
 
 .download-card:hover {
@@ -88,6 +79,8 @@ h1 {
 
 .download-card img {
     width: 100%;
+    height: 340px;
+    object-fit: cover;
     border-radius: 12px;
     margin-bottom: 14px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
@@ -99,8 +92,11 @@ h1 {
 }
 
 .download-card p {
-    font-size: 1rem;
-    color: #ddd0b0;
+    min-height: 110px;
+}
+
+.download-card .button {
+    margin-top: auto;
 }
 
 .button {
@@ -323,10 +319,7 @@ trackSelect.addEventListener("change", function() {
             </div>
 
         </div>
-
-        <p class="note">
-            I manuali completi sono distribuiti in più capitoli raccolti in archivi ZIP.
-        </p>
+        
 
     </section>
 
