@@ -300,6 +300,31 @@ h1 {
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
 }
 
+.map-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.map-card {
+    background: rgba(20, 10, 5, 0.7);
+    border: 1px solid rgba(212,154,58,0.35);
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+}
+
+.map-card h3 {
+    color: #f5f0e6;
+    margin-bottom: 8px;
+}
+
+.map-card p {
+    color: #ddd0b0;
+    font-size: 1rem;
+}
+
 .map-card img {
     width: 220px;
     height: 120px;
@@ -328,6 +353,10 @@ h1 {
     }
 
     .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-grid {
         grid-template-columns: 1fr;
     }
 
@@ -469,8 +498,8 @@ h1 {
 
         <div class="map-card">
             <a href="images/reami.png" target="_blank">
-            <img src="images/reami.png" alt="I Reami">
-            </a>a>
+                <img src="images/reami.png" alt="I Reami">
+            </a>
             <h3>I Reami</h3>
             <p>
                 Il cuore politico e religioso del continente.
@@ -563,7 +592,8 @@ h1 {
         </div>
 
     </div>
-
+</div>
+</section>
         <section class="section center">
 
     <h2>Una Lettera d'Amore ai Cartoni Animati</h2>
