@@ -1,152 +1,276 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASOS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Georgia, serif;
-            background: #080810;
-            color: #f5f0e6;
-        }
+<title>ASOS</title>
 
-        .page {
-            max-width: 1000px;
-            margin: auto;
-            padding: 40px 20px;
-            text-align: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: radial-gradient(circle at top, #13284a 0%, #080810 45%, #030306 100%);
+    color: #f5f0e6;
+}
 
-        .logo {
-            width: 520px;
-            max-width: 90%;
-            margin-bottom: 20px;
-        }
+.page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
 
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-        }
+.logo {
+    width: 520px;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
 
-        .subtitle {
-            font-size: 1.35rem;
-            color: #c8d8ff;
-            max-width: 800px;
-            margin: 0 auto 40px auto;
-            line-height: 1.6;
-        }
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
 
-        .section {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 16px;
-            padding: 30px;
-            margin: 30px 0;
-            text-align: left;
-        }
+.subtitle {
+    font-size: 1.35rem;
+    color: #c8d8ff;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
 
-        .section h2 {
-            color: #70a8ff;
-            margin-top: 0;
-        }
+.section {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(112,168,255,0.25);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
+}
 
-        .section p, .section li {
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
+.section.center {
+    text-align: center;
+}
 
-        .button {
-            display: inline-block;
-            text-decoration: none;
-            color: #f5f0e6;
-            border: 2px solid #70a8ff;
-            padding: 16px 28px;
-            font-size: 1.05rem;
-            letter-spacing: 1px;
-            background: rgba(5, 15, 35, 0.75);
-            transition: 0.2s;
-            border-radius: 8px;
-            margin: 10px;
-        }
+.section h2 {
+    color: #70a8ff;
+    margin-top: 0;
+}
 
-        .button:hover {
-            background: #70a8ff;
-            color: #080810;
-        }
+.section p,
+.section li {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
 
-        .back {
-            display: inline-block;
-            margin-top: 40px;
-            color: #c8d8ff;
-            text-decoration: none;
-        }
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
 
-        .back:hover {
-            color: #70a8ff;
-        }
-    </style>
+.feature-card {
+    background: rgba(5, 15, 35, 0.75);
+    border: 1px solid rgba(112,168,255,0.35);
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: #f5f0e6;
+    margin-top: 0;
+}
+
+.feature-card p {
+    color: #c8d8ff;
+    font-size: 1rem;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #f5f0e6;
+    border: 2px solid #70a8ff;
+    padding: 14px 24px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background: rgba(5, 15, 35, 0.75);
+    transition: 0.2s;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.button:hover {
+    background: #70a8ff;
+    color: #080810;
+}
+
+.status-box {
+    background: rgba(112,168,255,0.08);
+    border-left: 4px solid #70a8ff;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 40px;
+    color: #c8d8ff;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: #70a8ff;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <main class="page">
+<main class="page">
 
-        <img src="images/asos_logo.png" alt="ASOS" class="logo">
+    <img src="images/asos_logo.png" alt="ASOS" class="logo">
 
-        <h1>ASOS</h1>
+    <h1>ASOS</h1>
 
-        <p class="subtitle">
-            Un gioco strategico spaziale solitario con flotte, esplorazione,
-            fazioni in guerra, navi eroiche e campagne dinamiche generate con il supporto di un'app.
+    <p class="subtitle">
+        Un gioco strategico spaziale solitario con flotte, esplorazione,
+        fazioni in guerra, navi eroiche e campagne dinamiche generate con il supporto di un'app.
+    </p>
+
+    <section class="section">
+        <h2>Cos'è ASOS?</h2>
+
+        <p>
+            ASOS è un progetto di gioco strategico spaziale pensato per unire
+            il fascino della fantascienza anime classica con una struttura da campagna solitaria.
         </p>
 
-        <section class="section">
-            <h2>Cos'è ASOS?</h2>
-            <p>
-                ASOS è un progetto di gioco strategico spaziale pensato per unire
-                il fascino della fantascienza anime classica con una struttura da campagna solitaria.
-            </p>
-            <p>
-                Il giocatore controlla una fazione, esplora una mappa galattica,
-                gestisce risorse, navi, ufficiali e flotte, mentre le fazioni nemiche
-                si espandono e reagiscono attraverso un sistema automatizzato.
-            </p>
-        </section>
+        <p>
+            Il giocatore controlla una fazione, esplora una mappa galattica,
+            costruisce basi, gestisce risorse, navi eroiche, ufficiali e flotte,
+            mentre le altre potenze della galassia si espandono e reagiscono
+            attraverso un sistema automatizzato.
+        </p>
+    </section>
 
-        <section class="section">
-            <h2>Cosa troverai</h2>
-            <ul>
-                <li>Campagne spaziali dinamiche.</li>
-                <li>Fazioni giocabili e fazioni nemiche automatizzate.</li>
-                <li>Navi eroiche con danni, ufficiali e progressione.</li>
-                <li>Flotte, basi, esplorazione e conquista di settori.</li>
-                <li>Supporto digitale tramite app di gestione della campagna.</li>
-                <li>Possibilità di usare miniature e modelli 3D stampabili.</li>
-            </ul>
-        </section>
+    <section class="section center">
+        <h2>Il cuore del gioco</h2>
 
-        <section class="section">
-            <h2>Stato del progetto</h2>
-            <p>
-                ASOS è attualmente in sviluppo attivo. Il regolamento, l'app di supporto
-                e la struttura delle campagne sono in fase di espansione e revisione.
-            </p>
-        </section>
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>🚀 Navi Eroiche</h3>
+                <p>
+                    Le grandi protagoniste della campagna: unità uniche con danni,
+                    ufficiali, progressione e un ruolo decisivo negli scontri.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🌌 Campagna Galattica</h3>
+                <p>
+                    Una mappa spaziale da esplorare settore dopo settore,
+                    con colonie, basi, flotte nemiche e territori contesi.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>⚔️ Fazioni in Guerra</h3>
+                <p>
+                    Ogni fazione ha obiettivi, relazioni e flotte proprie.
+                    La galassia cambia anche quando il giocatore non agisce.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Cosa troverai</h2>
+
+        <ul>
+            <li>Campagne spaziali dinamiche e rigiocabili.</li>
+            <li>Fazioni giocabili e fazioni nemiche automatizzate.</li>
+            <li>Navi eroiche con danni, ufficiali e progressione.</li>
+            <li>Line unit, flotte, basi, esplorazione e conquista di settori.</li>
+            <li>Eventi, relazioni diplomatiche e incontri tra flotte.</li>
+            <li>Supporto digitale tramite app di gestione della campagna.</li>
+            <li>Possibilità di usare miniature e modelli 3D stampabili.</li>
+        </ul>
+    </section>
+
+    <section class="section center">
+        <h2>Materiali del progetto</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+                <h3>📘 Regolamento</h3>
+                <p>
+                    Le regole della campagna, della gestione fazione,
+                    degli scontri spaziali e della progressione.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>💻 App di Supporto</h3>
+                <p>
+                    Uno strumento digitale per gestire mappa, fazioni,
+                    flotte, eventi, ufficiali e avanzamento della campagna.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>🛰️ Miniature</h3>
+                <p>
+                    Il gioco è pensato per poter usare segnalini,
+                    standee o modelli 3D stampabili delle navi.
+                </p>
+            </div>
+
+        </div>
+
+        <br>
 
         <a class="button" href="https://github.com/lames76/ASOS" target="_blank">
             🚀 Vai al repository GitHub
         </a>
+    </section>
 
-        <br>
+    <section class="section">
+        <h2>Stato del progetto</h2>
 
-        <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
+        <div class="status-box">
+            <p>
+                ASOS è attualmente in sviluppo attivo. Il regolamento, l'app di supporto
+                e la struttura delle campagne sono in fase di espansione, revisione e test.
+            </p>
 
-    </main>
+            <p>
+                L'obiettivo è costruire un sistema solitario modulare, capace di generare
+                campagne spaziali sempre diverse senza trasformarsi in un videogioco:
+                l'app assiste il giocatore, ma il cuore resta sul tavolo.
+            </p>
+        </div>
+    </section>
+
+    <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
+
+</main>
 
 </body>
-
 </html>
