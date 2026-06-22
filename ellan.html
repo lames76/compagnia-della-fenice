@@ -18,7 +18,7 @@ body {
 .page {
     max-width: 1100px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 40px 20px 150px 20px;
     text-align: center;
 }
 
@@ -42,6 +42,12 @@ h1 {
 }
 
 .section {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
     overflow: visible;
 }
 
@@ -67,6 +73,12 @@ h1 {
 }
 
 .download-card {
+    background: rgba(20, 10, 5, 0.7);
+    border: 1px solid rgba(212,154,58,0.35);
+    border-radius: 16px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.2s;
     display: flex;
     flex-direction: column;
 }
@@ -93,6 +105,8 @@ h1 {
 
 .download-card p {
     min-height: 110px;
+    font-size: 1rem;
+    color: #ddd0b0;
 }
 
 .download-card .button {
@@ -116,77 +130,6 @@ h1 {
 .button:hover {
     background: #d49a3a;
     color: #080810;
-}
-
-.music-track {
-    background: rgba(20, 10, 5, 0.7);
-    border: 1px solid rgba(212,154,58,0.35);
-    border-radius: 14px;
-    padding: 20px;
-    margin: 20px 0;
-    text-align: center;
-}
-
-.music-track h3 {
-    margin-top: 0;
-    color: #f5f0e6;
-}
-
-audio {
-    width: 100%;
-    max-width: 600px;
-    margin: 10px 0;
-}
-
-.note {
-    color: #aaa;
-    margin-top: 20px;
-    font-size: 0.95rem;
-}
-
-.back {
-    display: inline-block;
-    margin-top: 40px;
-    color: #ddd0b0;
-    text-decoration: none;
-}
-
-.ellan-player {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 320px;
-    background: rgba(8, 8, 16, 0.95);
-    border: 1px solid rgba(212,154,58,0.6);
-    border-radius: 14px;
-    padding: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
-    z-index: 999;
-}
-
-.player-title {
-    color: #d49a3a;
-    font-weight: bold;
-    margin-bottom: 8px;
-    text-align: center;
-}
-
-.ellan-player select {
-    width: 100%;
-    margin-bottom: 8px;
-    padding: 8px;
-    background: #120f18;
-    color: #f5f0e6;
-    border: 1px solid #d49a3a;
-    border-radius: 8px;
-}
-
-.ellan-player audio {
-    width: 100%;
-}
-
-.back:hover {
-    color: #d49a3a;
 }
 
 .music-table {
@@ -259,7 +202,28 @@ audio {
     width: 100%;
 }
 
+.note {
+    color: #aaa;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 40px;
+    color: #ddd0b0;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: #d49a3a;
+}
+
 @media (max-width: 700px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+
     .ellan-player {
         left: 10px;
         right: 10px;
@@ -275,27 +239,6 @@ audio {
 </style>
 </head>
 
-<div class="ellan-player">
-    <div class="player-title">🎵 Radio Ellan</div>
-    <div id="currentTrack">Nessun brano in riproduzione</div>
-
-    <audio id="ellanAudio" controls>
-        <source src="" type="audio/mpeg">
-        Il tuo browser non supporta il player audio.
-    </audio>
-</div>
-
-<script>
-function playTrack(file, title) {
-    const audio = document.getElementById("ellanAudio");
-    const currentTrack = document.getElementById("currentTrack");
-
-    audio.src = file;
-    currentTrack.textContent = title;
-    audio.play();
-}
-</script>
-    
 <body>
 
 <main class="page">
@@ -400,99 +343,167 @@ function playTrack(file, title) {
             </div>
 
         </div>
-        
 
     </section>
 
     <section class="section center">
 
-    <h2>Archivio Musicale di Ellan</h2>
+        <h2>Archivio Musicale di Ellan</h2>
 
-    <p>
-        Canzoni, inni e ballate ispirate al mondo di Ellan.
-        Premi ascolta per avviare il brano nel player in basso,
-        oppure scarica direttamente l'MP3.
-    </p>
+        <p>
+            Le canzoni di Ellan sono raccolte nel Canzoniere e rappresentano inni,
+            ballate e canti popolari provenienti dai diversi regni del mondo.
+            Premi ascolta per avviare il brano nel player in basso, oppure scarica direttamente l'MP3.
+        </p>
 
-    <table class="music-table">
-        <thead>
-            <tr>
-                <th>Brano</th>
-                <th>Ascolta</th>
-                <th>Scarica</th>
-            </tr>
-        </thead>
+        <table class="music-table">
+            <thead>
+                <tr>
+                    <th>Brano</th>
+                    <th>Ascolta</th>
+                    <th>Scarica</th>
+                </tr>
+            </thead>
 
-        <tbody>
+            <tbody>
 
-            <tr>
-                <td>Inno ad Alidor</td>
-                <td>
-                    <button class="play-button"
-                            onclick="playTrack('music/inno-ad-alidor.mp3', 'Inno ad Alidor')">
-                        ▶️ Ascolta
-                    </button>
-                </td>
-                <td>
-                    <a class="button" href="music/inno-ad-alidor.mp3" download>
-                        ⬇️ MP3
-                    </a>
-                </td>
-            </tr>
+                <tr>
+                    <td>Inno ad Alidor – Luce del Giuramento</td>
+                    <td><button class="play-button" onclick="playTrack('music/Inno_ad_Alidor_Luce_del_Giuramento.mp3', 'Inno ad Alidor – Luce del Giuramento')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Inno_ad_Alidor_Luce_del_Giuramento.mp3" download>⬇️ MP3</a></td>
+                </tr>
 
-            <tr>
-                <td>Ballata di Cristal ed Elena</td>
-                <td>
-                    <button class="play-button"
-                            onclick="playTrack('music/ballata-cristal-elena.mp3', 'Ballata di Cristal ed Elena')">
-                        ▶️ Ascolta
-                    </button>
-                </td>
-                <td>
-                    <a class="button" href="music/ballata-cristal-elena.mp3" download>
-                        ⬇️ MP3
-                    </a>
-                </td>
-            </tr>
+                <tr>
+                    <td>Su il Vento, Irregolari!</td>
+                    <td><button class="play-button" onclick="playTrack('music/Su_il_Vento_Irregolari!.mp3', 'Su il Vento, Irregolari!')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Su_il_Vento_Irregolari!.mp3" download>⬇️ MP3</a></td>
+                </tr>
 
-            <tr>
-                <td>Sigla Gruppo 1</td>
-                <td>
-                    <button class="play-button"
-                            onclick="playTrack('music/sigla-gruppo-1.mp3', 'Sigla Gruppo 1')">
-                        ▶️ Ascolta
-                    </button>
-                </td>
-                <td>
-                    <a class="button" href="music/sigla-gruppo-1.mp3" download>
-                        ⬇️ MP3
-                    </a>
-                </td>
-            </tr>
+                <tr>
+                    <td>A Chansonne dove canta il cuore</td>
+                    <td><button class="play-button" onclick="playTrack('music/A_Chansonne_dove_canta_il_cuore.mp3', 'A Chansonne dove canta il cuore')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/A_Chansonne_dove_canta_il_cuore.mp3" download>⬇️ MP3</a></td>
+                </tr>
 
-            <tr>
-                <td>Sigla Gruppo 2</td>
-                <td>
-                    <button class="play-button"
-                            onclick="playTrack('music/sigla-gruppo-2.mp3', 'Sigla Gruppo 2')">
-                        ▶️ Ascolta
-                    </button>
-                </td>
-                <td>
-                    <a class="button" href="music/sigla-gruppo-2.mp3" download>
-                        ⬇️ MP3
-                    </a>
-                </td>
-            </tr>
+                <tr>
+                    <td>La Rosa e la Spada</td>
+                    <td><button class="play-button" onclick="playTrack('music/La_Rosa_e_la_Spada.mp3', 'La Rosa e la Spada')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/La_Rosa_e_la_Spada.mp3" download>⬇️ MP3</a></td>
+                </tr>
 
-        </tbody>
-    </table>
+                <tr>
+                    <td>L'Esilio e la Fiamma</td>
+                    <td><button class="play-button" onclick="playTrack('music/L_Esilio_e_la_Fiamma.mp3', 'L Esilio e la Fiamma')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/L_Esilio_e_la_Fiamma.mp3" download>⬇️ MP3</a></td>
+                </tr>
 
-</section>
+                <tr>
+                    <td>La Ballata di Pardisan Stormblade</td>
+                    <td><button class="play-button" onclick="playTrack('music/La_Ballata_di_Pardisan_Stormblade.mp3', 'La Ballata di Pardisan Stormblade')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/La_Ballata_di_Pardisan_Stormblade.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>La Casa che Appare</td>
+                    <td><button class="play-button" onclick="playTrack('music/La_Casa_che_Appare.mp3', 'La Casa che Appare')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/La_Casa_che_Appare.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>Sotto gli Occhi della Torre</td>
+                    <td><button class="play-button" onclick="playTrack('music/Sotto_gli_Occhi_della_Torre.mp3', 'Sotto gli Occhi della Torre')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Sotto_gli_Occhi_della_Torre.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>Né Luce Né Perdono</td>
+                    <td><button class="play-button" onclick="playTrack('music/Né_Luce_Né_Perdono.mp3', 'Né Luce Né Perdono')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Né_Luce_Né_Perdono.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>La Lancia che Fu</td>
+                    <td><button class="play-button" onclick="playTrack('music/La_Lancia_che_Fu.mp3', 'La Lancia che Fu')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/La_Lancia_che_Fu.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>Il Canto dei Figli della Vergogna</td>
+                    <td><button class="play-button" onclick="playTrack('music/Il_Canto_dei_Figli_della_Vergogna.mp3', 'Il Canto dei Figli della Vergogna')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Il_Canto_dei_Figli_della_Vergogna.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>L'Amore della Sirena</td>
+                    <td><button class="play-button" onclick="playTrack('music/L_Amore_della_Sirena.mp3', 'L Amore della Sirena')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/L_Amore_della_Sirena.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>Sotto Maschera il Cuore</td>
+                    <td><button class="play-button" onclick="playTrack('music/Sotto_Maschera_il_Cuore.mp3', 'Sotto Maschera il Cuore')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Sotto_Maschera_il_Cuore.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>La Benedizione del Viandante</td>
+                    <td><button class="play-button" onclick="playTrack('music/La_Benedizione_del_Viandante.mp3', 'La Benedizione del Viandante')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/La_Benedizione_del_Viandante.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>Cammino tra le Rovine Elfiche</td>
+                    <td><button class="play-button" onclick="playTrack('music/Cammino_tra_le_Rovine_Elfiche.mp3', 'Cammino tra le Rovine Elfiche')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Cammino_tra_le_Rovine_Elfiche.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>Forgia del Nord</td>
+                    <td><button class="play-button" onclick="playTrack('music/Forgia_del_Nord.mp3', 'Forgia del Nord')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/Forgia_del_Nord.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>La Nebbia di Scuracque</td>
+                    <td><button class="play-button" onclick="playTrack('music/La_Nebbia_di_Scuracque.mp3', 'La Nebbia di Scuracque')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/La_Nebbia_di_Scuracque.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+                <tr>
+                    <td>La Nebbia di Scuracque – Versione alternativa</td>
+                    <td><button class="play-button" onclick="playTrack('music/La_Nebbia_di_Scuracque_1.mp3', 'La Nebbia di Scuracque – Versione alternativa')">▶️ Ascolta</button></td>
+                    <td><a class="button" href="music/La_Nebbia_di_Scuracque_1.mp3" download>⬇️ MP3</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    </section>
 
     <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
 
 </main>
+
+<div class="ellan-player">
+    <div class="player-title">🎵 Archivio Musicale di Ellan</div>
+    <div id="currentTrack">Nessun brano in riproduzione</div>
+
+    <audio id="ellanAudio" controls>
+        Il tuo browser non supporta il player audio.
+    </audio>
+</div>
+
+<script>
+function playTrack(file, title) {
+    const audio = document.getElementById("ellanAudio");
+    const currentTrack = document.getElementById("currentTrack");
+
+    audio.src = file;
+    audio.volume = 0.4;
+    currentTrack.textContent = "In riproduzione: " + title;
+    audio.play();
+}
+</script>
 
 </body>
 </html>
