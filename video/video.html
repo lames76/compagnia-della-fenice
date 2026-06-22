@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Video della Fenice</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: #080810;
+    color: #f5f0e6;
+}
+
+.page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 520px;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.35rem;
+    color: #ddd0b0;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.section {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.section.center {
+    text-align: center;
+}
+
+.section h2 {
+    color: #d49a3a;
+    margin-top: 0;
+}
+
+.section p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.video-card {
+    background: rgba(20, 10, 5, 0.7);
+    border: 1px solid rgba(212,154,58,0.35);
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+}
+
+.video-card iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+.video-card h3 {
+    color: #f5f0e6;
+    margin-bottom: 6px;
+}
+
+.video-card p {
+    color: #d49a3a;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.video-card.spoiler {
+    border-color: rgba(212,154,58,0.7);
+}
+
+.future-list {
+    max-width: 700px;
+    margin: 20px auto 0 auto;
+    text-align: left;
+    color: #ddd0b0;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 40px;
+    color: #ddd0b0;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: #d49a3a;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+    <img src="images/logo_compagnia_della_fenice.png" alt="Compagnia della Fenice" class="logo">
+
+    <h1>Video della Fenice</h1>
+
+    <p class="subtitle">
+        Sigle, trailer, cronache e racconti dai mondi della Compagnia della Fenice.
+    </p>
+
+    <section class="section center">
+
+        <h2>Ellan – Personaggi</h2>
+
+        <p>
+            Animazioni e brevi filmati dedicati ai personaggi del mondo di Ellan.
+            Alcuni video possono contenere anticipazioni sulla campagna.
+        </p>
+
+        <div class="video-grid">
+
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/gDsZSp4whG8" title="Zoey" allowfullscreen></iframe>
+                <h3>Zoey</h3>
+            </div>
+
+            <div class="video-card spoiler">
+                <iframe src="https://www.youtube.com/embed/SDXDxHN8dLw" title="Rinmu" allowfullscreen></iframe>
+                <h3>Rinmu</h3>
+                <p>⚠️ Contiene possibili spoiler</p>
+            </div>
+
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/lEOX64XLHZ4" title="Dany Foglia Rossa" allowfullscreen></iframe>
+                <h3>Dany Foglia Rossa</h3>
+            </div>
+
+            <div class="video-card spoiler">
+                <iframe src="https://www.youtube.com/embed/A7WjHp3JP6Y" title="La Combattente Danzante" allowfullscreen></iframe>
+                <h3>La Combattente Danzante</h3>
+                <p>⚠️ Contiene possibili spoiler</p>
+            </div>
+
+            <div class="video-card">
+                <iframe src="https://www.youtube.com/embed/Su_Ql1rxITs" title="Lyra" allowfullscreen></iframe>
+                <h3>Lyra</h3>
+            </div>
+
+            <div class="video-card spoiler">
+                <iframe src="https://www.youtube.com/embed/tRahKOhKJow" title="Harukel" allowfullscreen></iframe>
+                <h3>Harukel</h3>
+                <p>⚠️ Contiene possibili spoiler</p>
+            </div>
+
+            <div class="video-card spoiler">
+                <iframe src="https://www.youtube.com/embed/TBSJZ6Y1c8g" title="Aurora" allowfullscreen></iframe>
+                <h3>Aurora</h3>
+                <p>⚠️ Contiene possibili spoiler</p>
+            </div>
+
+            <div class="video-card spoiler">
+                <iframe src="https://www.youtube.com/embed/D4h1XUe4ziQ" title="Halrek dell'Ombra" allowfullscreen></iframe>
+                <h3>Halrek dell'Ombra</h3>
+                <p>⚠️ Contiene possibili spoiler</p>
+            </div>
+
+            <div class="video-card spoiler">
+                <iframe src="https://www.youtube.com/embed/u-U4m-e0Txo" title="Kasumi" allowfullscreen></iframe>
+                <h3>Kasumi</h3>
+                <p>⚠️ Contiene possibili spoiler</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section center">
+
+        <h2>Cronache di Ellan</h2>
+
+        <p>
+            Brevi video di approfondimento dedicati alla storia, ai regni, alla magia
+            e alle grandi domande del mondo di Ellan.
+        </p>
+
+        <div class="future-list">
+            <p>Prossimamente:</p>
+            <ul>
+                <li>Cos'è Ellan?</li>
+                <li>La storia di Yatandra</li>
+                <li>Le Icelands e Iceblood</li>
+                <li>Il Mana</li>
+                <li>Le Stirpi di Ellan</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section class="section center">
+
+        <h2>ASOS</h2>
+
+        <p>
+            Trailer, presentazioni e video di sviluppo dedicati al progetto strategico spaziale ASOS.
+        </p>
+
+        <p style="color:#d49a3a;">
+            In preparazione.
+        </p>
+
+    </section>
+
+    <section class="section center">
+
+        <h2>Una Lettera d'Amore alle Sigle</h2>
+
+        <p>
+            Molti video e molte musiche della Compagnia della Fenice nascono come omaggio
+            alle sigle dei cartoni animati degli anni '80 e '90 che hanno ispirato i nostri mondi.
+        </p>
+
+    </section>
+
+    <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
+
+</main>
+
+</body>
+</html>
