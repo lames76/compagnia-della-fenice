@@ -67,6 +67,53 @@
             color: #080810;
         }
 
+        .separator {
+    width: 80%;
+    max-width: 700px;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(212,154,58,0.8),
+        transparent
+    );
+    margin: 50px auto;
+}
+
+.future-section {
+    max-width: 900px;
+    text-align: center;
+}
+
+.future-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.future-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.future-card h3 {
+    margin-top: 0;
+    color: #f5f0e6;
+}
+
+.future-card p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.future-card.single {
+    max-width: 420px;
+    margin: 25px auto 0 auto;
+}
+
         .projects {
     display: flex;
     flex-wrap: wrap;
@@ -151,27 +198,39 @@
     </a>
 </div>
 
-        <div class="coming-soon">
+        <div class="separator"></div>
 
-    <h2>In arrivo</h2>
+<div class="future-section">
 
-    <div class="mini-grid">
+    <h2>La Fenice continua a crescere</h2>
 
-        <div class="mini-card">
+    <p style="color:#ccc; max-width:700px; margin:auto;">
+        Nuovi contenuti, materiali scaricabili e approfondimenti sono in preparazione.
+    </p>
+
+    <div class="future-grid">
+
+        <div class="future-card">
             <h3>Video</h3>
-            <p>Sigle, trailer, cronache e racconti dai mondi della Fenice.</p>
+            <p>
+                Sigle, trailer, cronache e racconti dai mondi della Fenice.
+            </p>
         </div>
 
-        <div class="mini-card">
+        <div class="future-card">
             <h3>Laboratorio</h3>
-            <p>Miniature, mappe, materiali da stampare e risorse per il tavolo.</p>
+            <p>
+                Miniature, mappe, materiali da stampare e risorse per il tavolo.
+            </p>
         </div>
 
-        <div class="mini-card">
-            <h3>Articoli</h3>
-            <p>Diari di sviluppo, ispirazioni, note d'autore e dietro le quinte.</p>
-        </div>
+    </div>
 
+    <div class="future-card single">
+        <h3>Dietro le Quinte</h3>
+        <p>
+            Diari di sviluppo, ispirazioni, note d'autore e curiosità sui progetti.
+        </p>
     </div>
 
 </div>
