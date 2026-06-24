@@ -404,7 +404,7 @@
    <script>
     const bgMusic = document.getElementById("backgroundMusic");
 
-    document.addEventListener("click", function startBackgroundMusic() {
+    document.addEventListener("scroll", function startBackgroundMusic() {
         bgMusic.volume = 0.12;
         bgMusic.play().catch(() => {});
         document.removeEventListener("click", startBackgroundMusic);
