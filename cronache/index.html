@@ -1,1 +1,237 @@
+<!DOCTYPE html>
+<html lang="it">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Le Cronache di Ellan</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Georgia,serif;
+    background:#080810;
+    color:#f5f0e6;
+}
+
+.page{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+.logo{
+    width:520px;
+    max-width:90%;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:3.2rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    max-width:800px;
+    margin:auto;
+    color:#ddd0b0;
+    line-height:1.7;
+    font-size:1.15rem;
+}
+
+.section{
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.1);
+    border-radius:16px;
+    padding:30px;
+    margin-top:40px;
+}
+
+.section h2{
+    color:#d49a3a;
+    margin-top:0;
+}
+
+.cronache-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:24px;
+    margin-top:30px;
+}
+
+.cronaca-card{
+    background:rgba(20,10,5,0.7);
+    border:1px solid rgba(212,154,58,0.35);
+    border-radius:16px;
+    padding:18px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+}
+
+.cronaca-card:hover{
+    transform:translateY(-4px);
+    transition:0.2s;
+}
+
+.cronaca-card img{
+    width:100%;
+    height:340px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:14px;
+}
+
+.cronaca-card h3{
+    color:#f5f0e6;
+}
+
+.cronaca-card p{
+    color:#ddd0b0;
+    line-height:1.6;
+    flex-grow:1;
+}
+
+.button{
+    display:inline-block;
+    text-decoration:none;
+    color:#f5f0e6;
+    border:2px solid #d49a3a;
+    padding:12px 20px;
+    border-radius:8px;
+    margin-top:12px;
+}
+
+.button:hover{
+    background:#d49a3a;
+    color:#080810;
+}
+
+.coming-soon{
+    opacity:0.65;
+}
+
+.back{
+    display:inline-block;
+    margin-top:40px;
+    color:#ddd0b0;
+    text-decoration:none;
+}
+
+.back:hover{
+    color:#d49a3a;
+}
+
+</style>
+</head>
+
+<body>
+
+<main class="page">
+
+<img src="../images/ellan_logo.png" class="logo">
+
+<h1>Le Cronache di Ellan</h1>
+
+<p class="subtitle">
+Storie, leggende e memorie provenienti dai Reami di Ellan.
+Alcune sono racconti tramandati dai cronistorici.
+Altre sono testimonianze dirette di eventi che hanno cambiato il destino del mondo.
+</p>
+
+<section class="section">
+
+<h2>Biblioteca delle Cronache</h2>
+
+<div class="cronache-grid">
+
+<!-- CRONACA PUBBLICATA -->
+
+<div class="cronaca-card">
+
+<img src="../images/copertina_ryan_namari.png">
+
+<h3>L'Anello e la Lama</h3>
+
+<p>
+La storia del principe Ryan Stormblade e della contrabbandiera
+Namari Quickhand. Un racconto di amicizia, amore,
+avventura e destino.
+</p>
+
+<a class="button"
+href="pdf/L_Anello_e_la_Lama.pdf"
+target="_blank">
+📖 Leggi
+</a>
+
+</div>
+
+<!-- IN ARRIVO -->
+
+<div class="cronaca-card coming-soon">
+
+<img src="../images/copertina_pardisan.png">
+
+<h3>La Fiamma e la Lama</h3>
+
+<p>
+Le imprese giovanili di Pardisan Stormblade,
+prima che diventasse il Re di Yatandra.
+</p>
+
+<a class="button">
+⏳ In Arrivo
+</a>
+
+</div>
+
+<div class="cronaca-card coming-soon">
+
+<img src="../images/copertina_liselle.png">
+
+<h3>Il Falco d'Argento</h3>
+
+<p>
+L'ascesa di Liselle Silverhawk e il cammino
+che la portò al trono.
+</p>
+
+<a class="button">
+⏳ In Arrivo
+</a>
+
+</div>
+
+<div class="cronaca-card coming-soon">
+
+<img src="../images/copertina_halrek.png">
+
+<h3>Le Cronache Perdute di Halrek</h3>
+
+<p>
+La verità dietro l'uomo che osò ribellarsi
+agli Eterni.
+</p>
+
+<a class="button">
+⏳ In Arrivo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<a class="back" href="../ellan.html">
+← Torna a Ellan
+</a>
+
+</main>
+
+</body>
+</html>
