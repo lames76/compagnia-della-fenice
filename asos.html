@@ -358,7 +358,20 @@ h1 {
     <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
 
 </main>
+<audio id="backgroundMusic" loop>
+    <source src="mp3/asos_background.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+document.addEventListener("click", function startMusic() {
+    const music = document.getElementById("backgroundMusic");
+
+    music.volume = 0.15;
+    music.play().catch(() => {});
+
+    document.removeEventListener("click", startMusic);
+});
+</script>
 </body>
 </html>
 ```
