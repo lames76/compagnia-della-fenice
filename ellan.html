@@ -402,30 +402,45 @@
         <audio id="ellanAudio" controls> Il tuo browser non supporta il player audio. </audio>
     </div>
    <script>
-    const bgMusic = document.getElementById("backgroundMusic");
+const bgMusic = document.getElementById("backgroundMusic");
+let musicStarted = false;
 
-    document.addEventListener("scroll", function startBackgroundMusic() {
-        bgMusic.volume = 0.12;
-        bgMusic.play().catch(() => {});
-        document.removeEventListener("click", startBackgroundMusic);
-    });
+function startBackgroundMusic() {
 
-    function playTrack(file, title) {
-        const audio = document.getElementById("ellanAudio");
-        const currentTrack = document.getElementById("currentTrack");
+    if (musicStarted) return;
 
-        bgMusic.pause();
+    bgMusic.volume = 0.12;
+    bgMusic.play().catch(() => {});
 
-        audio.src = file;
-        audio.volume = 0.4;
+    musicStarted = true;
 
-        currentTrack.textContent = "In riproduzione: " + title;
-        audio.play();
-    }
+    document.removeEventListener("click", startBackgroundMusic);
+    document.removeEventListener("scroll", startBackgroundMusic);
+    document.removeEventListener("touchstart", startBackgroundMusic);
+    document.removeEventListener("keydown", startBackgroundMusic);
+}
 
-    document.getElementById("ellanAudio").addEventListener("ended", () => {
-        bgMusic.play().catch(() => {});
-    });
+document.addEventListener("click", startBackgroundMusic);
+document.addEventListener("scroll", startBackgroundMusic);
+document.addEventListener("touchstart", startBackgroundMusic);
+document.addEventListener("keydown", startBackgroundMusic);
+
+function playTrack(file, title) {
+    const audio = document.getElementById("ellanAudio");
+    const currentTrack = document.getElementById("currentTrack");
+
+    bgMusic.pause();
+
+    audio.src = file;
+    audio.volume = 0.4;
+
+    currentTrack.textContent = "In riproduzione: " + title;
+    audio.play();
+}
+
+document.getElementById("ellanAudio").addEventListener("ended", () => {
+    bgMusic.play().catch(() => {});
+});
 </script>
 </body>
 
