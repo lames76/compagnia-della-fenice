@@ -363,14 +363,26 @@ h1 {
 </audio>
 
 <script>
-document.addEventListener("scroll", function startMusic() {
+let musicStarted = false;
+
+function startMusic() {
+    if (musicStarted) return;
+
     const music = document.getElementById("backgroundMusic");
 
-    music.volume = 0.15;
+    music.volume = 0.10;
     music.play().catch(() => {});
 
+    musicStarted = true;
+
+    window.removeEventListener("scroll", startMusic);
     document.removeEventListener("click", startMusic);
-});
+    document.removeEventListener("touchstart", startMusic);
+}
+
+window.addEventListener("scroll", startMusic);
+document.addEventListener("click", startMusic);
+document.addEventListener("touchstart", startMusic);
 </script>
 </body>
 </html>
