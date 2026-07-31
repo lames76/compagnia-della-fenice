@@ -145,6 +145,66 @@ h1 {
     color: #70a8ff;
 }
 
+ .manual-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.manual-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(5, 15, 35, 0.82);
+    border: 1px solid rgba(112,168,255,0.35);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.manual-card h3 {
+    color: #f5f0e6;
+    margin: 0 0 6px 0;
+}
+
+.manual-version {
+    color: #70a8ff;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.manual-card p {
+    flex-grow: 1;
+    color: #c8d8ff;
+    font-size: 1rem;
+}
+
+.manual-buttons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.manual-buttons .button {
+    padding: 11px 16px;
+    margin: 5px;
+    font-size: 0.9rem;
+}
+
+.download-info {
+    margin-top: 28px;
+    padding: 18px;
+    text-align: center;
+    background: rgba(112,168,255,0.08);
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .manual-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 800px) {
     h1 {
         font-size: 2.5rem;
@@ -293,67 +353,223 @@ h1 {
         </p>
     </section>
 
-    <section class="section center">
-        <h2>Materiali del progetto</h2>
+    <section class="section">
+    <h2>Manuali di ASOS</h2>
+   <p class="manual-version">
+       Ultimo aggiornamento: luglio 2026
+   </p>
+    <p>
+        Il regolamento di ASOS è suddiviso in diversi Controller,
+        ciascuno dedicato a una parte specifica della campagna.
+        I manuali possono essere consultati direttamente online
+        oppure scaricati gratuitamente in formato PDF.
+    </p>
 
-        <div class="feature-grid">
+    <div class="manual-grid">
 
-            <div class="feature-card">
-                <h3>📘 Regolamento</h3>
-                <p>
-                    Le regole della campagna, della gestione fazione,
-                    degli scontri spaziali, delle relazioni e della progressione.
-                </p>
+        <article class="manual-card">
+            <h3>🌌 Faction Controller</h3>
+            <div class="manual-version">Versione 5.0</div>
+
+            <p>
+                Gestione della campagna galattica, delle fazioni,
+                delle risorse, della diplomazia, dello spionaggio,
+                dell'espansione e delle fazioni nemiche.
+            </p>
+
+            <div class="manual-buttons">
+                <a class="button"
+                   href="downloads/asos/ASOS-Faction-Controller-5.0.pdf"
+                   target="_blank"
+                   rel="noopener">
+                    👁️ Leggi
+                </a>
+
+                <a class="button"
+                   href="downloads/asos/ASOS-Faction-Controller-5.0.pdf"
+                   download>
+                    ⬇️ Scarica
+                </a>
             </div>
+        </article>
 
-            <div class="feature-card">
-                <h3>💻 App di Supporto</h3>
-                <p>
-                    Uno strumento digitale per gestire mappa, fazioni,
-                    flotte, eventi, ufficiali, danni e avanzamento della campagna.
-                </p>
+        <article class="manual-card">
+            <h3>🚀 Starship Controller</h3>
+            <div class="manual-version">Versione 5.0</div>
+
+            <p>
+                Regole per movimento, combattimento spaziale,
+                azioni delle navi, caccia, bombardieri, siluri,
+                armi MAP, terreni e abilità speciali.
+            </p>
+
+            <div class="manual-buttons">
+                <a class="button"
+                   href="downloads/asos/ASOS-Starship-Controller-5.0.pdf"
+                   target="_blank"
+                   rel="noopener">
+                    👁️ Leggi
+                </a>
+
+                <a class="button"
+                   href="downloads/asos/ASOS-Starship-Controller-5.0.pdf"
+                   download>
+                    ⬇️ Scarica
+                </a>
             </div>
+        </article>
 
-            <div class="feature-card">
-                <h3>🛰️ Miniature</h3>
-                <p>
-                    Il gioco è pensato per poter usare segnalini,
-                    standee o modelli 3D stampabili delle navi.
-                </p>
+        <article class="manual-card">
+            <h3>🛰️ Starships Reference</h3>
+            <div class="manual-version">Versione 5.0</div>
+
+            <p>
+                Schede delle Navi Eroiche, delle Line Unit,
+                dei caccia, dei Mobile Suit e delle altre unità
+                utilizzabili nelle battaglie spaziali.
+            </p>
+
+            <div class="manual-buttons">
+                <a class="button"
+                   href="downloads/asos/ASOS-Starships-Reference-5.0.pdf"
+                   target="_blank"
+                   rel="noopener">
+                    👁️ Leggi
+                </a>
+
+                <a class="button"
+                   href="downloads/asos/ASOS-Starships-Reference-5.0.pdf"
+                   download>
+                    ⬇️ Scarica
+                </a>
             </div>
+        </article>
 
-        </div>
+        <article class="manual-card">
+            <h3>👨‍🚀 Crew Controller</h3>
+            <div class="manual-version">Versione 5.0</div>
 
-        <br>
+            <p>
+                Gestione degli ufficiali, degli eventi di equipaggio,
+                dei sentimenti, delle relazioni personali
+                e dei loro effetti durante la campagna.
+            </p>
 
-        <a class="button" href="https://github.com/lames76/ASOS" target="_blank">
-            🚀 Vai al repository GitHub
+            <div class="manual-buttons">
+                <a class="button"
+                   href="downloads/asos/ASOS-Crew-Controller-5.0.pdf"
+                   target="_blank"
+                   rel="noopener">
+                    👁️ Leggi
+                </a>
+
+                <a class="button"
+                   href="downloads/asos/ASOS-Crew-Controller-5.0.pdf"
+                   download>
+                    ⬇️ Scarica
+                </a>
+            </div>
+        </article>
+
+        <article class="manual-card">
+            <h3>⚔️ Ground Controller</h3>
+            <div class="manual-version">Versione 5.0</div>
+
+            <p>
+                Regole per le unità terrestri, la formazione
+                degli eserciti e la risoluzione degli scontri
+                combattuti sulla superficie dei pianeti.
+            </p>
+
+            <div class="manual-buttons">
+                <a class="button"
+                   href="downloads/asos/ASOS-Ground-Controller-5.0.pdf"
+                   target="_blank"
+                   rel="noopener">
+                    👁️ Leggi
+                </a>
+
+                <a class="button"
+                   href="downloads/asos/ASOS-Ground-Controller-5.0.pdf"
+                   download>
+                    ⬇️ Scarica
+                </a>
+            </div>
+        </article>
+
+        <article class="manual-card">
+            <h3>📡 Mission Controller</h3>
+            <div class="manual-version">Versione 5.0</div>
+
+            <p>
+                Sistema per generare e risolvere missioni diplomatiche,
+                scientifiche e speciali, con difficoltà,
+                plot twist, test e ingerenze delle fazioni.
+            </p>
+
+            <div class="manual-buttons">
+                <a class="button"
+                   href="downloads/asos/ASOS-Mission-Controller-5.0.pdf"
+                   target="_blank"
+                   rel="noopener">
+                    👁️ Leggi
+                </a>
+
+                <a class="button"
+                   href="downloads/asos/ASOS-Mission-Controller-5.0.pdf"
+                   download>
+                    ⬇️ Scarica
+                </a>
+            </div>
+        </article>
+
+    </div>
+
+    <div class="download-info">
+        <p>
+            <strong>Tutti i materiali sono distribuiti gratuitamente.</strong><br>
+            Per segnalazioni, correzioni e aggiornamenti è disponibile
+            il repository ufficiale del progetto.
+        </p>
+
+        <a class="button"
+           href="https://github.com/lames76/ASOS"
+           target="_blank"
+           rel="noopener">
+            🚀 Repository GitHub
         </a>
-    </section>
+    </div>
+</section>
 
     <section class="section">
-        <h2>Stato del progetto</h2>
+    <h2>Stato del progetto</h2>
 
-        <div class="status-box">
-            <p>
-                ASOS è attualmente in sviluppo attivo. Il regolamento, l'app di supporto
-                e la struttura delle campagne sono in fase di espansione, revisione e test.
-            </p>
+    <div class="status-box">
+        <p>
+            La versione 5.0 dei principali manuali di ASOS
+            è stata completata ed è disponibile gratuitamente.
+        </p>
 
-            <p>
-                L'app è già in fase di prova e viene usata per verificare il funzionamento
-                della campagna, delle fazioni, delle flotte nemiche e degli eventi.
-                Parallelamente, il regolamento viene testato e rifinito per rendere
-                il sistema più fluido, chiaro e giocabile.
-            </p>
+        <p>
+            Il sistema comprende la gestione della campagna galattica,
+            delle battaglie spaziali, degli equipaggi, delle missioni
+            e degli scontri terrestri.
+        </p>
 
-            <p>
-                L'obiettivo è costruire un sistema solitario modulare, capace di generare
-                campagne spaziali sempre diverse senza trasformarsi in un videogioco:
-                l'app assiste il giocatore, ma il cuore resta sul tavolo.
-            </p>
-        </div>
-    </section>
+        <p>
+            Il progetto resta in sviluppo attivo:
+            le regole continueranno a essere sottoposte a test,
+            correzioni e aggiornamenti, mentre l'app di supporto
+            verrà progressivamente ampliata.
+        </p>
+
+        <p>
+            ASOS è un progetto amatoriale e in continua evoluzione.
+            I numeri di versione permettono di identificare chiaramente
+            l'edizione più recente di ciascun manuale.
+        </p>
+    </div>
+</section>
 
     <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
 
