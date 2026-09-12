@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Kaiju Cityfall — Compagnia della Fenice</title>
+<meta name="description" content="Kaiju Cityfall: gioco di miniature con mostri giganti e battaglie urbane. Scarica gratuitamente regolamento, schede base kaiju e carte straordinarie 1.0.">
+<style>
+body {
+    margin: 0;
+    font-family: Georgia, serif;
+    background: radial-gradient(circle at top, #173b27 0%, #080f0b 45%, #030705 100%);
+    color: #f5f0e6;
+}
+
+.page {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.logo {
+    width: 520px;
+    max-width: 90%;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.acronym {
+    color: #85cf78;
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    font-size: 1.35rem;
+    color: #cce5c5;
+    max-width: 850px;
+    margin: 0 auto 40px auto;
+    line-height: 1.6;
+}
+
+.section {
+    background: rgba(255,255,255,0.035);
+    border: 1px solid rgba(133,207,120,0.25);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.section.center {
+    text-align: center;
+}
+
+.section h2 {
+    color: #85cf78;
+    margin-top: 0;
+}
+
+.section p,
+.section li {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.hero-text {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #f5f0e6;
+}
+
+.hero-text em {
+    color: #cce5c5;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.feature-card {
+    background: rgba(7, 24, 14, 0.75);
+    border: 1px solid rgba(133,207,120,0.35);
+    border-radius: 16px;
+    padding: 22px;
+    text-align: center;
+}
+
+.feature-card h3 {
+    color: #f5f0e6;
+    margin-top: 0;
+}
+
+.feature-card p {
+    color: #cce5c5;
+    font-size: 1rem;
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    color: #f5f0e6;
+    border: 2px solid #85cf78;
+    padding: 14px 24px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    background: rgba(7, 24, 14, 0.75);
+    transition: 0.2s;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.button:hover {
+    background: #85cf78;
+    color: #080f0b;
+}
+
+.status-box {
+    background: rgba(133,207,120,0.08);
+    border-left: 4px solid #85cf78;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 40px;
+    color: #cce5c5;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: #85cf78;
+}
+
+ .manual-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.manual-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(7, 24, 14, 0.82);
+    border: 1px solid rgba(133,207,120,0.35);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.manual-card h3 {
+    color: #f5f0e6;
+    margin: 0 0 6px 0;
+}
+
+.manual-version {
+    color: #85cf78;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.manual-card p {
+    flex-grow: 1;
+    color: #cce5c5;
+    font-size: 1rem;
+}
+
+.manual-buttons {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.manual-buttons .button {
+    padding: 11px 16px;
+    margin: 5px;
+    font-size: 0.9rem;
+}
+
+.download-info {
+    margin-top: 28px;
+    padding: 18px;
+    text-align: center;
+    background: rgba(133,207,120,0.08);
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .manual-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+* { box-sizing: border-box; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.5rem); }
+.manual-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+a:focus-visible { outline: 3px solid #85cf78; outline-offset: 5px; }
+footer { margin-top: 35px; color: #cce5c5; font-size: .9rem; }
+@media (max-width: 800px) { .manual-grid { grid-template-columns: 1fr; } .section { padding: 24px 18px; } }
+@media (prefers-reduced-motion: reduce) { .button { transition: none; } }
+</style>
+</head>
+<body>
+
+<main class="page">
+    <header>
+        <!-- Carica il logo in images/kaiju_cityfall_logo.png. -->
+        <img src="images/kaiju_cityfall_logo.png" alt="Kaiju Cityfall" class="logo">
+        <h1>Kaiju Cityfall</h1>
+        <div class="acronym">Mostri giganti. Battaglie spettacolari. Città in rovina.</div>
+        <p class="subtitle">Un gioco di miniature in cui i kaiju si affrontano tra palazzi, macerie e forze armate: porta sul tavolo il fascino delle grandi battaglie del cinema dei mostri.</p>
+        <a class="button" href="#download">Scopri i manuali gratuiti</a>
+    </header>
+
+    <section class="section">
+        <h2>Cos’è Kaiju Cityfall?</h2>
+        <p>Kaiju Cityfall è un gioco di scontri tattici tra mostri giganti, pensato per offrire regole semplici da consultare e battaglie ricche di azione. Si gioca su una mappa a esagoni, con miniature o segnalini che rappresentano i kaiju e gli elementi della città.</p>
+        <p>Ogni kaiju ha caratteristiche, attacchi, abilità e debolezze proprie. Gestire l’energia, scegliere il momento per colpire e sfruttare la posizione sul campo sono parti essenziali dello scontro.</p>
+        <p>Un soffio devastante, una carica contro un edificio o una proiezione tra le macerie possono cambiare il corso della battaglia. Le carte straordinarie aggiungono le mosse spettacolari che rendono ogni mostro protagonista.</p>
+    </section>
+
+    <section class="section center">
+        <h2>Il cuore del gioco</h2>
+        <div class="feature-grid">
+            <article class="feature-card"><h3>Kaiju unici</h3><p>Attacchi, capacità innate e debolezze danno a ogni mostro una propria identità sul campo.</p></article>
+            <article class="feature-card"><h3>La città è il campo di battaglia</h3><p>Esagoni, edifici e macerie rendono importanti movimento, distanza e posizione. Gli impatti trasformano lo scenario.</p></article>
+            <article class="feature-card"><h3>Mosse straordinarie</h3><p>Carte dedicate ai kaiju permettono azioni spettacolari e interventi nel momento decisivo dello scontro.</p></article>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Porta la battaglia sul tavolo</h2>
+        <p>Per preparare il campo di gioco servono una mappa a esagoni, miniature o segnalini per i kaiju, elementi per rappresentare edifici e macerie e i materiali indicati nel regolamento.</p>
+        <p>Comincia dal Regolamento 1.0, scegli i combattenti dalle schede base e prepara le loro carte straordinarie. Tieni tutti e tre i documenti a portata di mano durante la partita.</p>
+    </section>
+
+    <section class="section" id="download">
+        <h2>Manuali e materiali di Kaiju Cityfall</h2>
+        <p class="manual-version">Edizione 1.0</p>
+        <p>I tre documenti raccolgono le regole, le schede dei combattenti e le carte straordinarie. Puoi consultarli online oppure scaricarli gratuitamente in formato PDF.</p>
+        <!-- Carica i tre PDF nella cartella download con i nomi indicati nei link. -->
+        <div class="manual-grid">
+            <article class="manual-card">
+                <h3>Regolamento</h3>
+                <div class="manual-version">Versione 1.0</div>
+                <p>Le regole del gioco: preparazione della partita, movimento, azioni, combattimento, energia, terreno e condizioni. Il punto di partenza per imparare a giocare.</p>
+                <div class="manual-buttons">
+                    <a class="button" href="download/Kaiju-Cityfall-Regolamento-1.0.pdf" target="_blank" rel="noopener" aria-label="Leggi Regolamento 1.0 (PDF, nuova scheda)">Leggi PDF</a>
+                    <a class="button" href="download/Kaiju-Cityfall-Regolamento-1.0.pdf" download aria-label="Scarica Regolamento 1.0 in PDF">↓ Scarica PDF</a>
+                </div>
+            </article>
+            <article class="manual-card">
+                <h3>Schede base kaiju</h3>
+                <div class="manual-version">Versione 1.0</div>
+                <p>Le caratteristiche dei kaiju base, con attacchi, abilità, tratti e debolezze. Il riferimento da tenere accanto ai combattenti durante la partita.</p>
+                <div class="manual-buttons">
+                    <a class="button" href="download/Kaiju-Cityfall-Schede-Base-Kaiju-1.0.pdf" target="_blank" rel="noopener" aria-label="Leggi Schede base kaiju 1.0 (PDF, nuova scheda)">Leggi PDF</a>
+                    <a class="button" href="download/Kaiju-Cityfall-Schede-Base-Kaiju-1.0.pdf" download aria-label="Scarica Schede base kaiju 1.0 in PDF">↓ Scarica PDF</a>
+                </div>
+            </article>
+            <article class="manual-card">
+                <h3>Carte straordinarie</h3>
+                <div class="manual-version">Versione 1.0</div>
+                <p>Le carte dedicate ai kaiju, con gli effetti e le condizioni di utilizzo delle loro mosse straordinarie. Da consultare e preparare prima dello scontro.</p>
+                <div class="manual-buttons">
+                    <a class="button" href="download/Kaiju-Cityfall-Carte-Straordinarie-1.0.pdf" target="_blank" rel="noopener" aria-label="Leggi Carte straordinarie 1.0 (PDF, nuova scheda)">Leggi PDF</a>
+                    <a class="button" href="download/Kaiju-Cityfall-Carte-Straordinarie-1.0.pdf" download aria-label="Scarica Carte straordinarie 1.0 in PDF">↓ Scarica PDF</a>
+                </div>
+            </article>
+        </div>
+        <div class="download-info">Tutti i materiali di gioco sono gratuiti. Per giocare con regole coerenti, utilizza il regolamento, le schede e le carte della stessa edizione.</div>
+    </section>
+
+    <section class="section">
+        <h2>Nota importante — Copyright e marchi</h2>
+        <p>Kaiju Cityfall è un progetto amatoriale, gratuito e non commerciale, realizzato da appassionati del cinema dei mostri giganti.</p>
+        <p>Tutti i marchi, i nomi dei personaggi, delle creature, delle serie e delle opere eventualmente citati nei materiali di gioco appartengono ai rispettivi titolari. I relativi diritti d’autore e di marchio restano di esclusiva proprietà dei loro aventi diritto.</p>
+        <p>Il progetto non è un prodotto ufficiale e non è affiliato, sponsorizzato, approvato o autorizzato dai titolari delle opere citate. I riferimenti sono presenti come omaggio alle opere originali; non si intende rivendicare alcun diritto su di esse.</p>
+        <p>I materiali sono distribuiti gratuitamente. Eventuali donazioni volontarie alla Compagnia della Fenice sostengono l’attività generale del sito e non costituiscono un pagamento per questi materiali né concedono diritti sulle opere citate.</p>
+    </section>
+
+    <section class="section">
+        <h2>Un progetto in evoluzione</h2>
+        <div class="status-box"><p>La versione 1.0 raccoglie il primo nucleo di Kaiju Cityfall: regolamento, schede base e carte straordinarie. Il progetto continua a crescere attraverso partite di prova, revisioni e nuovi contenuti.</p><p>Le versioni dei documenti permettono di riconoscere l’edizione utilizzata e seguire gli aggiornamenti del gioco.</p></div>
+    </section>
+
+    <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
+    <footer>© Compagnia della Fenice · Kaiju Cityfall</footer>
+</main>
+<script data-goatcounter="https://lames76.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
