@@ -210,6 +210,65 @@
     color: #ddd0b0;
 }
 
+.wip-section {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.wip-section h2 {
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.wip-intro {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.wip-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.wip-card {
+    position: relative;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(212,154,58,0.35);
+    border-radius: 15px;
+    padding: 35px 25px 25px;
+}
+
+.wip-card h3 {
+    margin: 10px 0;
+    font-size: 1.6rem;
+    color: #f5f0e6;
+}
+
+.wip-card p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.wip-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid #d49a3a;
+    border-radius: 20px;
+    color: #d49a3a;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .wip-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 700px) {
     .about-section {
         padding: 25px 20px;
@@ -269,6 +328,40 @@ footer {
     <p>Un gioco di miniature con battaglie tra mostri giganti e città da distruggere.</p>
 </a>
                </div>
+    <div class="wip-section">
+
+    <h2>Work in Progress</h2>
+
+    <p class="wip-intro">
+        Nuovi giochi stanno prendendo forma nel laboratorio della Fenice.
+    </p>
+
+    <div class="wip-grid">
+
+        <div class="wip-card">
+            <span class="wip-badge">WORK IN PROGRESS</span>
+
+            <h3>I Cattivi</h3>
+
+            <p>
+                Un nuovo progetto della Compagnia della Fenice attualmente in sviluppo.
+            </p>
+        </div>
+
+        <div class="wip-card">
+            <span class="wip-badge">WORK IN PROGRESS</span>
+
+            <h3>Mutant School</h3>
+
+            <p>
+                Costruisci e gestisci una scuola per giovani mutanti, affrontando crisi,
+                rivalità e minacce sempre più pericolose.
+            </p>
+        </div>
+
+    </div>
+
+</div>
 
         <div class="about-section">
 
