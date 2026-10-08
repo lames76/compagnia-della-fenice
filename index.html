@@ -281,16 +281,37 @@
 
 .wip-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
 }
 
 .wip-card {
+    display: block;
+    color: #f5f0e6;
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s;
     position: relative;
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(212,154,58,0.35);
     border-radius: 15px;
     padding: 35px 25px 25px;
+}
+
+.wip-card:hover {
+    border-color: #d49a3a;
+    background: rgba(212,154,58,0.08);
+}
+
+.wip-card:focus-visible {
+    outline: 3px solid #d49a3a;
+    outline-offset: 5px;
+}
+
+.wip-more {
+    display: inline-block;
+    margin-top: 8px;
+    color: #ddd0b0;
+    font-weight: bold;
 }
 
 .wip-card img {
@@ -390,41 +411,42 @@ footer {
 </a>
                </div>
     <div class="wip-section">
-
     <h2>Work in Progress</h2>
-
     <p class="wip-intro">
         Nuovi giochi stanno prendendo forma nel laboratorio della Fenice.
     </p>
-
     <div class="wip-grid">
-
-        <div class="wip-card">
+        <a class="wip-card" href="i-cattivi.html">
             <span class="wip-badge">WORK IN PROGRESS</span>
- <img src="images/i_cattivi.png" alt="I Cattivi">
+            <img src="images/i_cattivi.png" alt="I Cattivi">
             <h3>I Cattivi</h3>
-
             <p>
-                Un nuovo progetto della Compagnia della Fenice attualmente in sviluppo. 
-                Sei il "cattivo" di una storia di cartoni animati, non importa quanto ci 
-                provi non riuscirai mai a battere il "buono", la cosa importante è però 
-                continuare a provarci nel modo più assurdo possibile!
+                Sei il cattivo di un cartone animato: costruisci piani assurdi,
+                affronta disastri e continua a provarci, anche quando tutto va storto.
             </p>
-        </div>
-
-        <div class="wip-card">
+            <span class="wip-more">Scopri il gioco →</span>
+        </a>
+        <a class="wip-card" href="mutant-school.html">
             <span class="wip-badge">WORK IN PROGRESS</span>
             <img src="images/mutant-school.png" alt="Mutant School">
             <h3>Mutant School</h3>
-            
             <p>
                 Costruisci e gestisci una scuola per giovani mutanti, affrontando crisi,
                 rivalità e minacce sempre più pericolose.
             </p>
-        </div>
-
+            <span class="wip-more">Scopri il gioco →</span>
+        </a>
+        <a class="wip-card" href="maghette.html">
+            <span class="wip-badge">WORK IN PROGRESS</span>
+            <img src="images/maghette_logo.png" alt="Maghette">
+            <h3>Maghette</h3>
+            <p>
+                Crea la tua protagonista magica e risolvi piccoli problemi con fantasia:
+                un gioco narrativo cooperativo per bambini, famiglie e appassionati.
+            </p>
+            <span class="wip-more">Scopri il gioco →</span>
+        </a>
     </div>
-
 </div>
 
         <section class="about-section" aria-labelledby="about-title">
