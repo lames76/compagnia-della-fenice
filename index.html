@@ -210,6 +210,58 @@
     color: #ddd0b0;
 }
 
+.about-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 26px;
+}
+
+.about-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px 20px;
+    border: 2px solid #d49a3a;
+    border-radius: 10px;
+    background: rgba(212,154,58,0.1);
+    color: #f5f0e6;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.about-link-title {
+    font-size: 1.35rem;
+    font-weight: bold;
+    line-height: 1.35;
+}
+
+.about-link-description {
+    margin-top: 10px;
+    color: #ddd0b0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.about-link:hover {
+    background: #d49a3a;
+    color: #080810;
+}
+
+.about-link:hover .about-link-description {
+    color: #080810;
+}
+
+.about-link:focus-visible {
+    outline: 3px solid #f5f0e6;
+    outline-offset: 5px;
+}
+
+@media (max-width: 700px) {
+    .about-links { grid-template-columns: 1fr; }
+}
+
 .wip-section {
     width: 100%;
     max-width: 900px;
@@ -317,11 +369,6 @@ footer {
             Qui nascono Ellan – Luce e Ombra, ASOS e altri progetti ludici.
         </p>
 
-        <nav class="buttons" aria-label="Scopri la Compagnia" style="margin-bottom: 24px;">
-            <a class="button" href="compagnia.html">La Compagnia</a>
-            <a class="button" href="andrea.html">Chi sono</a>
-        </nav>
-
         <div class="projects">
 
     <a class="project-card" href="ellan.html">
@@ -380,42 +427,25 @@ footer {
 
 </div>
 
-        <div class="about-section">
-
-    <h2>Cos’è la Compagnia della Fenice?</h2>
-
+        <section class="about-section" aria-labelledby="about-title">
+    <h2 id="about-title">Cos’è la Compagnia della Fenice?</h2>
     <p>
-        La Compagnia della Fenice nacque molti anni fa come nome non ufficiale
-        del mio primo gruppo di gioco di ruolo, quando frequentavo ancora le
-        scuole superiori.
+        Nata dal mio primo gruppo di gioco di ruolo, oggi la Compagnia della Fenice
+        raccoglie mondi, giochi e storie cresciuti attraverso anni di avventure condivise.
+        Sono Andrea, autore e curatore di questo laboratorio:
+        <strong>tutto gratuito, fatto per passione.</strong>
     </p>
-
-    <p>
-        Da allora i tavoli sono cambiati, alcune persone si sono allontanate
-        e altre sono arrivate. Le loro avventure, le loro scelte e i loro
-        personaggi hanno però lasciato un segno nei mondi che continuiamo
-        a raccontare.
-    </p>
-
-    <p>
-        Oggi la Compagnia della Fenice non è una società, una redazione o un
-        gruppo con un elenco formale di membri. È il nome che raccoglie
-        idealmente tutti i tavoli, i giocatori e le storie che hanno contribuito
-        alla nascita e alla crescita di questi progetti.
-    </p>
-
-    <p>
-        <strong>Io sono Andrea, autore e curatore del progetto, e oggi ne sono
-        la voce.</strong> Ma mondi come Ellan non sono nati nel vuoto: sono
-        cresciuti attraverso molti anni di gioco condiviso.
-    </p>
-
-    <p>
-        <a href="compagnia.html" style="color: #ddd0b0;">Scopri la storia e il manifesto della Compagnia</a>
-        · <a href="andrea.html" style="color: #ddd0b0;">Conosci Andrea</a>
-    </p>
-
-</div>
+    <nav class="about-links" aria-label="Conosci la Compagnia e il suo autore">
+        <a class="about-link" href="compagnia.html">
+            <span class="about-link-title">La Compagnia e il manifesto</span>
+            <span class="about-link-description">La nostra storia e le emozioni che cerchiamo nei giochi.</span>
+        </a>
+        <a class="about-link" href="andrea.html">
+            <span class="about-link-title">Chi sono</span>
+            <span class="about-link-description">Conosci Andrea, le mie passioni e ciò che mi spinge a creare.</span>
+        </a>
+    </nav>
+</section>
 
        <div class="buttons">
 
