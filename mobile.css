@@ -1,0 +1,61 @@
+/* Adattamento del sito a telefoni e tablet */
+*, *::before, *::after { box-sizing: border-box; }
+img, iframe, audio { max-width: 100%; }
+h1, h2, h3, h4, p, li, dd, a { overflow-wrap: break-word; }
+.project-card, .future-card, .wip-card, .download-card, .manual-card,
+.feature-card, .video-card, .character-card, .map-card, .cronaca-card { min-width: 0; }
+.button, .play-button, .back { min-height: 44px; }
+.button, .play-button { line-height: 1.4; text-align: center; white-space: normal; }
+.back { padding: 12px 0; }
+.site-nav a { display: inline-flex; align-items: center; min-height: 44px; }
+[id] { scroll-margin-top: 20px; }
+
+@media (max-width: 800px) {
+    .download-grid, .manual-grid, .feature-grid, .video-grid,
+    .character-grid, .map-grid, .cronache-grid { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 700px) {
+    .page { width: 100%; padding: 24px 16px 36px; }
+    .hero { min-height: 100svh; padding: 28px 16px; }
+    h1 { font-size: clamp(1.9rem, 7vw, 2.4rem); line-height: 1.2; }
+    h2, .project-group-title, .wip-section h2 { font-size: 1.65rem; line-height: 1.3; }
+    .subtitle { font-size: 1.1rem; line-height: 1.65; margin-bottom: 26px; }
+    .acronym { font-size: 1rem; letter-spacing: 1px; line-height: 1.6; }
+    .section, .story, .status, .about-section { padding: 22px 18px; }
+    .section { margin: 24px 0; }
+    .section p, .section li { font-size: 1rem; }
+    .section ul, .section ol { padding-left: 22px; }
+    .download-grid, .manual-grid, .feature-grid, .video-grid,
+    .character-grid, .map-grid, .cronache-grid, .future-grid,
+    .wip-grid, .about-links { grid-template-columns: minmax(0, 1fr); gap: 18px; }
+    .projects { width: 100%; gap: 20px; }
+    .project-card { width: 100%; max-width: 420px; }
+    .future-section, .wip-section, .about-section { width: 100%; }
+    .download-card, .manual-card, .feature-card, .character-card,
+    .map-card, .cronaca-card, .video-card { padding: 18px; }
+    .map-card img { max-width: 100%; }
+    .download-card p { min-height: 0; }
+    .buttons, .manual-buttons, .links, .video-links { display: flex; flex-direction: column; gap: 12px; width: 100%; }
+    .button { max-width: 100%; padding: 12px 16px; letter-spacing: .5px; }
+    .buttons .button, .manual-buttons .button, .links .button,
+    .video-links .button, .download-card .button, .cronaca-card .button { width: 100%; margin: 0; }
+    .download-card .button, .cronaca-card .button { margin-top: 12px; }
+    .manual-buttons { margin-top: 18px; }
+    .section-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 12px; }
+    .section-index a { display: flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px; text-align: center; }
+    .ellan-player { position: static; width: 100%; margin: 24px 0; padding: 14px; }
+    #currentTrack { overflow-wrap: anywhere; line-height: 1.5; }
+    .music-table { display: block; margin-top: 20px; }
+    .music-table thead { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    .music-table tbody { display: grid; gap: 14px; }
+    .music-table tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 16px; border: 1px solid rgba(212,154,58,.35); border-radius: 12px; background: rgba(20,10,5,.7); }
+    .music-table td { display: block; min-width: 0; padding: 0; border: 0; }
+    .music-table td:first-child { grid-column: 1 / -1; line-height: 1.5; }
+    .music-table td:nth-child(3) { display: block; }
+    .music-table .play-button, .music-table .button { width: 100%; min-height: 44px; margin: 0; padding: 10px 8px; font-size: .95rem; }
+    .site-nav { gap: 4px 12px; padding: 10px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .button, .project-card, .future-card, .wip-card, .download-card, .cronaca-card { transition: none; }
+    .project-card:hover, .future-card:hover, .download-card:hover, .cronaca-card:hover { transform: none; }
+}
