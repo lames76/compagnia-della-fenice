@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mutant School: gestisci una scuola per giovani mutanti tra insegnamento, rivalità e crisi. Un gioco della Compagnia della Fenice in sviluppo.">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <title>Mutant School | Compagnia della Fenice</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: Georgia, serif; background: #080810; color: #f5f0e6; line-height: 1.75; }
+        a { color: #ddd0b0; text-underline-offset: 4px; }
+        a:hover { color: #d49a3a; }
+        a:focus-visible { outline: 2px solid #d49a3a; outline-offset: 5px; }
+        .page { width: 100%; max-width: 900px; margin: auto; padding: 28px 24px 48px; }
+        nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 26px; padding-bottom: 24px; border-bottom: 1px solid rgba(212,154,58,.35); }
+        nav a { text-decoration: none; }
+        nav a[aria-current="page"] { color: #d49a3a; text-decoration: underline; }
+        header { text-align: center; padding: 36px 0 26px; }
+        .logo { display: block; width: 280px; max-width: 80%; height: auto; margin: 0 auto 20px; }
+        h1 { font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.2; margin: 0 0 18px; }
+        .subtitle { color: #ddd0b0; font-size: 1.2rem; max-width: 650px; margin: auto; }
+        .story { padding: 30px 36px; background: rgba(255,255,255,.03); border: 1px solid rgba(212,154,58,.35); border-radius: 14px; }
+        h2 { color: #ddd0b0; font-size: 1.6rem; line-height: 1.3; margin: 32px 0 16px; }
+        .story h2:first-child { margin-top: 0; }
+        p { color: #ccc; margin: 0 0 18px; }
+        .story p:last-child { margin-bottom: 0; }
+        strong { color: #f5f0e6; }
+        .invitation { text-align: center; padding: 32px 0 0; }
+        .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
+        .button { display: inline-block; padding: 12px 22px; border: 2px solid #d49a3a; border-radius: 8px; text-decoration: none; color: #f5f0e6; background: rgba(20,10,5,.7); }
+        .button:hover { background: #d49a3a; color: #080810; }
+        footer { margin-top: 40px; text-align: center; color: #aaa; font-size: .9rem; }
+        @media (max-width: 600px) { .page { padding: 20px 16px 32px; } .story { padding: 24px 20px; } nav { gap: 10px 18px; } }
+    
+        .project-logo { display: block; width: 100%; max-width: 420px; height: 240px; object-fit: contain; margin: 0 auto 24px; }
+        .wip-badge { display: inline-block; padding: 6px 14px; border: 1px solid #d49a3a; border-radius: 20px; color: #d49a3a; font-size: .8rem; letter-spacing: 2px; margin-bottom: 20px; }
+        .status { margin-top: 24px; padding: 24px 30px; border: 1px solid rgba(212,154,58,.35); border-radius: 14px; background: rgba(212,154,58,.06); }
+        .status h2 { margin-top: 0; }
+        .status p:last-child { margin-bottom: 0; }
+        @media (max-width: 600px) { .project-logo { height: 180px; } .status { padding: 24px 20px; } }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <nav aria-label="Navigazione principale">
+            <a href="index.html">Home</a>
+            <a href="compagnia.html">La Compagnia</a>
+            <a href="andrea.html">Chi sono</a>
+        </nav>
+        <main>
+            <header>
+                <img src="images/mutant-school.png" alt="Logo di Mutant School" class="project-logo">
+                <span class="wip-badge">WORK IN PROGRESS</span>
+                <h1>Mutant School</h1>
+                <p class="subtitle">Grandi poteri. Giovani studenti. Una scuola da tenere in piedi.</p>
+            </header>
+            <article class="story">
+                <h2>Una scuola per chi è diverso</h2>
+                <p>In <strong>Mutant School</strong> guidi una scuola per giovani mutanti. Recluti studenti e professori, sviluppi le strutture e cerchi di preparare i tuoi allievi a un mondo che teme i loro poteri.</p>
+                <p>Xavier, Magneto, Emma Frost e Sinistro sono i presidi attorno a cui prendono forma le scuole rivali. Il prestigio è al centro della competizione, ma far crescere la tua scuola significa anche affrontare responsabilità e minacce.</p>
+                <h2>Insegnare a usare il proprio potere</h2>
+                <p>La crescita degli studenti passa attraverso <strong>Potenza, Controllo e Disciplina</strong>. Un potere straordinario può essere una risorsa, ma saperlo governare e decidere quando usarlo sono parti essenziali della formazione.</p>
+                <p>Professori, addestramento e miglioramenti della scuola ti aiutano a preparare gli studenti alle prove. Ogni scelta mette in relazione le ambizioni del tuo istituto con ciò di cui i suoi allievi hanno bisogno.</p>
+                <h2>Il mondo fuori dai cancelli</h2>
+                <p>La <strong>Paranoia</strong> misura il crescere della tensione verso i mutanti. Le crisi possono mettere in difficoltà le scuole e trasformare una rivalità in una necessità di collaborazione.</p>
+                <p>Investire nel futuro, proteggere studenti e strutture, conservare prestigio o cercare un’alleanza: la gestione della scuola si intreccia con le conseguenze di ciò che accade fuori dalle aule.</p>
+                <h2>Crescere diversi, insieme</h2>
+                <p>Il progetto cerca di portare al tavolo i temi delle storie di giovani mutanti: la scoperta di sé, la difficoltà di controllare capacità eccezionali, il rapporto con chi insegna e la paura di chi guarda dall’esterno.</p>
+                <p><strong>Far crescere una scuola significa far crescere i suoi studenti.</strong> È attorno a questo legame che voglio costruire l’esperienza di gioco, tra rivalità, responsabilità e occasioni di collaborazione.</p>
+            </article>
+            <section class="status" aria-labelledby="status-title">
+                <h2 id="status-title">Dal laboratorio della Fenice</h2>
+                <p>Il progetto è in sviluppo. Il prossimo passo è un playtest approfondito per verificare l’equilibrio tra insegnamento, prestigio, crescita della Paranoia e gestione delle crisi.</p>
+                <p>Questa pagina presenta il progetto. Regolamento e materiali scaricabili saranno aggiunti qui quando saranno pronti per la condivisione.</p>
+            </section>
+            <section class="invitation" aria-label="Partecipa allo sviluppo">
+                <p>Vuoi seguire lo sviluppo, fare una domanda o condividere un’idea? Ti aspetto nel Discord della Compagnia.</p>
+                <div class="links">
+                    <a class="button" href="https://discord.gg/MXyhYdmGR" target="_blank" rel="noopener noreferrer">Parliamone su Discord</a>
+                    <a class="button" href="compagnia.html">Leggi il nostro manifesto</a>
+                </div>
+            </section>
+        </main>
+        <nav aria-label="Torna alla homepage" style="margin-top: 36px; border-bottom: 0; padding-bottom: 0;">
+            <a class="button" href="index.html">← Torna alla homepage</a>
+        </nav>
+        <footer>© Compagnia della Fenice · Tutto gratuito, fatto per passione.</footer>
+    </div>
+    <script data-goatcounter="https://lames76.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
