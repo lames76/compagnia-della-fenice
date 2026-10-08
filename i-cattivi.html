@@ -85,8 +85,65 @@
         <nav aria-label="Torna alla homepage" style="margin-top: 36px; border-bottom: 0; padding-bottom: 0;">
             <a class="button" href="index.html">← Torna alla homepage</a>
         </nav>
+        <div style="text-align: center; margin-top: 28px;">
+            <button class="button" id="musicToggle" type="button" aria-controls="backgroundMusic" aria-pressed="false" style="font: inherit; cursor: pointer;">♫ Attiva musica</button>
+        </div>
         <footer>© Compagnia della Fenice · Tutto gratuito, fatto per passione.</footer>
     </div>
     <script data-goatcounter="https://lames76.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<audio id="backgroundMusic" loop preload="none">
+    <source src="mp3/cattivi_song.mp3" type="audio/mpeg">
+</audio>
+<script>
+(() => {
+    const music = document.getElementById("backgroundMusic");
+    const toggle = document.getElementById("musicToggle");
+    let starting = false;
+    music.volume = 0.10;
+
+    function updateButton() {
+        const playing = !music.paused;
+        toggle.textContent = playing ? "♫ Pausa musica" : "♫ Attiva musica";
+        toggle.setAttribute("aria-pressed", String(playing));
+    }
+
+    function removeStartListeners() {
+        document.removeEventListener("click", startMusic);
+        document.removeEventListener("touchstart", startMusic);
+        window.removeEventListener("scroll", onFirstScroll);
+    }
+
+    async function startMusic() {
+        if (starting || !music.paused) return;
+        starting = true;
+        try {
+            await music.play();
+            removeStartListeners();
+        } catch {
+            // Se il browser richiede un gesto esplicito, riprova al prossimo tocco.
+        } finally {
+            starting = false;
+            updateButton();
+        }
+    }
+
+    function onFirstScroll() {
+        window.removeEventListener("scroll", onFirstScroll);
+        startMusic();
+    }
+
+    toggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+        removeStartListeners();
+        if (music.paused) startMusic();
+        else music.pause();
+    });
+    music.addEventListener("play", updateButton);
+    music.addEventListener("pause", updateButton);
+    document.addEventListener("click", startMusic);
+    document.addEventListener("touchstart", startMusic, { passive: true });
+    window.addEventListener("scroll", onFirstScroll, { passive: true });
+})();
+</script>
 </body>
 </html>
