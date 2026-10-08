@@ -7,11 +7,12 @@
     <link rel="icon" type="image/png" href="images/favicon.png">
     <title>Ellan – Luce e Ombra</title>
     <style>
+        img { height: auto; }
         body { margin: 0; font-family: Georgia, serif; background: #080810; color: #f5f0e6; } .page { max-width: 1100px; margin: auto; padding: 40px 20px 150px 20px; text-align: center; } .logo { width: 520px; max-width: 90%; margin-bottom: 20px; } h1 { font-size: 3.5rem; margin-bottom: 10px; } .subtitle { font-size: 1.35rem; color: #ddd0b0; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; } .section { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; margin: 30px 0; text-align: left; overflow: visible; } .section.center { text-align: center; } .section h2 { color: #d49a3a; margin-top: 0; } .section p { line-height: 1.7; font-size: 1.1rem; } .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 30px; } .download-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 18px; text-align: center; transition: 0.2s; display: flex; flex-direction: column; } .download-card:hover { transform: translateY(-4px); border-color: #d49a3a; background: rgba(40, 20, 8, 0.85); } .download-card img { width: 100%; height: 340px; object-fit: cover; border-radius: 12px; margin-bottom: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); } .download-card h3 { color: #f5f0e6; margin: 10px 0; } .download-card p { min-height: 110px; font-size: 1rem; color: #ddd0b0; } .download-card .button { margin-top: auto; } .button { display: inline-block; text-decoration: none; color: #f5f0e6; border: 2px solid #d49a3a; padding: 12px 20px; font-size: 0.95rem; letter-spacing: 1px; background: rgba(20, 10, 5, 0.7); transition: 0.2s; border-radius: 8px; margin-top: 10px; } .button:hover { background: #d49a3a; color: #080810; } .music-table { width: 100%; border-collapse: collapse; margin-top: 25px; } .music-table th, .music-table td { border-bottom: 1px solid rgba(255,255,255,0.12); padding: 14px; text-align: center; } .music-table th { color: #d49a3a; } .music-table td:first-child { text-align: left; color: #f5f0e6; font-weight: bold; } .play-button { cursor: pointer; border: 2px solid #d49a3a; background: rgba(20, 10, 5, 0.7); color: #f5f0e6; border-radius: 8px; padding: 8px 14px; font-family: Georgia, serif; font-size: 1rem; } .play-button:hover { background: #d49a3a; color: #080810; } .ellan-player { position: fixed; right: 20px; bottom: 20px; width: 330px; background: rgba(8, 8, 16, 0.96); border: 1px solid rgba(212,154,58,0.6); border-radius: 14px; padding: 14px; box-shadow: 0 8px 25px rgba(0,0,0,0.6); z-index: 999; } .player-title { color: #d49a3a; font-weight: bold; margin-bottom: 6px; text-align: center; } #currentTrack { font-size: 0.9rem; color: #ddd0b0; text-align: center; margin-bottom: 8px; } .ellan-player audio { width: 100%; } .note { color: #aaa; margin-top: 20px; font-size: 0.95rem; } .back { display: inline-block; margin-top: 40px; color: #ddd0b0; text-decoration: none; } .back:hover { color: #d49a3a; } .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; } .video-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 16px; text-align: center; } .video-card iframe { width: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); } .video-card h3 { color: #f5f0e6; margin-bottom: 6px; } .video-card p { color: #d49a3a; font-size: 0.95rem; margin: 0; } .video-card.spoiler { border-color: rgba(212,154,58,0.7); } .character-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; } .character-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 22px; text-align: left; } .character-card h3 { color: #f5f0e6; margin-top: 0; margin-bottom: 6px; } .character-card h4 { color: #d49a3a; margin-top: 0; margin-bottom: 12px; font-weight: normal; } .character-card p { color: #ddd0b0; font-size: 1rem; line-height: 1.6; } .character-card img { width: 100%; max-height: 420px; object-fit: contain; border-radius: 12px; margin-bottom: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); } .map-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; } .map-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 18px; text-align: center; } .map-card h3 { color: #f5f0e6; margin-bottom: 8px; } .map-card p { color: #ddd0b0; font-size: 1rem; } .map-card img { width: 220px; height: 120px; object-fit: cover; object-position: center; border-radius: 12px; margin: 0 auto 14px auto; display: block; } @media (max-width: 700px) { h1 { font-size: 2.4rem; } .ellan-player { left: 10px; right: 10px; bottom: 10px; width: auto; } .music-table th:nth-child(3), .music-table td:nth-child(3) { display: none; } .video-grid { grid-template-columns: 1fr; } .map-grid { grid-template-columns: 1fr; } .character-grid { grid-template-columns: 1fr; } }
     </style>
     <link rel="stylesheet" href="site-navigation.css">
 </head>
-<audio id="backgroundMusic" loop>
+<audio id="backgroundMusic" loop preload="none">
     <source src="mp3/ellan_background.mp3" type="audio/mpeg">
 </audio>
 <body>
@@ -22,7 +23,7 @@
         <a href="compagnia.html">La Compagnia</a>
         <a href="andrea.html">Chi sono</a>
     </nav>
-    <main class="page"> <img src="images/ellan_logo.png" alt="Ellan – Luce e Ombra" class="logo">
+    <main class="page"> <img src="images/optimized/ellan_logo-960.webp" alt="Ellan – Luce e Ombra" class="logo" srcset="images/optimized/ellan_logo-480.webp 480w, images/optimized/ellan_logo-960.webp 960w" sizes="(max-width: 600px) 85vw, 520px" width="1254" height="1254" decoding="async" loading="eager" fetchpriority="high">
         <h1>Ellan – Luce e Ombra</h1>
         <p class="subtitle"> Un'ambientazione fantasy originale per giochi di ruolo, dove il Mana respira sotto il mondo, gli dèi camminano tra i mortali e la verità sulla storia di Ellan è stata dimenticata da secoli. </p>
         <div class="start-here">
@@ -67,19 +68,19 @@
             <h2 id="manuali">Biblioteca di Ellan</h2>
             <p> Manuali, quickstarter, canzoniere e materiali scaricabili raccolti in un unico scaffale. </p>
             <div class="download-grid">
-                <div class="download-card"> <img src="images/copertina_quickstarter.png" alt="Copertina Quickstarter Ellan">
+                <div class="download-card"> <img src="images/optimized/copertina_quickstarter-960.webp" alt="Copertina Quickstarter Ellan" srcset="images/optimized/copertina_quickstarter-480.webp 480w, images/optimized/copertina_quickstarter-960.webp 960w" sizes="(max-width: 700px) 85vw, 350px" width="1024" height="1536" decoding="async" loading="lazy">
                     <h3>Quickstarter</h3>
                     <p> Le regole essenziali, una panoramica dell'ambientazione e un'avventura introduttiva per iniziare subito. </p> <a class="button" href="https://github.com/lames76/compagnia-della-fenice/releases/download/v0.1/Ellan-Quickstarter.pdf"
                     target="_blank"> 📖 Scarica PDF </a> </div>
-                <div class="download-card"> <img src="images/copertina_giocatore.png" alt="Copertina Manuale del Giocatore">
+                <div class="download-card"> <img src="images/optimized/copertina_giocatore-960.webp" alt="Copertina Manuale del Giocatore" srcset="images/optimized/copertina_giocatore-480.webp 480w, images/optimized/copertina_giocatore-960.webp 960w" sizes="(max-width: 700px) 85vw, 350px" width="1024" height="1536" decoding="async" loading="lazy">
                     <h3>Manuale del Giocatore</h3>
                     <p> Stirpi, regni, magia, carriere, leggende e tutto ciò che un personaggio può conoscere del mondo di Ellan. </p> <a class="button" href="https://github.com/lames76/compagnia-della-fenice/releases/download/v0.2/Manuale.del.Giocatore.-.Ellan.-.Luce.e.Ombra.zip"
                     target="_blank"> 📦 Scarica ZIP </a> </div>
-                <div class="download-card"> <img src="images/copertina_master.png" alt="Copertina Manuale del Master">
+                <div class="download-card"> <img src="images/optimized/copertina_master-960.webp" alt="Copertina Manuale del Master" srcset="images/optimized/copertina_master-480.webp 480w, images/optimized/copertina_master-960.webp 960w" sizes="(max-width: 700px) 85vw, 350px" width="1024" height="1536" decoding="async" loading="lazy">
                     <h3>Manuale del Master</h3>
                     <p> Segreti, cosmologia, fazioni nascoste, verità perdute e strumenti per condurre campagne complete. </p> <a class="button" href="https://github.com/lames76/compagnia-della-fenice/releases/download/v0.2/Manuale.del.Master.-.Ellan.Ellan_luce_e_ombra.zip"
                     target="_blank"> 📦 Scarica ZIP </a> </div>
-                <div class="download-card"> <img src="images/copertina_canzoniere.png" alt="Copertina Canzoniere di Ellan">
+                <div class="download-card"> <img src="images/optimized/copertina_canzoniere-960.webp" alt="Copertina Canzoniere di Ellan" srcset="images/optimized/copertina_canzoniere-480.webp 480w, images/optimized/copertina_canzoniere-960.webp 960w" sizes="(max-width: 700px) 85vw, 350px" width="1086" height="1448" decoding="async" loading="lazy">
                     <h3>Canzoniere di Ellan</h3>
                     <p> Canti popolari, inni, ballate e appunti raccolti dal diario di Rilven Arcochiaro. </p> <a class="button" href="https://github.com/lames76/compagnia-della-fenice/releases/download/v0.2/Canzoniere.di.Ellan.pdf" target="_blank"> 🎼 Scarica PDF </a>                    </div>
             </div>            
@@ -124,7 +125,7 @@
     <div class="download-grid">
 
         <div class="download-card">
-            <img src="images/copertina_gioco_tattico.png" alt="Copertina Ellan – Il Gioco Tattico">
+            <img src="images/optimized/copertina_gioco_tattico-960.webp" alt="Copertina Ellan – Il Gioco Tattico" srcset="images/optimized/copertina_gioco_tattico-480.webp 480w, images/optimized/copertina_gioco_tattico-960.webp 960w" sizes="(max-width: 700px) 85vw, 350px" width="1054" height="1492" decoding="async" loading="lazy">
             <h3>Regolamento</h3>
             <p>
                 Le regole complete del gioco tattico: movimento, combattimento,
@@ -138,7 +139,7 @@
         </div>
 
         <div class="download-card">
-            <img src="images/carte_gioco_tattico.png" alt="Carte Print and Play Ellan">
+            <img src="images/optimized/carte_gioco_tattico-960.webp" alt="Carte Print and Play Ellan" srcset="images/optimized/carte_gioco_tattico-480.webp 480w, images/optimized/carte_gioco_tattico-960.webp 960w" sizes="(max-width: 700px) 85vw, 350px" width="1054" height="1492" decoding="async" loading="lazy">
             <h3>Carte Print & Play</h3>
             <p>
                 Eroi, nemici, eventi, luoghi, oggetti, artefatti ed evocazioni
@@ -152,7 +153,7 @@
         </div>
 
         <div class="download-card">
-            <img src="images/plancia_gioco_tattico.png" alt="Plancia Ellan – Il Gioco Tattico">
+            <img src="images/optimized/plancia_gioco_tattico-960.webp" alt="Plancia Ellan – Il Gioco Tattico" srcset="images/optimized/plancia_gioco_tattico-480.webp 480w, images/optimized/plancia_gioco_tattico-960.webp 960w" sizes="(max-width: 700px) 85vw, 350px" width="1860" height="2598" decoding="async" loading="lazy">
             <h3>Plancia e Segnalini</h3>
             <p>
                 La griglia 4x5, i segnalini obiettivo, i token dei personaggi evocati
@@ -180,22 +181,22 @@
                 veramente. </p>
             <div class="map-grid">
                 <div class="map-card">
-                    <a href="images/Ellan.png" target="_blank"> <img src="images/Ellan.png" alt="Mappa di Ellan"> </a>
+                    <a href="images/Ellan.png" target="_blank"> <img src="images/optimized/Ellan-960.webp" alt="Mappa di Ellan" srcset="images/optimized/Ellan-480.webp 480w, images/optimized/Ellan-960.webp 960w" sizes="220px" width="1086" height="1448" decoding="async" loading="lazy"> </a>
                     <h3>Mappa di Ellan</h3>
                     <p> La mappa generale del continente di Heimland. </p>
                 </div>
                 <div class="map-card">
-                    <a href="images/reami.png" target="_blank"> <img src="images/reami.png" alt="I Reami"> </a>
+                    <a href="images/reami.png" target="_blank"> <img src="images/optimized/reami-960.webp" alt="I Reami" srcset="images/optimized/reami-480.webp 480w, images/optimized/reami-960.webp 857w" sizes="220px" width="857" height="731" decoding="async" loading="lazy"> </a>
                     <h3>I Reami</h3>
                     <p> Il cuore politico e religioso del continente. </p>
                 </div>
                 <div class="map-card">
-                    <a href="images/Icelands.png" target="_blank"> <img src="images/Icelands.png" alt="Le Icelands"> </a>
+                    <a href="images/Icelands.png" target="_blank"> <img src="images/optimized/Icelands-960.webp" alt="Le Icelands" srcset="images/optimized/Icelands-480.webp 480w, images/optimized/Icelands-960.webp 960w" sizes="220px" width="1024" height="1536" decoding="async" loading="lazy"> </a>
                     <h3>Le Icelands</h3>
                     <p> Le terre del nord e il regno di Iceblood. </p>
                 </div>
                 <div class="map-card">
-                    <a href="images/yatandra.png" target="_blank"> <img src="images/yatandra.png" alt="Yatandra"> </a>
+                    <a href="images/yatandra.png" target="_blank"> <img src="images/optimized/yatandra-960.webp" alt="Yatandra" srcset="images/optimized/yatandra-480.webp 480w, images/optimized/yatandra-960.webp 960w" sizes="220px" width="1402" height="1122" decoding="async" loading="lazy"> </a>
                     <h3>Yatandra</h3>
                     <p> Il regno governato da Re Pardisan Stormblade e dalla Regina Liselle Silverhawk. </p>
                 </div>
@@ -205,37 +206,37 @@
             <h2 id="personaggi">Personaggi Famosi di Ellan</h2>
             <p> Re, regine, eroi, esploratori e comandanti. Questi sono alcuni dei nomi più noti del mondo di Ellan: figure ancora vive, raccontate nelle taverne, studiate dai cronistorici e ricordate nei regni di tutto il continente. </p>
             <div class="character-grid">
-                <div class="character-card"> <img src="images/Pardisan.png" alt="Pardisan Stormblade">
+                <div class="character-card"> <img src="images/optimized/Pardisan-960.webp" alt="Pardisan Stormblade" srcset="images/optimized/Pardisan-480.webp 376w, images/optimized/Pardisan-960.webp 376w" sizes="(max-width: 700px) 85vw, 350px" width="376" height="492" decoding="async" loading="lazy">
                     <h3>Pardisan Stormblade</h3>
                     <h4>Re di Yatandra</h4>
                     <p>Cavaliere, sovrano e avventuriero. Le sue imprese lo hanno reso uno dei personaggi più rispettati dei Reami e un simbolo vivente degli ideali cavallereschi.</p>
                 </div>
-                <div class="character-card"> <img src="images/Liselle.png" alt="Liselle Silverhawk">
+                <div class="character-card"> <img src="images/optimized/Liselle-960.webp" alt="Liselle Silverhawk" srcset="images/optimized/Liselle-480.webp 374w, images/optimized/Liselle-960.webp 374w" sizes="(max-width: 700px) 85vw, 350px" width="374" height="499" decoding="async" loading="lazy">
                     <h3>Liselle Silverhawk</h3>
                     <h4>Regina di Yatandra</h4>
                     <p>Governante amata dal popolo e stratega brillante. È famosa per la sua saggezza, la sua fermezza e la capacità di guidare Yatandra anche nelle crisi più dure.</p>
                 </div>
-                <div class="character-card"> <img src="images/Cristal.png" alt="Cristal Swan Igor V">
+                <div class="character-card"> <img src="images/optimized/Cristal-960.webp" alt="Cristal Swan Igor V" srcset="images/optimized/Cristal-480.webp 368w, images/optimized/Cristal-960.webp 368w" sizes="(max-width: 700px) 85vw, 350px" width="368" height="493" decoding="async" loading="lazy">
                     <h3>Cristal Swan Igor V</h3>
                     <h4>Re di Iceblood</h4>
                     <p>Ultimo erede della dinastia Swan Igor. Il suo ritorno dall'esilio e la riconquista del trono sono diventati una delle storie più celebri delle Icelands.</p>
                 </div>
-                <div class="character-card"> <img src="images/Elena.png" alt="Elena Rubies">
+                <div class="character-card"> <img src="images/optimized/Elena-960.webp" alt="Elena Rubies" srcset="images/optimized/Elena-480.webp 372w, images/optimized/Elena-960.webp 372w" sizes="(max-width: 700px) 85vw, 350px" width="372" height="488" decoding="async" loading="lazy">
                     <h3>Elena Rubies</h3>
                     <h4>Regina di Iceblood</h4>
                     <p>Diplomatica, guerriera e simbolo di fedeltà. Durante l'esilio di Cristal mantenne vive le speranze dei lealisti, diventando una leggenda vivente.</p>
                 </div>
-                <div class="character-card"> <img src="images/Cryon.png" alt="Cryon Lonewolf">
+                <div class="character-card"> <img src="images/optimized/Cryon-960.webp" alt="Cryon Lonewolf" srcset="images/optimized/Cryon-480.webp 371w, images/optimized/Cryon-960.webp 371w" sizes="(max-width: 700px) 85vw, 350px" width="371" height="482" decoding="async" loading="lazy">
                     <h3>Cryon Lonewolf</h3>
                     <h4>Maestro della Torre dell'Artiglio</h4>
                     <p>Esploratore, studioso e comandante della più famosa accademia dei Reami. Molti avventurieri sognano di essere accolti sotto la sua guida.</p>
                 </div>
-                <div class="character-card"> <img src="images/Robert.png" alt="Robert Tartareo">
+                <div class="character-card"> <img src="images/optimized/Robert-960.webp" alt="Robert Tartareo" srcset="images/optimized/Robert-480.webp 365w, images/optimized/Robert-960.webp 365w" sizes="(max-width: 700px) 85vw, 350px" width="365" height="488" decoding="async" loading="lazy">
                     <h3>Robert Tartareo</h3>
                     <h4>Capo dei Dimenticati</h4>
                     <p>Colosso di muscoli e mente affilata, guida il popolo dei Dimenticati con forza e intelligenza. Per alcuni è un eroe, per altri una figura inquietante.</p>
                 </div>
-                <div class="character-card"> <img src="images/Volpe.png" alt="Volpe Scura">
+                <div class="character-card"> <img src="images/optimized/Volpe-960.webp" alt="Volpe Scura" srcset="images/optimized/Volpe-480.webp 386w, images/optimized/Volpe-960.webp 386w" sizes="(max-width: 700px) 85vw, 350px" width="386" height="490" decoding="async" loading="lazy">
                     <h3>Volpe Scura</h3>
                     <h4>Capitano degli Irregolari di Fortevento</h4>
                     <p>Avventuriera, esploratice e leggenda vivente delle terre selvagge. Le storie sulle sue missioni sono così numerose che nessuno sa più distinguere la verità dall'esagerazione.</p>
@@ -256,41 +257,41 @@
             <p> Animazioni, sigle e brevi filmati dedicati ai personaggi e alle leggende di Ellan. Alcuni video possono contenere anticipazioni sulla campagna. </p>
             <div class="video-grid">
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/gDsZSp4whG8" title="Zoei" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/gDsZSp4whG8" title="Zoei" allowfullscreen loading="lazy"></iframe>
                     <h3>Zoei</h3> </div>
                 <div class="video-card spoiler">
-                    <iframe src="https://www.youtube.com/embed/SDXDxHN8dLw" title="Rinmu" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/SDXDxHN8dLw" title="Rinmu" allowfullscreen loading="lazy"></iframe>
                     <h3>Rinmu</h3>
                     <p>⚠️ Contiene possibili spoiler</p>
                 </div>
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/lEOX64XLHZ4" title="Dany Fogliarossa" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/lEOX64XLHZ4" title="Dany Fogliarossa" allowfullscreen loading="lazy"></iframe>
                     <h3>Dany Fogliarossa</h3> </div>
                 <div class="video-card spoiler">
-                    <iframe src="https://www.youtube.com/embed/A7WjHp3JP6Y" title="La combattente danzante" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/A7WjHp3JP6Y" title="La combattente danzante" allowfullscreen loading="lazy"></iframe>
                     <h3>La Combattente Danzante</h3>
                     <p>⚠️ Contiene possibili spoiler</p>
                 </div>
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/Su_Ql1rxITs" title="Lyra" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/Su_Ql1rxITs" title="Lyra" allowfullscreen loading="lazy"></iframe>
                     <h3>Lyra</h3> </div>
                 <div class="video-card">
-                    <iframe src="https://www.youtube.com/embed/tRahKOhKJow" title="Harukel" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/tRahKOhKJow" title="Harukel" allowfullscreen loading="lazy"></iframe>
                     <h3>Harukel</h3>
                     <p>⚠️ Contiene possibili spoiler</p>
                 </div>
                 <div class="video-card spoiler">
-                    <iframe src="https://www.youtube.com/embed/TBSJZ6Y1c8g" title="Aurora" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/TBSJZ6Y1c8g" title="Aurora" allowfullscreen loading="lazy"></iframe>
                     <h3>Aurora</h3>
                     <p>⚠️ Contiene possibili spoiler</p>
                 </div>
                 <div class="video-card spoiler">
-                    <iframe src="https://www.youtube.com/embed/D4h1XUe4ziQ" title="Halrek dell'Ombra" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/D4h1XUe4ziQ" title="Halrek dell'Ombra" allowfullscreen loading="lazy"></iframe>
                     <h3>Halrek dell'Ombra</h3>
                     <p>⚠️ Contiene possibili spoiler</p>
                 </div>
                  <div class="video-card spoiler">
-                <iframe src="https://www.youtube.com/embed/u-U4m-e0Txo" title="Kasumi" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/u-U4m-e0Txo" title="Kasumi" allowfullscreen loading="lazy"></iframe>
                 <h3>Kasumi</h3>
                 <p>⚠️ Contiene possibili spoiler</p>
             </div>
@@ -441,7 +442,7 @@
     <div class="ellan-player">
         <div class="player-title">🎵 Archivio Musicale di Ellan</div>
         <div id="currentTrack">Nessun brano in riproduzione</div>
-        <audio id="ellanAudio" controls> Il tuo browser non supporta il player audio. </audio>
+        <audio id="ellanAudio" controls preload="none"> Il tuo browser non supporta il player audio. </audio>
     </div>
    <script>
 const bgMusic = document.getElementById("backgroundMusic");
