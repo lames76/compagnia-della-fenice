@@ -113,7 +113,8 @@
         window.removeEventListener("scroll", onFirstScroll);
     }
 
-    async function startMusic() {
+    async function startMusic(event) {
+        if (event && toggle.contains(event.target)) return;
         if (starting || !music.paused) return;
         starting = true;
         try {
