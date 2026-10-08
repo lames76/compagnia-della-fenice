@@ -314,35 +314,69 @@ footer { margin-top: 35px; color: #cce5c5; font-size: .9rem; }
         <div class="status-box"><p>La versione 1.0 raccoglie il primo nucleo di Kaiju Cityfall: regolamento, schede base e carte straordinarie. Il progetto continua a crescere attraverso partite di prova, revisioni e nuovi contenuti.</p><p>Le versioni dei documenti permettono di riconoscere l’edizione utilizzata e seguire gli aggiornamenti del gioco.</p></div>
     </section>
 
+    <div style="text-align: center; margin-top: 28px;">
+        <button class="button" id="musicToggle" type="button" aria-controls="backgroundMusic" aria-pressed="false" style="font: inherit; cursor: pointer;">♫ Attiva musica</button>
+    </div>
+
     <a class="back" href="index.html">← Torna alla Compagnia della Fenice</a>
     <footer>© Compagnia della Fenice · Kaiju Cityfall</footer>
 </main>
 <script data-goatcounter="https://lames76.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
-<audio id="backgroundMusic" loop>
+<audio id="backgroundMusic" loop preload="none">
     <source src="mp3/kaiju_cityfall_background.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-let musicStarted = false;
-
-function startMusic() {
-    if (musicStarted) return;
-
+(() => {
     const music = document.getElementById("backgroundMusic");
-
+    const toggle = document.getElementById("musicToggle");
+    let starting = false;
     music.volume = 0.10;
-    music.play().catch(() => {});
 
-    musicStarted = true;
+    function updateButton() {
+        const playing = !music.paused;
+        toggle.textContent = playing ? "♫ Pausa musica" : "♫ Attiva musica";
+        toggle.setAttribute("aria-pressed", String(playing));
+    }
 
-    window.removeEventListener("scroll", startMusic);
-    document.removeEventListener("click", startMusic);
-    document.removeEventListener("touchstart", startMusic);
-}
+    function removeStartListeners() {
+        document.removeEventListener("click", startMusic);
+        document.removeEventListener("touchstart", startMusic);
+        window.removeEventListener("scroll", onFirstScroll);
+    }
 
-window.addEventListener("scroll", startMusic);
-document.addEventListener("click", startMusic);
-document.addEventListener("touchstart", startMusic);
+    async function startMusic(event) {
+        if (event && toggle.contains(event.target)) return;
+        if (starting || !music.paused) return;
+        starting = true;
+        try {
+            await music.play();
+            removeStartListeners();
+        } catch {
+            // Se il browser richiede un gesto esplicito, riprova al prossimo tocco.
+        } finally {
+            starting = false;
+            updateButton();
+        }
+    }
+
+    function onFirstScroll() {
+        window.removeEventListener("scroll", onFirstScroll);
+        startMusic();
+    }
+
+    toggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+        removeStartListeners();
+        if (music.paused) startMusic();
+        else music.pause();
+    });
+    music.addEventListener("play", updateButton);
+    music.addEventListener("pause", updateButton);
+    document.addEventListener("click", startMusic);
+    document.addEventListener("touchstart", startMusic, { passive: true });
+    window.addEventListener("scroll", onFirstScroll, { passive: true });
+})();
 </script>
 </body>
 </html>
