@@ -9,14 +9,36 @@
     <style>
         body { margin: 0; font-family: Georgia, serif; background: #080810; color: #f5f0e6; } .page { max-width: 1100px; margin: auto; padding: 40px 20px 150px 20px; text-align: center; } .logo { width: 520px; max-width: 90%; margin-bottom: 20px; } h1 { font-size: 3.5rem; margin-bottom: 10px; } .subtitle { font-size: 1.35rem; color: #ddd0b0; max-width: 800px; margin: 0 auto 40px auto; line-height: 1.6; } .section { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 30px; margin: 30px 0; text-align: left; overflow: visible; } .section.center { text-align: center; } .section h2 { color: #d49a3a; margin-top: 0; } .section p { line-height: 1.7; font-size: 1.1rem; } .download-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 30px; } .download-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 18px; text-align: center; transition: 0.2s; display: flex; flex-direction: column; } .download-card:hover { transform: translateY(-4px); border-color: #d49a3a; background: rgba(40, 20, 8, 0.85); } .download-card img { width: 100%; height: 340px; object-fit: cover; border-radius: 12px; margin-bottom: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); } .download-card h3 { color: #f5f0e6; margin: 10px 0; } .download-card p { min-height: 110px; font-size: 1rem; color: #ddd0b0; } .download-card .button { margin-top: auto; } .button { display: inline-block; text-decoration: none; color: #f5f0e6; border: 2px solid #d49a3a; padding: 12px 20px; font-size: 0.95rem; letter-spacing: 1px; background: rgba(20, 10, 5, 0.7); transition: 0.2s; border-radius: 8px; margin-top: 10px; } .button:hover { background: #d49a3a; color: #080810; } .music-table { width: 100%; border-collapse: collapse; margin-top: 25px; } .music-table th, .music-table td { border-bottom: 1px solid rgba(255,255,255,0.12); padding: 14px; text-align: center; } .music-table th { color: #d49a3a; } .music-table td:first-child { text-align: left; color: #f5f0e6; font-weight: bold; } .play-button { cursor: pointer; border: 2px solid #d49a3a; background: rgba(20, 10, 5, 0.7); color: #f5f0e6; border-radius: 8px; padding: 8px 14px; font-family: Georgia, serif; font-size: 1rem; } .play-button:hover { background: #d49a3a; color: #080810; } .ellan-player { position: fixed; right: 20px; bottom: 20px; width: 330px; background: rgba(8, 8, 16, 0.96); border: 1px solid rgba(212,154,58,0.6); border-radius: 14px; padding: 14px; box-shadow: 0 8px 25px rgba(0,0,0,0.6); z-index: 999; } .player-title { color: #d49a3a; font-weight: bold; margin-bottom: 6px; text-align: center; } #currentTrack { font-size: 0.9rem; color: #ddd0b0; text-align: center; margin-bottom: 8px; } .ellan-player audio { width: 100%; } .note { color: #aaa; margin-top: 20px; font-size: 0.95rem; } .back { display: inline-block; margin-top: 40px; color: #ddd0b0; text-decoration: none; } .back:hover { color: #d49a3a; } .video-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; } .video-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 16px; text-align: center; } .video-card iframe { width: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); } .video-card h3 { color: #f5f0e6; margin-bottom: 6px; } .video-card p { color: #d49a3a; font-size: 0.95rem; margin: 0; } .video-card.spoiler { border-color: rgba(212,154,58,0.7); } .character-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; } .character-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 22px; text-align: left; } .character-card h3 { color: #f5f0e6; margin-top: 0; margin-bottom: 6px; } .character-card h4 { color: #d49a3a; margin-top: 0; margin-bottom: 12px; font-weight: normal; } .character-card p { color: #ddd0b0; font-size: 1rem; line-height: 1.6; } .character-card img { width: 100%; max-height: 420px; object-fit: contain; border-radius: 12px; margin-bottom: 14px; box-shadow: 0 8px 20px rgba(0,0,0,0.4); } .map-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 30px; } .map-card { background: rgba(20, 10, 5, 0.7); border: 1px solid rgba(212,154,58,0.35); border-radius: 16px; padding: 18px; text-align: center; } .map-card h3 { color: #f5f0e6; margin-bottom: 8px; } .map-card p { color: #ddd0b0; font-size: 1rem; } .map-card img { width: 220px; height: 120px; object-fit: cover; object-position: center; border-radius: 12px; margin: 0 auto 14px auto; display: block; } @media (max-width: 700px) { h1 { font-size: 2.4rem; } .ellan-player { left: 10px; right: 10px; bottom: 10px; width: auto; } .music-table th:nth-child(3), .music-table td:nth-child(3) { display: none; } .video-grid { grid-template-columns: 1fr; } .map-grid { grid-template-columns: 1fr; } .character-grid { grid-template-columns: 1fr; } }
     </style>
+    <link rel="stylesheet" href="site-navigation.css">
 </head>
 <audio id="backgroundMusic" loop>
     <source src="mp3/ellan_background.mp3" type="audio/mpeg">
 </audio>
 <body>
+    <nav class="site-nav" aria-label="Navigazione principale">
+        <a href="index.html">Home</a>
+        <a href="index.html#giochi">Giochi</a>
+        <a href="video/video.html">Video</a>
+        <a href="compagnia.html">La Compagnia</a>
+        <a href="andrea.html">Chi sono</a>
+    </nav>
     <main class="page"> <img src="images/ellan_logo.png" alt="Ellan – Luce e Ombra" class="logo">
         <h1>Ellan – Luce e Ombra</h1>
         <p class="subtitle"> Un'ambientazione fantasy originale per giochi di ruolo, dove il Mana respira sotto il mondo, gli dèi camminano tra i mortali e la verità sulla storia di Ellan è stata dimenticata da secoli. </p>
+        <div class="start-here">
+            <strong>Sei nuovo a Ellan? Parti dal Quickstarter.</strong>
+            Una prima porta d’ingresso all’ambientazione, prima dei manuali completi.
+            <a href="#manuali">Vai ai manuali e al Quickstarter →</a>
+        </div>
+        <nav class="section-index" aria-label="Esplora le sezioni di Ellan">
+            <a href="#manuali">Manuali</a>
+            <a href="#cronache">Cronache</a>
+            <a href="#gioco-tattico">Gioco tattico</a>
+            <a href="#mappe">Mappe</a>
+            <a href="#personaggi">Personaggi</a>
+            <a href="#video-sigle">Video e sigle</a>
+            <a href="#musica">Musica</a>
+        </nav>
         <section class="section">
             <h2>Cos'è Ellan?</h2>
             <p> Ellan è un mondo fantasy pensato per campagne di gioco di ruolo, nato per raccontare storie di eroi imperfetti, antiche civiltà, magia viva, divinità ambigue e verità sepolte. </p>
@@ -42,7 +64,7 @@
             <p> Stirpi originali, regni, leggende, magia, religioni, fazioni nascoste, figure leggendarie, canzoni popolari, materiali di gioco e strumenti per iniziare subito a vivere Ellan. </p>
         </section>
         <section class="section center">
-            <h2>Biblioteca di Ellan</h2>
+            <h2 id="manuali">Biblioteca di Ellan</h2>
             <p> Manuali, quickstarter, canzoniere e materiali scaricabili raccolti in un unico scaffale. </p>
             <div class="download-grid">
                 <div class="download-card"> <img src="images/copertina_quickstarter.png" alt="Copertina Quickstarter Ellan">
@@ -63,7 +85,7 @@
             </div>            
         </section>
         <section class="section center">
-    <h2>Cronache di Ellan</h2>
+    <h2 id="cronache">Cronache di Ellan</h2>
 
     <p>
         Racconti, leggende e memorie ambientate nel mondo di Ellan.
@@ -82,7 +104,7 @@
     </div>
 </section>
          <section class="section center">
-        <h2>Ellan – Luce e Ombra: Il Gioco Tattico</h2>
+        <h2 id="gioco-tattico">Ellan – Luce e Ombra: Il Gioco Tattico</h2>
 
     <p>
         Un gioco di carte tattico Print & Play ambientato nel mondo di Ellan.
@@ -153,7 +175,7 @@
 </section>
 
         <section class="section center">
-            <h2>Mappe di Ellan</h2>
+            <h2 id="mappe">Mappe di Ellan</h2>
             <p> Dalle vaste terre dei Reami alle gelide Icelands, queste mappe aiutano viaggiatori, cronistorici e avventurieri a orientarsi nel mondo di Ellan. Come per le storie e le leggende, mostrano come il mondo viene percepito piuttosto per come è
                 veramente. </p>
             <div class="map-grid">
@@ -180,7 +202,7 @@
             </div>
         </section>
         <section class="section center">
-            <h2>Personaggi Famosi di Ellan</h2>
+            <h2 id="personaggi">Personaggi Famosi di Ellan</h2>
             <p> Re, regine, eroi, esploratori e comandanti. Questi sono alcuni dei nomi più noti del mondo di Ellan: figure ancora vive, raccontate nelle taverne, studiate dai cronistorici e ricordate nei regni di tutto il continente. </p>
             <div class="character-grid">
                 <div class="character-card"> <img src="images/Pardisan.png" alt="Pardisan Stormblade">
@@ -230,7 +252,7 @@
             <p style="color:#d49a3a;"> Se qualche melodia vi farà sentire di nuovo bambini, allora avranno raggiunto il loro scopo. </p>
         </section>
         <section class="section center">
-            <h2>Video e Sigle di Ellan</h2>
+            <h2 id="video-sigle">Video e Sigle di Ellan</h2>
             <p> Animazioni, sigle e brevi filmati dedicati ai personaggi e alle leggende di Ellan. Alcuni video possono contenere anticipazioni sulla campagna. </p>
             <div class="video-grid">
                 <div class="video-card">
@@ -275,7 +297,7 @@
             </div>
         </section>
         <section class="section center">
-            <h2>Archivio Musicale di Ellan</h2>
+            <h2 id="musica">Archivio Musicale di Ellan</h2>
             <p> Le canzoni di Ellan sono raccolte nel Canzoniere e rappresentano inni, ballate e canti popolari provenienti dai diversi regni del mondo. Premi ascolta per avviare il brano nel player in basso, oppure scarica direttamente l'MP3. </p>
             <table
             class="music-table">

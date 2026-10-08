@@ -372,9 +372,17 @@ footer {
     color: #aaa;
 }
     </style>
+    <link rel="stylesheet" href="site-navigation.css">
 </head>
 
 <body>
+    <nav class="site-nav" aria-label="Navigazione principale">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="index.html#giochi">Giochi</a>
+        <a href="video/video.html">Video</a>
+        <a href="compagnia.html">La Compagnia</a>
+        <a href="andrea.html">Chi sono</a>
+    </nav>
 
     <section class="hero">
 
@@ -389,6 +397,8 @@ footer {
             Giochi, ambientazioni e mondi originali.<br>
             Qui nascono Ellan – Luce e Ombra, ASOS e altri progetti ludici.
         </p>
+
+        <h2 id="giochi" class="project-group-title">Giochi e materiali disponibili</h2>
 
         <div class="projects">
 
@@ -411,7 +421,7 @@ footer {
 </a>
                </div>
     <div class="wip-section">
-    <h2>Work in Progress</h2>
+    <h2 id="in-sviluppo">Giochi in sviluppo</h2>
     <p class="wip-intro">
         Nuovi giochi stanno prendendo forma nel laboratorio della Fenice.
     </p>
@@ -518,6 +528,7 @@ footer {
 
         <div class="future-card">
             <h3>Laboratorio</h3>
+            <span class="preparation-label">In preparazione</span>
             <p>
                 Miniature, mappe, materiali da stampare e risorse per il tavolo.
             </p>
@@ -527,6 +538,7 @@ footer {
 
     <div class="future-card single">
         <h3>Dietro le Quinte</h3>
+        <span class="preparation-label">In preparazione</span>
         <p>
             Diari di sviluppo, ispirazioni, note d'autore e curiosità sui progetti.
         </p>
