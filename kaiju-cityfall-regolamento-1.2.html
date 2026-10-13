@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<title>Kaiju Cityfall — Regolamento v1.2</title>
+<meta name="description" content="Kaiju Cityfall — Regolamento v1.2 — materiale gratuito di Kaiju Cityfall.">
+<link rel="stylesheet" href="site-navigation.css">
+<link rel="stylesheet" href="mobile.css">
+<style>
+body{margin:0;font-family:Georgia,serif;background:radial-gradient(circle at top,#173b27 0%,#080f0b 45%,#030705 100%);color:#f5f0e6}
+main{max-width:900px;margin:auto;padding:40px 22px 80px}
+h1{font-size:clamp(2.1rem,6vw,3.3rem);text-align:center;margin-bottom:8px}
+.subtitle{text-align:center;color:#cce5c5;font-size:1.25rem;margin-bottom:40px}
+h2{color:#85cf78;margin-top:42px;border-bottom:1px solid rgba(133,207,120,.3);padding-bottom:8px}
+h3{color:#cce5c5;margin-top:28px}
+p{line-height:1.7;font-size:1.05rem;white-space:pre-line}
+.back{display:inline-block;margin-top:45px;color:#cce5c5;text-decoration:none}
+.back:hover{color:#85cf78}
+.notice{background:rgba(133,207,120,.08);border-left:4px solid #85cf78;padding:14px 18px;border-radius:8px;margin:25px 0}
+a:focus-visible{outline:3px solid #85cf78;outline-offset:4px}
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Navigazione principale">
+<a href="index.html">Home</a><a href="index.html#giochi">Giochi</a><a href="video/video.html">Video</a><a href="compagnia.html">La Compagnia</a><a href="andrea.html">Chi sono</a>
+</nav>
+<main>
+<div class="notice">Versione online aggiornata. Materiale fan-made gratuito e non ufficiale.</div>
+<h1>KAIJU CITYFALL</h1>
+<p class="subtitle">Regolamento di gioco — Versione 1.2</p>
+<h2>INTRODUZIONE</h2>
+<p>Kaiju Cityfall è un gioco tattico di miniature dedicato a scontri tra kaiju in un ambiente urbano distruttibile. Il sistema privilegia posizione, gestione dell’Energia, uso dello scenario e identità dei singoli kaiju, con danni deterministici e alea ridotta.</p>
+<p>La modalità base è una Battaglia Kaiju uno contro uno. Vince l’ultimo kaiju rimasto in piedi.</p>
+<h2>1. COMPONENTI E CAMPO DI BATTAGLIA</h2>
+<h3>1.1 Componenti</h3>
+<p>Per giocare servono:</p>
+<p>• miniature dei kaiju;</p>
+<p>• una mappa divisa in esagoni;</p>
+<p>• edifici e macerie;</p>
+<p>• segnalini;</p>
+<p>• unità militari neutrali;</p>
+<p>• schede dei kaiju;</p>
+<p>• Carte Straordinarie.</p>
+<p>Il danno non richiede tiri di dado.</p>
+<h3>1.2 Campo di battaglia</h3>
+<p>Gli esagoni regolano movimento, gittate, traiettorie, spinte, collisioni e interazione con gli edifici. I kaiju non hanno orientamento e possono voltarsi liberamente nel proprio esagono.</p>
+<h3>1.3 Occupazione degli esagoni</h3>
+<p>Due unità, due kaiju oppure un kaiju e un’unità militare non possono terminare il proprio movimento nello stesso esagono.</p>
+<p>Eccezioni:</p>
+<p>• un esagono può contenere un edificio e, quando le regole lo consentono, un kaiju può entrarvi distruggendolo o sfondandolo;</p>
+<p>• un kaiju può entrare o attraversare l’esagono occupato da un reparto militare alla stessa quota: il reparto viene eliminato immediatamente e il kaiju può fermarsi nell’esagono o proseguire;</p>
+<p>• capacità specifiche possono consentire di attraversare l’esagono occupato da un altro kaiju, ma non di terminarvi il movimento salvo indicazione esplicita.</p>
+<p>Un kaiju terrestre può calpestare reparti terrestri; un kaiju In Volo può calpestare reparti aerei. Il semplice sorvolo di un reparto terrestre non lo elimina.</p>
+<h3>1.4 Distanza e Raggio</h3>
+<p>La distanza tra due esagoni si misura senza contare l’esagono occupato dal kaiju che agisce. Si parte dal primo esagono adiacente e si conta fino all’esagono del bersaglio, compreso.</p>
+<p>Raggio 1 indica un bersaglio adiacente. Raggio 2 indica un bersaglio con 1 esagono intermedio. Raggio 3 indica un bersaglio con 2 esagoni intermedi, e così via. La stessa regola vale per gittate, capacità, carte e qualsiasi effetto espresso in distanza o raggio.</p>
+<h2>2. SCHEDA DEL KAIJU</h2>
+<p>Ogni kaiju usa le caratteristiche seguenti.</p>
+<h3>2.1 Resistenza (RES)</h3>
+<p>Rappresenta i punti ferita complessivi. Quando la RES raggiunge 0, il kaiju è sconfitto salvo regole speciali.</p>
+<h3>2.2 Corazza (COR)</h3>
+<p>Riduce il danno subito.</p>
+<p>Danno subito = Danno dell’attacco − Corazza, con minimo 0.</p>
+<p>Un attacco può quindi essere completamente annullato dalla Corazza, salvo proprietà specifiche.</p>
+<h3>2.3 Movimento (MOV)</h3>
+<p>Indica il numero massimo di esagoni percorribili con un’Azione di Movimento:</p>
+<p>• 0: immobile;</p>
+<p>• 1: lentissimo;</p>
+<p>• 2: lento;</p>
+<p>• 3: normale;</p>
+<p>• 4: veloce;</p>
+<p>• 5: eccezionale.</p>
+<h3>2.4 Potenza (POT)</h3>
+<p>Rappresenta la forza fisica. Si usa per spinte, sfondamenti, distruzione dello scenario e ogni capacità che richieda un confronto di forza. Non determina direttamente il danno degli attacchi.</p>
+<p>2.4.1 Confronti di Potenza e Sforzo</p>
+<p>Quando due kaiju entrano in un confronto fisico, confrontano la POT. Ciascun giocatore può spendere segretamente da 0 a 2 EN come Sforzo; ogni EN spesa concede +1 POT per quel confronto. Gli Sforzi si rivelano contemporaneamente. Vince il valore più alto; in caso di pareggio prevale il difensore.</p>
+<h3>2.5 Energia (EN) e Recupero Energia (REN)</h3>
+<p>L’Energia alimenta capacità e attacchi che ne prevedono un costo. Ogni scheda indica l’EN massima e il proprio valore di Recupero Energia (REN).</p>
+<p>Durante la Fase Energia, ogni kaiju recupera EN pari al proprio REN, senza superare il valore massimo.</p>
+<p>Esaurimento Energetico — se un kaiju termina il round a 0 EN, nella Fase Energia del round successivo recupera soltanto 1 EN, indipendentemente dal proprio REN. Se termina quel round con almeno 1 EN, dal round seguente torna a recuperare normalmente.</p>
+<p>Le Carte Straordinarie non consumano EN né altre risorse: il loro costo è la carta stessa, che viene scartata dopo l’uso.</p>
+<h3>2.6 Taglia</h3>
+<p>I kaiju regolati da questa versione sono di Taglia Normale e occupano 1 esagono.</p>
+<h3>2.7 Debolezza</h3>
+<p>Ogni kaiju possiede almeno una Debolezza coerente con la propria incarnazione. La Debolezza è descritta sulla scheda e può rappresentare una zona vulnerabile, una condizione sfavorevole, un limite strutturale o una situazione sfruttabile tatticamente.</p>
+<h2></h2>
+<h2>3. ROUND E AZIONI</h2>
+<h3>3.1 Sequenza del round</h3>
+<p>Ogni round è composto da quattro fasi:</p>
+<p>1. Fase Energia — ogni kaiju recupera EN in base al proprio REN e alle regole di Esaurimento Energetico.</p>
+<p>2. Fase Kaiju — i giocatori alternano una singola Azione alla volta.</p>
+<p>3. Fase Umani — si attivano le unità militari neutrali.</p>
+<p>4. Fine Round — si risolvono gli effetti che indicano esplicitamente questa tempistica.</p>
+<h3>3.2 Azioni dei kaiju</h3>
+<p>Ogni kaiju dispone normalmente di 3 Azioni per round.</p>
+<p>Le Azioni generiche sono:</p>
+<p>• Movimento;</p>
+<p>• Attacco;</p>
+<p>• Attivazione di una capacità.</p>
+<p>Altre azioni esistono solo quando una scheda, una Carta Straordinaria o una regola le descrive espressamente.</p>
+<h3>3.3 Attivazione alternata</h3>
+<p>Durante la Fase Kaiju, i giocatori spendono una singola Azione a turno, alternandosi, finché entrambi hanno esaurito le Azioni disponibili.</p>
+<p>Il giocatore che effettua la prima Azione del round si alterna a ogni nuovo round: chi inizia il Round 1 agirà per secondo all’inizio del Round 2, poi di nuovo per primo nel Round 3, e così via.</p>
+<h3>3.4 Ripetizione delle azioni</h3>
+<p>Le Azioni generiche possono essere ripetute nello stesso round, ma uno stesso Attacco Base non può essere usato più di una volta nello stesso round, sia esso fisico o energetico.</p>
+<p>Capacità non classificate come Attacchi Base possono avere un proprio limite di utilizzo indicato sulla scheda.</p>
+<h2>4. COMBATTIMENTO</h2>
+<h3>4.1 Danno</h3>
+<p>Il danno è deterministico. La maggior parte degli attacchi infligge 2 o 3 Danni; valori 4–5 rappresentano attacchi potenti o eccezionali.</p>
+<p>Danno subito = Danno dell’attacco − Corazza, con minimo 0.</p>
+<h3>4.2 Attacchi Base e Capacità Base</h3>
+<p>Gli Attacchi Base sono sempre disponibili, possono essere fisici o energetici e normalmente richiedono 1 Azione. Possono inoltre avere un costo in EN indicato sulla scheda.</p>
+<p>Le Capacità Base sono poteri iconici sempre disponibili e possono richiedere EN. Quando una Capacità Base prevede un costo in EN, il costo minimo è 2 EN, salvo eccezioni esplicite. Le Prese e lo Sforzo nei confronti di POT non sono soggetti a questo minimo.</p>
+<h3>4.3 Prese</h3>
+<p>Una Presa richiede 1 Azione e un bersaglio adiacente. Attaccante e difensore effettuano un confronto di POT usando normalmente le regole di Sforzo. In caso di pareggio prevale il difensore.</p>
+<p>Se la Presa riesce, l’attaccante sceglie immediatamente se Lanciare oppure Trattenere il bersaglio.</p>
+<p>Lanciare — il bersaglio viene immediatamente rilasciato e si risolve il Lancio secondo l’effetto di spostamento previsto dalla Presa o dalla capacità che lo ha generato.</p>
+<p>Trattenere — il bersaglio diventa Afferrato e viene immediatamente sbattuto una volta senza spendere un’Azione aggiuntiva.</p>
+<p>Sbattimento — quando un kaiju sbatte un bersaglio Afferrato, infligge Danno pari alla propria POT. La COR si applica normalmente. Lo Sbattimento non è un Attacco Base, non provoca Spinta né Impatto e il bersaglio rimane Afferrato. Ogni Sbattimento successivo costa 1 Azione.</p>
+<p>Liberarsi — quando può agire, un kaiju Afferrato può spendere 1 Azione per liberarsi automaticamente. Non è richiesto alcun confronto di POT. La condizione Afferrato termina immediatamente.</p>
+<p>Finché un bersaglio è Afferrato, chi lo trattiene non può effettuare una nuova Presa su un altro bersaglio.</p>
+<p>Le Carte Straordinarie rappresentano invece azioni o momenti eccezionali e non sostituiscono le capacità fondamentali della scheda.</p>
+<h3>4.4 Penetra e Penetrazione</h3>
+<p>Penetra — dopo aver applicato normalmente la Corazza, se il Danno risultante è 0, un attacco con Penetra infligge comunque 1 Danno. Penetra non riduce la Corazza e non aumenta il Danno quando l’attacco riesce già a superarla.</p>
+<p>Penetrazione X — riduce di X la Corazza del bersaglio esclusivamente per risolvere quell’attacco. La Corazza effettiva non può scendere sotto 0.</p>
+<h3>4.5 Impatto, spinte e collisioni</h3>
+<p>Alcuni attacchi possiedono Impatto X. Il bersaglio viene spinto fino a X esagoni nella direzione indicata dall’attacco.</p>
+<p>Se il bersaglio viene spinto contro un edificio o un altro kaiju e non può completare la spinta, il kaiju spinto e l’ostacolo subiscono 1 Danno per ogni esagono di Impatto non completato. Il danno da collisione subito da ciascun kaiju viene ridotto normalmente dalla propria COR e può essere ridotto a 0. La spinta si arresta contro l’ostacolo salvo regole speciali.</p>
+<p>Dopo la collisione, il kaiju spinto diventa Rovesciato anche se l’edificio viene distrutto dall’impatto. Se l’ostacolo è un altro kaiju, anche quest’ultimo diventa Rovesciato.</p>
+<h3>4.6 Rovesciato</h3>
+<p>Rovesciato è una condizione distinta da A Terra, che indica semplicemente un kaiju non In Volo.</p>
+<p>Un kaiju Rovesciato:</p>
+<p>• non può effettuare Movimenti o Attacchi;</p>
+<p>• non può effettuare Prese;</p>
+<p>• non può usare capacità attive che comportino movimento, attacco o spinta;</p>
+<p>• deve spendere 1 Azione per rialzarsi.</p>
+<p>Dopo essersi rialzato può utilizzare normalmente le Azioni rimanenti. Le Interruzioni possono essere giocate normalmente salvo indicazione contraria. Un kaiju già Rovesciato può subire normalmente ulteriori danni da collisione, ma non accumula ulteriori costi per rialzarsi.</p>
+<p>Presa contro un bersaglio Rovesciato — quando un kaiju non Rovesciato tenta una Presa contro un kaiju Rovesciato, il bersaglio subisce −1 POT esclusivamente per quel confronto.</p>
+<h3>4.7 Traiettorie, ostacoli e linea di vista</h3>
+<p>Contatto — attacco fisico in corpo a corpo; richiede normalmente adiacenza.</p>
+<p>Movimento/Carica — il kaiju percorre fisicamente la traiettoria. Edifici e ostacoli solidi bloccano il percorso salvo eccezioni esplicite.</p>
+<p>Linea/Proiettile — si traccia una linea diretta di esagoni dall’attaccante al bersaglio. Gli edifici bloccano normalmente il tiro.</p>
+<p>Perforante — l’attacco può attraversare edifici. Ogni edificio attraversato subisce il Danno corrente dell’attacco e riduce di 1 il Danno per tutto ciò che si trova oltre. Se il Danno scende a 0, l’attacco si arresta.</p>
+<p>Linea di vista — gli attacchi a distanza normali richiedono linea di vista libera. Gli edifici bloccano la linea di vista salvo regole specifiche.</p>
+<h2>5. SCENARIO URBANO</h2>
+<h3>5.1 Edifici</h3>
+<p>Gli edifici hanno un valore di Integrità:</p>
+<p>• edificio piccolo: 2;</p>
+<p>• edificio medio: 4;</p>
+<p>• edificio massiccio: 6.</p>
+<p>Quando l’Integrità raggiunge 0, l’edificio viene sostituito da macerie o da un indicatore equivalente.</p>
+<h3>5.2 Attraversamento e Sfondamento</h3>
+<p>Un kaiju terrestre spende 1 MOV per entrare in un esagono libero.</p>
+<p>Entrare o attraversare un esagono occupato da un edificio costa +1 MOV e richiede Sfondamento. Lo Sfondamento infligge all’edificio Danni pari alla POT del kaiju.</p>
+<p>Se l’edificio raggiunge 0 Integrità viene distrutto e il kaiju può entrare nell’esagono. Se l’edificio sopravvive, il kaiju si ferma davanti a esso.</p>
+<h2>6. MOVIMENTO AEREO E VOLO</h2>
+<p>Un kaiju In Volo si trova sopra il profilo degli edifici:</p>
+<p>• ignora edifici e macerie durante il movimento;</p>
+<p>• gli edifici non bloccano la linea di vista verso di lui;</p>
+<p>• il semplice sorvolo non danneggia gli edifici salvo capacità specifiche.</p>
+<p>Una capacità di attacco aereo può consentire di attraversare l’esagono del bersaglio e proseguire oltre se la relativa scheda lo specifica. Quando comporta un impatto corporeo, resta un attacco fisico a contatto diretto.</p>
+<p>Un kaiju capace di volare inizia la partita In Volo oppure A Terra, come indicato dallo scenario. Può spendere 1 Azione per decollare o atterrare senza effettuare movimento.</p>
+<p>Un kaiju Rovesciato non può decollare. Se viene costretto A Terra, perde immediatamente lo stato In Volo e deve spendere 1 Azione per decollare nuovamente.</p>
+<h2>7. FORZE MILITARI NEUTRALI</h2>
+<p>Le unità militari sono neutrali e agiscono nella Fase Umani secondo priorità automatiche.</p>
+<h3>7.1 Scala astratta</h3>
+<p>Una singola miniatura o un segnalino militare rappresenta un reparto, non necessariamente un singolo mezzo. Carri Armati, Elicotteri, Aerei e Maser rappresentano quindi formazioni composte da più mezzi o sistemi d’arma.</p>
+<h3>7.2 Danno e Soppressione</h3>
+<p>Gli attacchi militari ordinari possono essere completamente annullati dalla Corazza.</p>
+<p>Se un attacco militare colpisce un kaiju ma, dopo la Corazza, infligge 0 Danni, assegna comunque 1 segnalino Soppressione.</p>
+<p>Quando un kaiju raggiunge 3 segnalini Soppressione, i segnalini vengono rimossi e il kaiju subisce −1 MOV nel round successivo. Più applicazioni della penalità non si cumulano nello stesso round.</p>
+<p>Le armi speciali possono possedere Penetrazione o altre proprietà indicate sulla propria scheda e possono quindi infliggere Danni reali anche ai kaiju più corazzati.</p>
+<h3>7.3 Minaccia e IA delle unità militari</h3>
+<p>Ogni kaiju accumula Minaccia durante il round:</p>
+<p>• +1 Minaccia per ogni edificio distrutto;</p>
+<p>• +1 Minaccia per ogni reparto militare distrutto;</p>
+<p>• +1 Minaccia se usa almeno una Capacità offensiva che consuma EN;</p>
+<p>• +1 Minaccia se termina la Fase Kaiju entro 2 esagoni da un reparto militare.</p>
+<p>Nella Fase Umani, ogni reparto sceglie come bersaglio il kaiju con la Minaccia più alta. In caso di parità sceglie il kaiju più vicino; se permane la parità, il bersaglio viene determinato casualmente.</p>
+<p>Ogni reparto esegue una sola attivazione per round:</p>
+<p>1. se il bersaglio è in gittata e in linea di vista, attacca;</p>
+<p>2. altrimenti si muove, usando il proprio MOV, verso la posizione più vicina dalla quale potrebbe attaccare il bersaglio prioritario;</p>
+<p>3. se non esiste alcun percorso utile o nessun bersaglio valido, resta fermo.</p>
+<p>La Minaccia viene azzerata alla fine della Fase Umani.</p>
+<h3>7.4 Reparti militari</h3>
+<p>Carri Armati — reparto terrestre ordinario</p>
+<p>MOV 2; Gittata 3; Danno 1; Integrità 1. Richiede linea di vista; gli edifici bloccano il tiro. Se il Danno viene annullato dalla Corazza, applica Soppressione.</p>
+<p>Maser — reparto speciale antikaiju</p>
+<p>MOV 1; Gittata 5; Danno 2; Integrità 1; Penetrazione 1. Richiede linea di vista; gli edifici bloccano il tiro. Se anche dopo la Penetrazione il Danno è 0, applica Soppressione.</p>
+<p>Elicotteri — reparto aereo ordinario</p>
+<p>MOV 4; Gittata 3; Danno 1; Integrità 1. Ignora edifici e macerie durante il movimento. Gli edifici non bloccano la linea di vista verso un kaiju In Volo; contro un kaiju A Terra si applica la normale linea di vista. Se il Danno viene annullato dalla Corazza, applica Soppressione.</p>
+<h3>7.5 Eliminare un reparto militare</h3>
+<p>Un kaiju può eliminare un reparto militare in tre modi:</p>
+<p>• Calpestamento: entrando o attraversando il suo esagono, purché kaiju e reparto si trovino alla stessa quota. Un kaiju terrestre calpesta reparti terrestri; un kaiju In Volo calpesta reparti aerei.</p>
+<p>• Corpo a corpo: se è adiacente al reparto può usare un Attacco Base o un’altra capacità fisica valida. Un kaiju terrestre può colpire un reparto aereo se l’attacco è compatibile con il bersaglio.</p>
+<p>• Attacco a distanza: qualsiasi attacco o capacità che possa legalmente bersagliare il reparto lo elimina se gli infligge almeno 1 Danno.</p>
+<p>Un reparto con Integrità 1 viene rimosso appena perde il proprio punto di Integrità. Il semplice sorvolo di un reparto terrestre da parte di un kaiju In Volo non lo distrugge salvo capacità specifiche.</p>
+<h2>8. CARTE STRAORDINARIE</h2>
+<p>Ogni kaiju possiede un repertorio pubblico di 4–6 Carte Straordinarie. Prima della partita il giocatore ne sceglie 3, che restano segrete all’avversario finché non vengono giocate.</p>
+<p>Le Carte Straordinarie:</p>
+<p>• non costano EN né altre risorse;</p>
+<p>• vengono scartate definitivamente dopo l’uso;</p>
+<p>• sono Interruzioni e possono essere giocate anche durante il turno avversario, dopo che un’Azione è stata dichiarata ma prima che venga risolta;</p>
+<p>• sono limitate a un massimo di 1 Carta Straordinaria giocata da ciascun kaiju per ogni singola Azione.</p>
+<p>Se un’Interruzione rende impossibile l’Azione dichiarata, l’Azione è comunque considerata effettuata e gli eventuali costi già spesi non vengono recuperati.</p>
+<h2>9. CONDIZIONE DI VITTORIA</h2>
+<p>Nella Battaglia Kaiju vince l’ultimo kaiju rimasto in piedi.</p>
+<p>Se entrambi i kaiju raggiungono 0 RES nella stessa risoluzione, il risultato è un doppio KO e quindi un pareggio, salvo diversa regola di scenario.</p>
+<h2>10. RIFERIMENTO RAPIDO</h2>
+<p>Sequenza del round</p>
+<p>1. Fase Energia.</p>
+<p>2. Fase Kaiju.</p>
+<p>3. Fase Umani.</p>
+<p>4. Fine Round.</p>
+<p>Valori principali</p>
+<p>RES = Resistenza.</p>
+<p>COR = Corazza.</p>
+<p>MOV = Movimento.</p>
+<p>POT = Potenza.</p>
+<p>EN = Energia.</p>
+<p>REN = Recupero Energia.</p>
+<p>Regole da ricordare</p>
+<p>• 3 Azioni per kaiju per round, salvo eccezioni.</p>
+<p>• Un’Azione alla volta, alternando i giocatori.</p>
+<p>• Lo stesso Attacco Base non può essere usato due volte nello stesso round.</p>
+<p>• Danno subito = Danno − COR, minimo 0.</p>
+<p>• Penetra garantisce 1 Danno se la COR annulla completamente l’attacco.</p>
+<p>• A 0 EN, nel round successivo si recupera soltanto 1 EN.</p>
+<p>• A 3 Soppressioni: rimuovi i segnalini e applica −1 MOV nel round successivo.</p>
+<p>• Una collisione che interrompe una spinta rende Rovesciato il kaiju coinvolto secondo le regole di Impatto.</p>
+<h2>NOTA SUL PROGETTO</h2>
+<p>Kaiju Cityfall è un progetto fan-made gratuito e non ufficiale. I nomi e i personaggi citati appartengono ai rispettivi titolari dei diritti. Il regolamento è distribuito senza finalità commerciali.</p>
+
+<a class="back" href="kaiju-cityfall.html">← Torna a Kaiju Cityfall</a>
+</main>
+</body></html>
