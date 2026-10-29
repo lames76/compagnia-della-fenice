@@ -1,0 +1,11 @@
+/* Componenti multimediali presenti nella pagina storica Ellan. */
+.music-table { width:100%; border-collapse:collapse; margin-top:25px; }
+.music-table th,.music-table td { border-bottom:1px solid rgba(255,255,255,.12); padding:14px; text-align:center; }
+.music-table th { color:var(--ellan-gold); }
+.music-table td:first-child { text-align:left; color:var(--ellan-text); font-weight:bold; }
+.play-button { cursor:pointer; border:2px solid var(--ellan-gold); background:var(--ellan-card); color:var(--ellan-text); border-radius:8px; padding:8px 14px; font-family:Georgia,serif; font-size:1rem; }
+.play-button:hover { background:var(--ellan-gold); color:var(--ellan-bg); }
+.ellan-player { position:fixed; right:20px; bottom:20px; width:330px; background:rgba(8,8,16,.96); border:1px solid rgba(212,154,58,.6); border-radius:14px; padding:14px; box-shadow:0 8px 25px rgba(0,0,0,.6); z-index:999; }
+.player-title { color:var(--ellan-gold); font-weight:bold; margin-bottom:6px; text-align:center; }
+#currentTrack { font-size:.9rem; color:var(--ellan-muted); text-align:center; margin-bottom:8px; }
+.ellan-player audio { width:100%; }
