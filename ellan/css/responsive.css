@@ -1,0 +1,11 @@
+/* Adattamento smartphone e tablet. Caricare per ultimo. */
+@media (max-width:700px) {
+ h1 { font-size:2.4rem; }
+ .page { padding:25px 14px 110px; }
+ .section { padding:20px; }
+ .ellan-player { left:10px; right:10px; bottom:10px; width:auto; }
+ .music-table th:nth-child(3),.music-table td:nth-child(3) { display:none; }
+ .video-grid,.map-grid,.character-grid { grid-template-columns:1fr; }
+ .ellan-announcement { margin:12px 14px 0; padding:16px; }
+}
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .download-card { transition:none; } }
