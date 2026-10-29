@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <meta name="description" content="Nuovo portale di Ellan — struttura in preparazione.">
+  <title>Portale — Ellan</title>
+  <link rel="icon" href="../images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../site-navigation.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/media.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/portal.css">
+  <script src="js/portal.js" defer></script>
+  <script src="js/music-player.js" defer></script>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Navigazione principale">
+    <a href="../index.html">Home</a>
+    <a href="../ellan.html">Ellan attuale</a>
+  </nav>
+  <header class="portal-header">
+    <img src="../images/optimized/ellan_logo-960.webp" alt="Ellan – Luce e Ombra" width="340" height="auto">
+    <h1>Il mondo di Ellan</h1>
+    <p>Un nuovo modo di esplorare Ellan sta prendendo forma.</p>
+  </header>
+  <main class="page" id="main">
+    <nav class="portal-nav" aria-label="Sezioni del nuovo portale">
+      <a href="#inizio" data-portal-link="inizio">Inizio</a>
+      <a href="#atlante" data-portal-link="atlante">Atlante</a>
+      <a href="#gazzettini" data-portal-link="gazzettini">Gazzettini</a>
+      <a href="#stirpi" data-portal-link="stirpi">Stirpi</a>
+      <a href="#miti" data-portal-link="miti">Miti</a>
+      <a href="#religioni" data-portal-link="religioni">Religioni</a>
+      <a href="#magia" data-portal-link="magia">Magia</a>
+      <a href="#naturalistico" data-portal-link="naturalistico">Natura</a>
+      <a href="#biblioteca" data-portal-link="biblioteca">Biblioteca</a>
+    </nav>
+    <section class="section portal-panel" data-portal-panel="inizio"><h2 tabindex="-1">Benvenuti su Ellan</h2><p>Questa è una struttura sperimentale, non ancora collegata dal sito principale. Scegli una sezione per provarne la navigazione senza interruzioni musicali.</p></section>
+    <section class="section portal-panel" data-portal-panel="atlante" hidden><h2 tabindex="-1">Atlante</h2><p>Qui troverà posto la cartina interattiva dei regni e delle creature.</p></section>
+    <section class="section portal-panel" data-portal-panel="gazzettini" hidden><h2 tabindex="-1">Gazzettini</h2><p>Qui verranno collegati i Gazzettini geografici, con lettura web e PDF.</p></section>
+    <section class="section portal-panel" data-portal-panel="stirpi" hidden><h2 tabindex="-1">Stirpi</h2><p>Le schede delle stirpi e i collegamenti ai loro miti.</p></section>
+    <section class="section portal-panel" data-portal-panel="miti" hidden><h2 tabindex="-1">Miti e leggende</h2><p>I racconti tramandati dai popoli di Ellan.</p></section>
+    <section class="section portal-panel" data-portal-panel="religioni" hidden><h2 tabindex="-1">Religioni</h2><p>Fedi, culti e credenze del mondo conosciuto.</p></section>
+    <section class="section portal-panel" data-portal-panel="magia" hidden><h2 tabindex="-1">Magia</h2><p>La magia come viene studiata e percepita dagli abitanti.</p></section>
+    <section class="section portal-panel" data-portal-panel="naturalistico" hidden><h2 tabindex="-1">Manuale naturalistico</h2><p>Flora e fauna, creature e ambienti di Ellan.</p></section>
+    <section class="section portal-panel" data-portal-panel="biblioteca" hidden><h2 tabindex="-1">Biblioteca</h2><p>Guide, manuali pubblici e documenti scaricabili.</p></section>
+  </main>
+  <div class="portal-music" role="group" aria-label="Colonna sonora di Ellan">
+    <audio id="ellan-music" src="../mp3/ellan_background.mp3" loop preload="none"></audio>
+    <button id="music-toggle" type="button" aria-pressed="false">▶ Ascolta Ellan</button>
+    <label for="music-volume">Volume <input id="music-volume" type="range" min="0" max="1" step="0.05" value="0.35"></label>
+    <small id="music-status" aria-live="polite">Musica in pausa</small>
+  </div>
+</body>
+</html>
