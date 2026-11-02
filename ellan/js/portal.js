@@ -1,7 +1,7 @@
 /* Ellan: navigazione interna senza ricaricare il documento, così l'audio rimane attivo. */
 (() => {
   'use strict';
-  const sections = new Set(['inizio','atlante','gazzettini','stirpi','miti','religioni','magia','naturalistico','biblioteca']);
+  const sections = new Set(['inizio','atlante','gazzettini','personaggi','stirpi','miti','religioni','magia','naturalistico','biblioteca']);
   const panels = [...document.querySelectorAll('[data-portal-panel]')];
   const links = [...document.querySelectorAll('[data-portal-link]')];
   function navigate() {
