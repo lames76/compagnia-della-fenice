@@ -9,8 +9,11 @@ Aggiornato il 4 novembre 2026. Nota editoriale per continuare la revisione; **no
 - Marchk Ombralunare — Fenice.
 - Holdrin Ombralunare — Starlight.
 
+## Altri segnaposto approvati e creati
+- Menion Ravenlock — Alto Legato di Yatandra; approvato e creato il 4 novembre 2026.
+
 ## Da proporre singolarmente, chiedendo conferma **prima** di ogni pagina
-- Menion Ravenlock — Alto Legato di Yatandra; candidato prioritario, **non ancora approvato**.
+
 - Tyna Silverhawk — Yatandra; da valutare.
 - Rowena — Yatandra; da valutare.
 - Alaric di Kort — Yatandra; da valutare.
