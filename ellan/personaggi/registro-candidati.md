@@ -12,6 +12,7 @@ Aggiornato il 4 novembre 2026. Nota editoriale per continuare la revisione; **no
 ## Altri segnaposto approvati e creati
 - Menion Ravenlock — Alto Legato di Yatandra; approvato e creato il 4 novembre 2026.
 - Berto e Manola — Silverdown; una sola scheda condivisa, approvata e creata il 4 novembre 2026.
+- Cassandra — capitana dei Fulmini di Silverdown; scheda autonoma approvata e creata il 4 novembre 2026. Non sviluppare ancora il mistero delle sue origini.
 
 ## Da proporre singolarmente, chiedendo conferma **prima** di ogni pagina
 
@@ -19,7 +20,7 @@ Aggiornato il 4 novembre 2026. Nota editoriale per continuare la revisione; **no
 
 
 ## Esclusi o rinviati per decisione dell'autore
-- Cassandra — Silverdown; decisione sulla scheda rinviata, resta nel gazzettino.
+
 - Kelen Silverhawk — NON creare scheda: è sufficiente il Gazzettino di Yatandra.
 - Roland Stormblade — NON creare scheda: è sufficiente il Gazzettino di Silverdown.
 - Lucifer Forter — RINVIARE: l'autore deve ancora decidere se mantenere o sostituire il personaggio. Non creare il segnaposto senza nuova conferma.
