@@ -40,3 +40,10 @@ Aggiornato il 4 novembre 2026. Nota editoriale per continuare la revisione; **no
 
 ## Criterio redazionale
 Si creano schede autonome solo se c'è una reale esigenza narrativa oltre il gazzettino. Per ogni nuovo personaggio chiedere espressamente conferma, uno per volta. I segreti del Master restano fuori dalle pagine pubbliche.
+
+## Classificazione cromatica delle schede (decisione 4 novembre 2026)
+- **Blu — Protagonisti enciclopedici**: personaggi molto approfonditi, da interpretare coerentemente. Classificati e colorati: Pardisan Stormblade, Liselle Silverhawk, Marlene Stormblade.
+- **Verde — Agganci narrativi**: personaggi caratteristici con spunti aperti al Master; non riempire arbitrariamente le lacune del passato. Categoria disponibile, ma nessuna assegnazione automatica.
+- **Rosso — Deceduti**: il simbolo † resta accanto al nome, a prescindere dal colore, per accessibilità. Non classificare come certamente deceduto chi ha sorte incerta (per esempio Lir-Lir-Tu ◇).
+- **Oro — Da classificare**: stato predefinito delle altre schede; NON interpretarlo come giudizio di importanza.
+- **Promemoria obbligatorio**: quando iniziamo a compilare la biografia di un personaggio, prima di considerarla pronta, proporre e decidere **insieme all'autore** il colore del suo pulsante (blu, verde, rosso o oro), motivando la scelta sulla base del ruolo narrativo. Non usare automaticamente il rango politico per scegliere il colore.
