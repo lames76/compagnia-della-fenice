@@ -21,3 +21,23 @@
  .portal-music small { width:100%; text-align:center; }
  .portal-panel { margin-bottom:140px; }
 }
+
+/* Tipologie narrative per la sezione Personaggi: il colore non sostituisce le etichette. */
+.portal-panel[data-portal-panel="personaggi"] .character-legend { margin:18px 0 20px;padding:15px 18px;border:1px solid var(--ellan-border);border-radius:12px;background:var(--ellan-card); }
+.portal-panel[data-portal-panel="personaggi"] .character-legend p { margin:0 0 10px; }
+.portal-panel[data-portal-panel="personaggi"] .character-legend ul { list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:8px 14px; }
+.portal-panel[data-portal-panel="personaggi"] .character-legend li { display:flex;align-items:center;gap:8px;font-size:.92rem; }
+.portal-panel[data-portal-panel="personaggi"] .character-swatch { display:inline-block;width:16px;height:16px;border-radius:5px;border:2px solid currentColor;flex:none; }
+.portal-panel[data-portal-panel="personaggi"] .character-swatch--blue { background:#214f82;color:#81bfff; }
+.portal-panel[data-portal-panel="personaggi"] .character-swatch--green { background:#225c45;color:#82d2a9; }
+.portal-panel[data-portal-panel="personaggi"] .character-swatch--red { background:#7b2835;color:#f29aa5; }
+.portal-panel[data-portal-panel="personaggi"] .character-swatch--gold { background:#55401a;color:#e4b866; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--blue { border-color:#81bfff;background:#17395f;color:#e6f3ff; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--blue:hover,
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--blue:focus-visible { background:#3974ae;color:#fff; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--green { border-color:#82d2a9;background:#194a37;color:#e6fff1; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--green:hover,
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--green:focus-visible { background:#327d59;color:#fff; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--red { border-color:#f29aa5;background:#642330;color:#fff0f0; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--red:hover,
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--red:focus-visible { background:#a83d50;color:#fff; }
