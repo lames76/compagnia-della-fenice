@@ -26,3 +26,15 @@
 .ellan-announcement { max-width:1050px; margin:18px auto 0; padding:18px 22px; border:1px solid var(--ellan-gold); border-radius:12px; background:linear-gradient(135deg,#252012,#101019); color:var(--ellan-text); text-align:center; box-shadow:0 0 22px rgba(212,154,58,.14); }
 .ellan-announcement strong { display:block; color:#edbc68; font-size:1.12rem; letter-spacing:.035em; margin-bottom:7px; }
 .ellan-announcement p { margin:0; line-height:1.55; font-size:1rem; }
+
+/* Gallerie illustrate dei personaggi — Ellan 3.0 */
+.ellan-character-gallery{margin:24px auto 34px;max-width:860px;text-align:center}
+.ellan-character-gallery .ellan-character-main{display:block;width:min(370px,100%);height:auto;max-height:510px;object-fit:contain;margin:0 auto 14px;border-radius:14px;border:1px solid var(--ellan-border);box-shadow:0 8px 24px #0005}
+.ellan-character-gallery details{margin-top:15px;padding:12px;border:1px solid var(--ellan-border);border-radius:12px;background:var(--ellan-panel)}
+.ellan-character-gallery summary{cursor:pointer;color:var(--ellan-gold);font-weight:650}
+.ellan-character-gallery .ellan-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(125px,1fr));gap:12px;margin:18px 0 4px}
+.ellan-character-gallery .ellan-gallery-grid a{display:block}
+.ellan-character-gallery .ellan-gallery-grid img{width:100%;height:158px;object-fit:contain;background:#0003;border-radius:9px}
+.ellan-character-gallery figcaption{font-size:.9rem;color:var(--ellan-muted);margin:8px 0}
+.ellan-silverdown-audio{margin:22px auto 30px;padding:20px;background:var(--ellan-panel);border:1px solid var(--ellan-border);border-radius:14px;text-align:center;max-width:650px}
+.ellan-silverdown-audio audio{display:block;width:100%;margin:12px auto}
