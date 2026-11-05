@@ -41,3 +41,9 @@
 .portal-panel[data-portal-panel="personaggi"] .button.character-type--red { border-color:#f29aa5;background:#642330;color:#fff0f0; }
 .portal-panel[data-portal-panel="personaggi"] .button.character-type--red:hover,
 .portal-panel[data-portal-panel="personaggi"] .button.character-type--red:focus-visible { background:#a83d50;color:#fff; }
+
+/* Personaggi viola: segreti conservati nel Manuale del Master. */
+.portal-panel[data-portal-panel="personaggi"] .character-swatch--purple { background:#532c77;color:#d3a7fa; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--purple { border-color:#d3a7fa;background:#482365;color:#f7ebff; }
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--purple:hover,
+.portal-panel[data-portal-panel="personaggi"] .button.character-type--purple:focus-visible { background:#7946a4;color:#fff; }
