@@ -47,3 +47,16 @@
 .portal-panel[data-portal-panel="personaggi"] .button.character-type--purple { background-color:#7e22ce; border-color:#c084fc; color:#fff; }
 .portal-panel[data-portal-panel="personaggi"] .button.character-type--purple:hover,
 .portal-panel[data-portal-panel="personaggi"] .button.character-type--purple:focus-visible { background-color:#9333ea; border-color:#e9d5ff; color:#fff; }
+
+/* Anteprime cartografiche dell'Atlante */
+.portal-panel[data-portal-panel="atlante"]{max-width:980px}
+.atlas-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:26px 0 10px}
+.atlas-card{display:flex;flex-direction:column;align-items:flex-start;padding:18px;background:var(--ellan-card);border:1px solid var(--ellan-border);border-radius:14px;min-width:0}
+.atlas-card>a:first-child{width:100%;display:flex;justify-content:center;align-items:center;min-height:250px;background:rgba(0,0,0,.12);border-radius:10px;overflow:hidden}
+.atlas-card img{display:block;width:100%;height:290px;object-fit:contain;transition:transform .18s ease}
+.atlas-card>a:first-child:hover img{transform:scale(1.025)}
+.atlas-card h3{color:var(--ellan-gold);margin:14px 0 4px}
+.atlas-card p{margin:7px 0 12px;line-height:1.6}
+.atlas-card p:last-child{margin-top:auto}
+.atlas-card .button{font-size:.94rem}
+@media(max-width:650px){.atlas-grid{grid-template-columns:1fr}.atlas-card img{height:330px}}
