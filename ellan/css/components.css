@@ -38,3 +38,14 @@
 .ellan-character-gallery figcaption{font-size:.9rem;color:var(--ellan-muted);margin:8px 0}
 .ellan-silverdown-audio{margin:22px auto 30px;padding:20px;background:var(--ellan-panel);border:1px solid var(--ellan-border);border-radius:14px;text-align:center;max-width:650px}
 .ellan-silverdown-audio audio{display:block;width:100%;margin:12px auto}
+
+/* Atlante e cartografia dei Gazzettini */
+.ellan-gazette-map{max-width:850px;margin:24px auto 36px;text-align:center}
+.ellan-gazette-map img{display:block;width:100%;height:auto;max-height:650px;object-fit:contain;border:1px solid var(--ellan-border);border-radius:14px;background:rgba(255,255,255,.03)}
+.ellan-gazette-map figcaption{margin-top:9px;color:var(--ellan-muted);font-size:.92rem}
+.ellan-gazette-map a{color:#edbc68}
+.ellan-atlas-main{max-width:1000px;margin:24px auto}
+.ellan-atlas-main img{display:block;width:100%;height:auto;max-height:85vh;object-fit:contain;border-radius:14px;border:1px solid var(--ellan-border);background:#101016}
+.ellan-atlas-links{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:10px;margin:18px 0 28px}
+.ellan-atlas-links a{padding:11px 12px;text-align:center;border:1px solid var(--ellan-border);border-radius:10px;background:var(--ellan-panel);color:#edbc68;text-decoration:none}
+.ellan-atlas-links a:hover,.ellan-atlas-links a:focus-visible{border-color:var(--ellan-gold);background:rgba(212,154,58,.12)}
