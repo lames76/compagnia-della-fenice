@@ -19,7 +19,8 @@
     .nalle-home {max-width:850px; margin:0 auto;}
     .nalle-home h2 {color:var(--ellan-gold);}
     .nalle-cards {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px;}
-    .nalle-card {background:var(--ellan-card);border:1px solid var(--ellan-border);padding:20px;border-radius:14px;}
+    .nalle-card {display:block;text-decoration:none;color:inherit;background:var(--ellan-card);border:1px solid var(--ellan-border);padding:20px;border-radius:14px;}
+    .nalle-card:hover{border-color:var(--ellan-gold);background:rgba(212,154,58,.08)}
     .nalle-card h3 {margin:0 0 10px;color:var(--ellan-gold);}
     .nalle-card p {font-size:1rem;margin:0;color:var(--ellan-muted);}
     .nalle-note {color:var(--ellan-muted);font-style:italic;}
@@ -45,15 +46,21 @@
       <p>La storia che i giocatori conoscono è soltanto una parte della storia di Ellan. Qui potrai esplorare ciò che si cela dietro le leggende, senza togliere ai personaggi il piacere di scoprirlo da sé.</p>
     </section>
     <section class="section" aria-labelledby="contenuti">
-      <h2 id="contenuti">La biblioteca del Master</h2>
-      <p>Stiamo organizzando i materiali in sezioni che saranno collegate da questa pagina man mano che verranno completate.</p>
+      <h2 id="contenuti">Biblioteca del Master</h2>
+      <p>Le prime pagine riservate di Nalle sono consultabili qui sotto. Ogni scheda contiene informazioni che non devono essere anticipate ai giocatori.</p>
+      <h3>Fronti di Ellan</h3>
       <div class="nalle-cards">
-        <div class="nalle-card"><h3>Manuale del Master</h3><p>Regole, indicazioni e strumenti per condurre le sessioni.</p></div>
-        <div class="nalle-card"><h3>Segreti di Ellan</h3><p>Storia nascosta, misteri e verità riservate al Master.</p></div>
-        <div class="nalle-card"><h3>Personaggi e retroscena</h3><p>Obiettivi segreti e approfondimenti dei personaggi dell'ambientazione.</p></div>
-        <div class="nalle-card"><h3>Avventure e strumenti</h3><p>Spunti, campagne, incontri e materiali da usare al tavolo.</p></div>
+        <a class="nalle-card" href="fronti/eterni.html"><h3>Gli Eterni</h3><p>Il Re Bianco, il Marchio dell'Infinito e la Culla.</p></a>
+        <a class="nalle-card" href="fronti/dissidenti-silenti.html"><h3>I Dissidenti Silenti</h3><p>La ribellione contro il Patto e i Reggenti Bianchi.</p></a>
+        <a class="nalle-card" href="fronti/ellantil-conservatori.html"><h3>Ellantil Conservatori</h3><p>I Tradizionalisti dell'Archivio e il prezzo della memoria.</p></a>
+        <a class="nalle-card" href="fronti/ellantil-progressisti.html"><h3>Ellantil Progressisti</h3><p>La Lontananza, il cambiamento e il ritorno all'azione.</p></a>
       </div>
-      <p class="nalle-note">Le sezioni verranno aperte progressivamente, dopo la revisione del materiale originale.</p>
+      <h3>La verità dietro Ellan</h3>
+      <div class="nalle-cards">
+        <a class="nalle-card" href="storia/vera-storia.html"><h3>La Vera Storia</h3><p>Dalla Prima Catastrofe ai Primari, fino all'arrivo dei Noren.</p></a>
+        <a class="nalle-card" href="stirpi/ellantil.html"><h3>Gli Ellantil</h3><p>La civiltà perduta, il popolo di Ellanor e l'Archivio.</p></a>
+      </div>
+      <p class="nalle-note">Queste sono le prime sei schede della sezione Master. Le restanti saranno sviluppate gradualmente.</p>
     </section>
   </main>
 </body>
