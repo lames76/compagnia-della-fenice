@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Regolamento di Mutant School per 2–4 giocatori, con scenario e materiali testuali per la prima partita.">
+<meta name="color-scheme" content="dark light">
+<title>Mutant School — Regolamento di gioco v0.3</title>
+<link rel="icon" type="image/png" href="../images/favicon.png">
+<style>
+:root{color-scheme:dark;--bg:#0b0b14;--surface:#161622;--paper:#f5f0e6;--soft:#d4cbbc;--accent:#ffce73;--line:#4f4b53;--ink:#131018}
+*{box-sizing:border-box}
+html{scroll-padding-top:1.1rem}
+body{margin:0;background:var(--bg);color:var(--paper);font:1.05rem/1.68 system-ui,sans-serif}
+a{color:var(--accent);text-decoration-thickness:.08em;text-underline-offset:.2em}
+a:hover{text-decoration-thickness:.15em}
+:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.skip{position:absolute;inset-inline-start:1rem;transform:translateY(-140%);background:var(--bg);padding:.7rem;z-index:2}
+.skip:focus{transform:translateY(.5rem)}
+.frame{width:min(100% - 2rem,68rem);margin-inline:auto}
+header{padding:1.25rem 0 2.25rem;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at top right,#352445,transparent 72%),var(--surface)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.92rem}
+.kicker{margin:2.5rem 0 .45rem;color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.82rem}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.16}
+h1{margin:0;font-size:clamp(2.8rem,10vw,6rem);letter-spacing:-.04em}
+.lead{font-size:1.17rem;color:var(--soft);max-width:63ch;margin-bottom:0}
+main{padding-block:1.75rem 3rem}
+p{max-width:76ch}
+.index{background:var(--surface);border:1px solid var(--line);border-radius:.75rem;padding:.9rem 1.2rem 1.2rem;margin:1.6rem 0 2.4rem}
+.index h2{margin:.2rem 0 .8rem;font-size:1.4rem}
+.index ol{margin:0;columns:2;column-gap:2rem;padding-left:1.4rem}
+.index li{break-inside:avoid;margin:.25rem 0}
+section{margin-block:2.6rem}
+section h2{color:var(--accent);margin:.1rem 0 1rem;font-size:clamp(1.6rem,4vw,2.2rem)}
+h3{font-size:1.4rem;margin:1.6rem 0 .55rem}
+li+li{margin-top:.3rem}
+.example{background:var(--surface);border-inline-start:.23rem solid var(--accent);padding:.75rem 1rem}
+.pt{color:var(--accent);font-size:.92em;font-weight:650}
+.table-wrap{max-width:100%;overflow:auto;margin:1rem 0 1.5rem;border:1px solid var(--line);border-radius:.5rem}
+table{width:100%;border-collapse:collapse;font-size:.95rem;background:var(--surface)}
+caption{text-align:left;font-weight:700;padding:.65rem .8rem;color:var(--paper)}
+th,td{border-top:1px solid var(--line);padding:.6rem .75rem;text-align:left;vertical-align:top}
+thead th{color:var(--accent);background:var(--bg)}
+tbody th{font-weight:650}
+.back{padding-top:1rem;border-top:1px solid var(--line)}
+@media(max-width:40rem){.index ol{columns:1}th,td{padding:.5rem .65rem}}
+@media print{
+ :root{color-scheme:light;--bg:white;--surface:white;--paper:#111;--soft:#333;--accent:#111;--line:#888}
+ body{font-size:10pt}.frame{width:100%}header{background:white;padding:0 0 1rem}.skip,.top,.back{display:none}
+ main{padding:0}.index{border:0;padding:0;margin:1rem 0}h1{font-size:34pt}.kicker{margin:0 0 .4rem}
+ section{margin-block:1.4rem}h2,h3,caption{break-after:avoid}.table-wrap{overflow:visible}
+ table{font-size:9pt}thead{display:table-header-group}tr,.example{break-inside:avoid}a{color:#111}
+}
+</style>
+</head>
+<body id="inizio">
+<a class="skip" href="#manuale">Vai al regolamento</a>
+<header>
+<div class="frame">
+<nav class="top" aria-label="Navigazione del progetto"><a href="../mutant-school.html">← Pagina di Mutant School</a><a href="#indice">Indice del regolamento</a></nav>
+<p class="kicker">Regolamento v0.3 · Edizione playtest</p>
+<h1>Mutant School</h1>
+<p class="lead">Dirigi un’Accademia per giovani mutanti. Recluta allievi e docenti, allena i poteri, competi nelle Prove e difendi la scuola quando la paura del pubblico diventa una Crisi.</p>
+</div>
+</header>
+<main id="manuale" class="frame" tabindex="-1">
+<nav id="indice" class="index" aria-label="Indice"><h2>Indice</h2><ol>
+<li><a href="#sezione-1">Obiettivo e materiale</a></li>
+<li><a href="#sezione-2">Preparare il tavolo</a></li>
+<li><a href="#sezione-3">Un Anno di Studi, in ordine</a></li>
+<li><a href="#sezione-4">Personaggi e Insegnamento</a></li>
+<li><a href="#sezione-5">La Prova dell’anno</a></li>
+<li><a href="#sezione-6">Paranoia, Crisi e KO</a></li>
+<li><a href="#sezione-7">I 16 Upgrade</a></li>
+<li><a href="#sezione-8">I quattro Presidi</a></li>
+<li><a href="#sezione-9">Scenario pronto da provare</a></li>
+<li><a href="#sezione-10">Promemoria da tavolo</a></li>
+</ol></nav>
+<p>2–4 giocatori, una scuola a testa. Compagnia della Fenice. Questa edizione include uno scenario di prima partita e schede testuali da copiare su biglietti. Le regole e i valori segnati con <span class="pt">[PT]</span> sono provvisori di playtest, non decisioni definitive.</p>
+<section aria-labelledby="sezione-1"><h2 id="sezione-1">1. Obiettivo e materiale</h2>
+<p>Vince la scuola con più Prestigio alla fine dell’ultimo Anno di Studi. Il Prestigio è sia il punteggio sia la valuta con cui paghi reclute, edifici e deviazioni delle Crisi. La Paranoia è invece un unico valore condiviso: cresce con il tempo e con le azioni delle scuole.</p>
+<p>Occorrente: almeno un dado a sei facce (d6), carta, matita e segnalini o crocette per contare Prestigio, aumenti delle caratteristiche, progressi e stati. Usa biglietti separati per Studenti, Professori, Carte Piano e valori delle Crisi, oppure numera le tabelle e usa un’estrazione casuale. Gli Upgrade e i Presidi possono essere annotati su un foglio personale.</p>
+</section>
+<section aria-labelledby="sezione-2"><h2 id="sezione-2">2. Preparare il tavolo</h2>
+<ol>
+<li>Ogni giocatore sceglie un Preside diverso oppure ne riceve uno a caso. Scrivi 10 Prestigio sul foglio della scuola. Parti senza Upgrade.</li>
+<li>Mescola separatamente Studenti e Professori. Dai a ciascuno 2 Studenti e 1 Professore casuali, gratis <span class="pt">[PT per il metodo di assegnazione del Professore]</span>. Il limite iniziale è di 4 Studenti e 2 Professori.</li>
+<li>Metti la Paranoia a 0. Prepara il mazzo comune delle 12 Carte Piano e i quattro mazzi Crisi. Scegli un primo giocatore a caso <span class="pt">[PT]</span>.</li>
+<li>Per la prima partita gioca 6 Anni di Studi <span class="pt">[PT]</span>. Dopo l’eventuale Crisi del sesto anno confronta il Prestigio rimasto. Le scuole in testa a pari merito condividono la vittoria <span class="pt">[PT]</span>.</li>
+</ol>
+</section>
+<section aria-labelledby="sezione-3"><h2 id="sezione-3">3. Un Anno di Studi, in ordine</h2>
+<div class="table-wrap" role="region" aria-labelledby="tabella-1" tabindex="0">
+<table><caption id="tabella-1">Le sette fasi dell’Anno</caption><thead><tr><th scope="col">Fase</th><th scope="col">Cosa si fa</th></tr></thead>
+<tbody><tr><th scope="row">1 · Inizio Anno</th><td>Aumenta la Paranoia di 1. Ogni scuola incassa 3 Prestigio <span class="pt">[PT]</span> più le rendite previste. Ripristina le abilità «una volta per Anno».</td></tr>
+<tr><th scope="row">2 · Upgrade</th><td>Costruisci o ricostruisci gli Upgrade che vuoi e puoi pagare.</td></tr>
+<tr><th scope="row">3 · Reclutamento</th><td>Metti all’asta Studenti, poi Professori.</td></tr>
+<tr><th scope="row">4 · Insegnamento I</th><td>Assegna gli allievi ai docenti, tira e segna i progressi.</td></tr>
+<tr><th scope="row">5 · Prova</th><td>Rivela la Prova, scegli i Piani e schiera gli Studenti. Risolvi e assegna il Prestigio.</td></tr>
+<tr><th scope="row">6 · Insegnamento II</th><td>Ripeti l’Insegnamento. I personaggi KO non sono disponibili.</td></tr>
+<tr><th scope="row">7 · Fine Anno</th><td>Risolvi l’eventuale Crisi. Poi rimuovi i KO in scadenza e le penalità che durano fino a fine anno. Dopo il sesto anno calcola la vittoria.</td></tr></tbody></table></div>
+<p><span class="pt">[PT]</span> Quando conta l’ordine, parti dal primo giocatore e continua in senso orario. Passa il segnalino al vicino di sinistra a fine anno. La scelta degli Studenti in Prova è sempre segreta e simultanea.</p>
+<h3>Upgrade e aste</h3>
+<p>In fase Upgrade puoi effettuare più acquisti se hai Prestigio sufficiente <span class="pt">[PT]</span>. Un Upgrade costa 5 Prestigio. Costruirlo o ricostruirlo aumenta la Paranoia di 1 <span class="pt">[PT per la ricostruzione]</span>. Non puoi possedere due copie dello stesso Upgrade. L’Officina tecnologica riduce la ricostruzione a 3 Prestigio.</p>
+<p>Rivela N−1 Studenti e poi N−1 Professori, dove N è il numero di giocatori. Se ci sono meno carte, rivela quelle disponibili. Metti in asta una carta alla volta, nell’ordine di rivelazione <span class="pt">[PT]</span>. L’apertura deve raggiungere il prezzo minimo. A turno rilancia di almeno 1 o passa per quella carta. Quando rimane un solo offerente, paga l’offerta e prende la carta. Se tutti passano, la carta va in fondo al mazzo <span class="pt">[PT]</span>.</p>
+<p>Puoi vincere più Studenti nella stessa fase, ma al massimo un Professore. Non puoi offrire più del tuo Prestigio né partecipare a un’asta se non hai posto. I KO occupano ancora un posto. Il Prestigio non scende sotto zero <span class="pt">[PT]</span>.</p>
+</section>
+<section aria-labelledby="sezione-4"><h2 id="sezione-4">4. Personaggi e Insegnamento</h2>
+<p>Uno Studente ha quattro valori di gioco. La Potenza indica quanto contribuisce se controlla il potere. Il Controllo evita incidenti. La Disciplina permette di seguire il Piano. La Cooperazione premia il lavoro di squadra. Il Talento fissa il limite permanente della Potenza.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-2" tabindex="0">
+<table><caption id="tabella-2">Limiti di Potenza e prezzi base</caption><thead><tr><th scope="col">Talento</th><th scope="col">Potenza massima</th><th scope="col">Asta base [PT]</th></tr></thead>
+<tbody><tr><th scope="row">Delta</th><td>2</td><td>2</td></tr>
+<tr><th scope="row">Gamma</th><td>3</td><td>3</td></tr>
+<tr><th scope="row">Beta</th><td>4</td><td>4</td></tr>
+<tr><th scope="row">Alpha</th><td>5</td><td>6</td></tr>
+<tr><th scope="row">Omega</th><td>6</td><td>8</td></tr></tbody></table></div>
+<p>Per un test tira 1d6: riesci se il risultato è pari o inferiore al valore effettivo. Il valore 0 non può riuscire e con 6 o più si riesce sempre. Per un ritiro usa il nuovo risultato <span class="pt">[PT]</span>. I modificatori temporanei non cambiano il valore permanente sulla scheda.</p>
+<ol>
+<li>Assegna gli Studenti ai Professori disponibili. Un allievo può seguire più Professori nella stessa fase, ma con ciascuno riceve una sola lezione. Didattica 1–2 permette di seguire 1 Studente, 3–4 ne permette 2, 5–6 ne permette 3.</li>
+<li>Ogni Professore sceglie una sola caratteristica per tutta la sua classe. L’Insegnamento ordinario è gratuito. La specializzazione non impedisce di insegnare altre caratteristiche <span class="pt">[PT]</span>.</li>
+<li>Per ogni Studente assegnato, il Professore tira contro la propria Didattica. Ogni successo dà 1 progresso, a meno che l’abilità del docente indichi altro. Risolvi un docente alla volta nell’ordine scelto dalla scuola <span class="pt">[PT]</span>.</li>
+<li>Tieni separati i progressi di ogni caratteristica. Ogni volta che raggiungi la soglia, spendi i progressi richiesti e aumenta il valore di 1. Conserva gli eventuali progressi avanzati. Potenza non supera il limite del Talento, le altre caratteristiche non superano 6.</li>
+</ol>
+<div class="table-wrap" role="region" aria-labelledby="tabella-3" tabindex="0">
+<table><caption id="tabella-3">Soglie di crescita</caption><thead><tr><th scope="col">Caratteristica</th><th scope="col">Progressi per +1</th><th scope="col">Riduzioni</th></tr></thead>
+<tbody><tr><th scope="row">Potenza</th><td>3</td><td>2 con Palestra</td></tr>
+<tr><th scope="row">Controllo</th><td>3</td><td>2 con Aula di Controllo</td></tr>
+<tr><th scope="row">Disciplina</th><td>3</td><td>2 con Sala di Meditazione o Shame. Con Pride non si guadagnano progressi in Disciplina <span class="pt">[PT]</span>.</td></tr>
+<tr><th scope="row">Cooperazione</th><td>2</td><td>Nessuna</td></tr></tbody></table></div>
+<p class="example">Esempio. Uno Studente ha già 1 progresso di Potenza. Wolverine riesce nella lezione di Potenza e gliene dà 2. A quota 3 aumenta la Potenza di 1, se il Talento lo consente. Con un fallimento non guadagna progressi e subisce −1 Controllo fino a fine Anno, quindi la penalità può contare anche nella Crisi di Fine Anno.</p>
+</section>
+<section aria-labelledby="sezione-5"><h2 id="sezione-5">5. La Prova dell’anno</h2>
+<p>Usa l’esercitazione di <a href="#sezione-9">§9</a> se non hai una carta Prova. I Professori non partecipano alle Prove ordinarie, salvo una regola specifica. Ogni scuola può schierare da 0 a 4 Studenti disponibili. Una scuola senza squadra totalizza 0 e non riceve ricompense <span class="pt">[PT]</span>.</p>
+<ol>
+<li>Dal mazzo comune rivela N+1 Piani. Partendo dalla scuola con meno Prestigio, ciascuno può scegliere un solo Piano, gratis. Per le parità usa l’ordine di tavolo <span class="pt">[PT]</span>.</li>
+<li>Ogni scuola sceglie in segreto fino a 4 Studenti. Rivelate le squadre insieme. Risolvete i tiri per ciascuno Studente, nell’ordine qui sotto.</li>
+<li>Disciplina. Chi riesce può beneficiare del Piano e rimuove un eventuale Pride o Shame. Chi fallisce partecipa comunque, ma non beneficia del Piano.</li>
+<li>Controllo. Chi riesce apporta tutta la sua Potenza effettiva e applica il Bonus del potere pertinente. Chi fallisce apporta 0 Potenza, applica il Problema del potere pertinente e aumenta la Paranoia: +1 se Beta, +2 se Alpha o Omega, nessun aumento per Delta o Gamma salvo effetti specifici. Non aggiungere un’ulteriore perdita generica di Prestigio <span class="pt">[PT]</span>.</li>
+<li>Cooperazione. Ogni successo vale +1 per il totale della squadra, anche quando lo Studente non ha apportato Potenza. Chi è già KO prima di questo test non lo effettua <span class="pt">[PT]</span>.</li>
+<li>Somma Potenza apportata, successi di Cooperazione e modificatori al risultato. Ordina le scuole per risultato e assegna il Prestigio: 7 alla prima, 5 alla seconda, 4 alla terza, 3 alla quarta. A pari merito si prende lo stesso premio e si saltano le posizioni occupate. Scarta i Piani rivelati e rimescola gli scarti solo se servono altre carte <span class="pt">[PT]</span>.</li>
+</ol>
+<p class="example">Esempio. Una scuola schiera due Studenti. Il primo apporta 3 Potenza e supera Cooperazione. Il secondo fallisce Controllo ma supera Cooperazione. La squadra totalizza 5 prima di Piani e altri effetti. Se due scuole arrivano prime, guadagnano 7 ciascuna e quella dopo di loro prende 4.</p>
+<h3>Pride, Shame e poteri</h3>
+<p>Quando fallisci Disciplina, il test di Controllo determina l’emozione: con un successo prendi Pride, con un fallimento prendi Shame. Sostituisci l’eventuale segnalino precedente, senza cumularli. Il nuovo stato si registra dopo aver fissato il contributo dello Studente a quella Prova <span class="pt">[PT]</span>. Pride dà +1 Potenza e blocca la crescita di Disciplina. Shame dà −1 Potenza e riduce a 2 la soglia di crescita di Disciplina. Al primo successo di Disciplina rimuovi il segnalino.</p>
+<p>Un potere pertinente entra in gioco automaticamente con il test di Controllo: non spendi Prestigio, non scegli di attivarlo e non tiri una seconda volta. Segui la scheda del potere, oppure la tabella ponte di <a href="#sezione-9">§9</a> se usi lo scenario incluso. La Prova indica quali poteri sono pertinenti.</p>
+<p><span class="pt">[PT]</span> Quando un effetto interferisce con un altro personaggio, risolvi in ordine scelto dalla sua scuola. Un KO interrompe le azioni che il personaggio deve ancora effettuare, senza togliere contributi già maturati. Il risultato finale non può scendere sotto 0.</p>
+<h3>Carte Piano</h3>
+<p>Solo chi supera Disciplina riceve i benefici del Piano. Quando un effetto conta successi o personaggi, conta solo gli Studenti che hanno superato Disciplina. Se una carta indica un ritiro o una protezione, si usa una sola volta per Prova <span class="pt">[PT dove il dettaglio della carta è ancora da verificare]</span>.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-4" tabindex="0">
+<table><caption id="tabella-4">Le 12 Carte Piano</caption><thead><tr><th scope="col">Piano</th><th scope="col">Effetto</th></tr></thead>
+<tbody><tr><th scope="row">Attacco Coordinato</th><td>Ogni Studente disciplinato che supera Controllo apporta +1 Potenza.</td></tr>
+<tr><th scope="row">Controllo Prima di Tutto</th><td>+1 Controllo a ogni Studente disciplinato.</td></tr>
+<tr><th scope="row">Lavoro di Squadra</th><td>+1 Cooperazione a ogni Studente disciplinato.</td></tr>
+<tr><th scope="row">Ripassiamo il Piano</th><td>Ritira un test di Cooperazione.</td></tr>
+<tr><th scope="row">Respira e Concentrati</th><td>Ritira un test di Controllo.</td></tr>
+<tr><th scope="row">Copritevi a Vicenda</th><td>Il primo fallimento di Controllo fra gli Studenti disciplinati non applica il Problema del potere. Paranoia e Potenza si risolvono normalmente.</td></tr>
+<tr><th scope="row">Formazione Stretta</th><td>+1 al risultato ogni 2 successi di Cooperazione degli Studenti disciplinati.</td></tr>
+<tr><th scope="row">Spingete Insieme</th><td>+2 al risultato con almeno 3 Studenti disciplinati che superano Controllo.</td></tr>
+<tr><th scope="row">Niente Eroismi</th><td>Riduci di 1 un’eventuale perdita numerica dovuta al Problema di uno Studente disciplinato <span class="pt">[PT per l’applicazione]</span>.</td></tr>
+<tr><th scope="row">Secondo Tentativo</th><td>Ritira un test di Cooperazione fallito.</td></tr>
+<tr><th scope="row">Seguite il Leader</th><td>Se almeno 3 Studenti superano Disciplina, ognuno di loro ottiene +1 Cooperazione.</td></tr>
+<tr><th scope="row">Tutto Secondo Piano</th><td>+2 al risultato se tutti gli Studenti schierati superano Disciplina. Serve almeno uno Studente.</td></tr></tbody></table></div>
+</section>
+<section aria-labelledby="sezione-6"><h2 id="sezione-6">6. Paranoia, Crisi e KO</h2>
+<p>La Paranoia va da 0 a 30 e non scende. Annota ogni aumento. Quando raggiungi una soglia, segna la Crisi corrispondente per la Fine Anno. Nello stesso Anno non puoi raggiungere una seconda soglia: ferma l’aumento a un punto sotto di essa. Esempio: se hai già raggiunto 15 quest’anno, la traccia non può superare 24.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-5" tabindex="0">
+<table><caption id="tabella-5">Soglie della Paranoia</caption><thead><tr><th scope="col">Soglia</th><th scope="col">Crisi</th><th scope="col">Effetto</th></tr></thead>
+<tbody><tr><th scope="row">5</th><td>Minore</td><td>Il bersaglio perde il Prestigio indicato.</td></tr>
+<tr><th scope="row">15</th><td>Media</td><td>Il bersaglio perde 1 o 2 Upgrade a caso. Per ogni Upgrade che manca perde invece 5 Prestigio.</td></tr>
+<tr><th scope="row">25</th><td>Grave</td><td>Il bersaglio difende la propria scuola.</td></tr>
+<tr><th scope="row">30</th><td>Estrema</td><td>Difendono tutte le scuole. Da quell’Anno in poi si risolve una Crisi Estrema a ogni Fine Anno.</td></tr></tbody></table></div>
+<h3>Chi subisce la Crisi</h3>
+<ol>
+<li>Per una Crisi Minore, Media o Grave trova la scuola con più Prestigio. Se il primo posto è già condiviso, ciascuna scuola in parità subisce integralmente la Crisi.</li>
+<li>Se c’è un solo bersaglio può accettare, oppure pagare la differenza di Prestigio rispetto alla scuola immediatamente sotto per passare la Crisi. Con Sistema di sorveglianza paga 1 in meno, minimo 1. Il passaggio è valido anche se per lo sconto non si verifica un pareggio <span class="pt">[PT]</span>.</li>
+<li>La nuova scuola può accettare oppure tentare di passare la Crisi a sua volta confrontandosi con la prima scuola a un valore inferiore. Ricalcola i valori dopo ogni passaggio. Se una scuola già coinvolta torna davanti a chi ha appena passato la Crisi, riprende il bersaglio. La scuola originaria, se riprende il bersaglio, deve subirla. Nei casi non coperti, se il prossimo bersaglio è condiviso la Crisi colpisce tutte le scuole di quel gruppo, e nessuna scuola può deviare due volte la stessa Crisi <span class="pt">[PT]</span>.</li>
+</ol>
+<p class="example">Esempio. Xavier ha 15, Magneto 11 ed Emma 8. Xavier paga 4 e passa la Crisi a Magneto. Se Magneto paga 3 per provare a passarla a Emma, Xavier rimane in testa con 11: la Crisi torna a lui e non può passarla di nuovo.</p>
+<h3>Combattere una Crisi Grave o Estrema</h3>
+<ol>
+<li>Rivela il valore Minaccia. Ogni scuola colpita può schierare tutti gli Studenti e tutti i Professori disponibili. Non c’è il limite di 4 Studenti. In una Crisi Estrema dichiarate eventuali alleanze prima dei tiri.</li>
+<li>Usa Disciplina, Controllo e Cooperazione come in Prova. Nello scenario base non si pesca un Piano durante la Crisi <span class="pt">[PT]</span>. I Professori usano i valori operativi. Non ricevono Pride o Shame e non provocano la Paranoia da Talento prevista per gli Studenti <span class="pt">[PT]</span>. Applica le abilità operative e gli Upgrade, contando il bonus anti-Sentinella una sola volta.</li>
+<li>Se il risultato raggiunge o supera la Minaccia, la scuola si difende. Altrimenti perde un Upgrade casuale o 5 Prestigio se non ne possiede. Inoltre va KO un Professore schierato scelto a caso. Se non ne ha schierati, scegli a caso uno Studente schierato. Se non c’è nessuno disponibile per quel KO, non aggiungere altre penalità <span class="pt">[PT]</span>.</li>
+</ol>
+<h3>Alleanza d’Emergenza</h3>
+<p>Solo durante una Crisi Estrema, due scuole possono accordarsi su un aiuto. Prima dei tiri dichiarano chi aiuta, chi riceve e quanti punti del risultato verranno ceduti, da 2 a 5. I punti ceduti si sottraggono dal risultato di chi aiuta e si aggiungono a quello di chi riceve. Se grazie a questi punti la scuola aiutata passa da fallimento a successo, la scuola che aiuta guadagna altrettanti punti di Prestigio. Altrimenti non guadagna nulla.</p>
+<p><span class="pt">[PT]</span> Ogni scuola può essere coinvolta in una sola alleanza per Crisi. Applica l’accordo soltanto se chi aiuta ha almeno i punti promessi, altrimenti non li trasferisce e non guadagna Prestigio. Verifica la difesa di entrambe le scuole dopo il trasferimento.</p>
+<p class="example">Esempio. La Minaccia è 18. Una scuola ha promesso 3 punti e ottiene 22. L’altra ottiene 16. Dopo la cessione entrambe arrivano a 19. Chi ha aiutato guadagna 3 Prestigio. Se la seconda scuola avesse già ottenuto 18 senza aiuto, non ci sarebbe alcun premio.</p>
+<h3>Durata del KO e perdita di capienza</h3>
+<p>Un personaggio KO non può insegnare, ricevere Insegnamento, partecipare a Prove o Crisi né usare abilità attive. Il KO ordinario si rimuove a fine Anno, dopo la Crisi. Se un personaggio va KO durante la Crisi di Fine Anno, resta indisponibile fino alla fine dell’Anno successivo <span class="pt">[PT]</span>. Segna direttamente l’Anno in cui scade il KO.</p>
+<p>Se perdi un Upgrade di capienza e sei oltre il nuovo limite, scegli subito chi lascia la scuola fino a tornare entro il limite. I personaggi rimossi ritornano nel pool corrispondente senza progressi o stati accumulati <span class="pt">[PT per il ripristino]</span>.</p>
+</section>
+<section aria-labelledby="sezione-7"><h2 id="sezione-7">7. I 16 Upgrade</h2>
+<p>Le abilità una volta per Anno si recuperano a Inizio Anno. Puoi usare il Rifugio o l’Infermeria quando la conseguenza sta per essere applicata. Annullare la distruzione con il Rifugio non genera la perdita sostitutiva di Prestigio.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-6" tabindex="0">
+<table><caption id="tabella-6">I 16 Upgrade</caption><thead><tr><th scope="col">Upgrade</th><th scope="col">Categoria</th><th scope="col">Effetto</th></tr></thead>
+<tbody><tr><th scope="row">Palestra</th><td>Didattica</td><td>Per aumentare Potenza servono 2 progressi invece di 3.</td></tr>
+<tr><th scope="row">Aula di Controllo</th><td>Didattica</td><td>Per aumentare Controllo servono 2 progressi invece di 3.</td></tr>
+<tr><th scope="row">Sala di Meditazione</th><td>Didattica</td><td>Per aumentare Disciplina servono 2 progressi invece di 3.</td></tr>
+<tr><th scope="row">Centro di formazione docenti</th><td>Didattica</td><td>Ogni Professore può seguire +1 Studente rispetto al proprio limite personale.</td></tr>
+<tr><th scope="row">Infermeria</th><td>Difesa</td><td>Una volta per Anno di Studi annulla un KO subito da uno Studente o Professore della scuola.</td></tr>
+<tr><th scope="row">Rifugio sotterraneo</th><td>Difesa</td><td>Una volta per Anno di Studi annulla la distruzione di 1 Upgrade causata da una Crisi.</td></tr>
+<tr><th scope="row">Sistema di sorveglianza</th><td>Difesa</td><td>Quando la scuola spende Prestigio per evitare o passare una Crisi, spende 1 Prestigio in meno. La spesa minima resta 1.</td></tr>
+<tr><th scope="row">Contromisure anti-Sentinella</th><td>Difesa</td><td>Durante una Crisi Grave o Estrema la scuola ottiene +3 alla Potenza finale complessiva. Il bonus viene applicato dopo la somma di tutti i contributi e vale una sola volta per Crisi.</td></tr>
+<tr><th scope="row">Dormitorio</th><td>Sociale</td><td>Il limite degli Studenti passa da 4 a 6. Se il Dormitorio viene distrutto, il limite torna a 4. Gli Studenti in eccesso vengono scelti dal giocatore e tornano nel pool di reclutamento.</td></tr>
+<tr><th scope="row">Sala Insegnanti</th><td>Sociale</td><td>Il limite dei Professori passa da 2 a 4. Se la Sala Insegnanti viene distrutta, il limite torna a 2. I Professori in eccesso vengono scelti dal giocatore e tornano nel pool.</td></tr>
+<tr><th scope="row">Ufficio PR</th><td>Sociale</td><td>Una volta per Anno di Studi riduce di 1 un aumento di Paranoia generato dalla scuola.</td></tr>
+<tr><th scope="row">Ufficio legale</th><td>Sociale</td><td>Una volta per Anno di Studi riduce di 2 una perdita di Prestigio causata da una Crisi.</td></tr>
+<tr><th scope="row">Laboratorio</th><td>Tecnologia</td><td>Una volta per Anno di Studi, prima di una Prova, uno Studente ottiene +1 Controllo per quella Prova.</td></tr>
+<tr><th scope="row">Sistema di rilevamento mutanti</th><td>Tecnologia</td><td>Una volta per Anno di Studi, dopo aver vinto un’asta per uno Studente, pesca 1 nuovo Studente. Può reclutare quello appena pescato al posto dello Studente vinto, mantenendo il costo dell’asta. Lo Studente sostituito torna nel pool.</td></tr>
+<tr><th scope="row">Centro di ricerca genetica</th><td>Tecnologia</td><td>Una volta per Anno di Studi annulla il Problema del Potere di uno Studente dopo un fallimento. Non recupera il contributo di Potenza perso e non cancella l’aumento di Paranoia.</td></tr>
+<tr><th scope="row">Officina tecnologica</th><td>Tecnologia</td><td>Ricostruire un Upgrade distrutto costa 3 Prestigio invece di 5.</td></tr></tbody></table></div>
+</section>
+<section aria-labelledby="sezione-8"><h2 id="sezione-8">8. I quattro Presidi</h2>
+<p>Ogni Preside ha un’affinità. Il bonus Affinità è attivo soltanto quando la scuola possiede almeno 3 Upgrade della categoria indicata. Gli effetti marcati <span class="pt">[PT]</span> completano in via provvisoria i prototipi per permettere alle quattro scuole di giocare. I limiti legati a spionaggio e sabotaggio non si usano in questa edizione.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-7" tabindex="0">
+<table><caption id="tabella-7">Abilità dei Presidi</caption><thead><tr><th scope="col">Preside</th><th scope="col">Affinità</th><th scope="col">Passiva e attiva</th></tr></thead>
+<tbody><tr><th scope="row">Professor Xavier</th><td>Didattica. Una volta per Fase di Insegnamento ritira un test di Didattica fallito.</td><td>Mentore: il primo Studente che riceve un progresso Disciplina in una fase riceve anche 1 progresso Controllo. Lezione Magistrale: una volta per Anno, scegli un Professore prima della sua lezione. Ogni successo di quella lezione dà 1 progresso extra <span class="pt">[PT]</span>.</td></tr>
+<tr><th scope="row">Magneto</th><td>Difesa. +1 Potenza a ciascun Professore schierato in Crisi.</td><td>Nessuno ci minaccia: riduce di 1 la prima perdita numerica di Prestigio da Crisi nell’Anno <span class="pt">[PT per l’applicazione]</span>. Dimostrazione di Forza: una volta per Anno, +2 al risultato di una difesa in cui ha schierato almeno un Professore <span class="pt">[PT]</span>.</td></tr>
+<tr><th scope="row">Emma Frost</th><td>Sociale. +1 Prestigio a Inizio Anno.</td><td>Immagine Perfetta: paga 1 in meno per la prima asta vinta nell’Anno, minimo 1 <span class="pt">[PT]</span>. Pressione Sociale: una volta per Anno, se paga per passare una Crisi, paga 1 Prestigio in meno, minimo 1, cumulabile con la Sorveglianza <span class="pt">[PT]</span>. Non si applica alle Crisi Estreme.</td></tr>
+<tr><th scope="row">Mister Sinister</th><td>Tecnologia. Una volta per Fase di Insegnamento ritira un test di Didattica fallito su Potenza o Controllo.</td><td>Sperimentazione: la prima volta nell’Anno in cui uno Studente aumenta la Potenza tramite Insegnamento riceve anche 1 progresso Controllo <span class="pt">[PT]</span>. Accelerazione Forzata: una volta per Anno, a inizio di una Fase di Insegnamento, uno Studente disponibile riceve 1 progresso in Potenza o Controllo e la scuola genera +1 Paranoia <span class="pt">[PT]</span>.</td></tr></tbody></table></div>
+</section>
+<section aria-labelledby="sezione-9"><h2 id="sezione-9">9. Scenario pronto da provare</h2>
+<p>Usa questi riferimenti se non hai le carte. Copia ogni riga su un biglietto oppure estraine a caso l’indice. Tutti i valori e gli effetti contrassegnati <span class="pt">[PT]</span> sono da provare al tavolo. Lo scenario ripete lo stesso tipo di Prova per osservare quanto cambia l’esito con l’addestramento e le scelte di squadra.</p>
+<h3>Prova e mazzi Crisi</h3>
+<p><span class="pt">[PT]</span> Esercitazione interscolastica. Una Prova di squadra all’anno, con tutte le categorie di potere pertinenti. Usa i Piani, il punteggio e i premi del <a href="#sezione-5">§5</a>. Anche nel combattimento delle Crisi tutti i poteri elencati sono pertinenti nello scenario.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-8" tabindex="0">
+<table><caption id="tabella-8">Composizione dei quattro mazzi Crisi</caption><thead><tr><th scope="col">Mazzo</th><th scope="col">Biglietti da preparare (uno per numero)</th></tr></thead>
+<tbody><tr><th scope="row">Minore</th><td>3 · 4 · 5 Prestigio persi</td></tr>
+<tr><th scope="row">Media</th><td>1 · 1 · 2 Upgrade persi <span class="pt">[PT per la distribuzione]</span></td></tr>
+<tr><th scope="row">Grave</th><td>14 · 14 · 16 · 16 · 18 · 18 Minaccia <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Estrema</th><td>18 · 18 · 20 · 22 Minaccia <span class="pt">[PT]</span></td></tr></tbody></table></div>
+<p><span class="pt">[PT]</span> Mescola ogni mazzo separatamente. Se un livello esaurisce le carte, rimescola il suo scarto. Per una Crisi Estrema pesca una sola carta: la stessa Minaccia vale per tutte le scuole.</p>
+<h3>Poteri degli Studenti nello scenario</h3>
+<p>Applica i Bonus o Problemi in aggiunta alla procedura normale. Per «alleato casuale» usa un altro personaggio della squadra ancora attivo. Se non esiste un bersaglio valido, ignora l’effetto, salvo dove è indicato diversamente. <span class="pt">[PT]</span> Applica i modificatori prima dei tiri che possono ancora influenzare, senza riaprire tiri già risolti.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-9" tabindex="0">
+<table><caption id="tabella-9">Bonus e Problemi dei poteri</caption><thead><tr><th scope="col">Categoria</th><th scope="col">Bonus con successo</th><th scope="col">Problema con fallimento</th></tr></thead>
+<tbody><tr><th scope="row">Emissione di energia <span class="pt">[PT]</span></th><td>+1 al risultato.</td><td>−1 al risultato.</td></tr>
+<tr><th scope="row">Controllo di elemento o forza <span class="pt">[PT]</span></th><td>+1 al risultato.</td><td>−1 al risultato.</td></tr>
+<tr><th scope="row">Potenziamento fisico</th><td>Annulla un KO per sé o per un alleato, oppure la distruzione di un Upgrade prevista dalla stessa risoluzione. Usa il bonus una volta, se si presenta l’occasione <span class="pt">[PT per il momento d’uso]</span>.</td><td>Va KO oppure manda KO un alleato casuale presente. Applica la seconda opzione solo se esiste un alleato valido <span class="pt">[PT]</span>.</td></tr>
+<tr><th scope="row">Mobilità sovrumana <span class="pt">[PT]</span></th><td>+1 al risultato.</td><td>−1 al risultato.</td></tr>
+<tr><th scope="row">Poteri mentali <span class="pt">[PT]</span></th><td>+1 al risultato.</td><td>−1 al risultato.</td></tr>
+<tr><th scope="row">Telecinesi <span class="pt">[PT]</span></th><td>+1 al risultato.</td><td>−1 al risultato.</td></tr>
+<tr><th scope="row">Rigenerazione / guarigione <span class="pt">[PT]</span></th><td>Può annullare un proprio KO causato dalla stessa risoluzione.</td><td>−1 al risultato.</td></tr>
+<tr><th scope="row">Assorbimento / copia <span class="pt">[PT]</span></th><td>+1 al risultato.</td><td>−1 al risultato.</td></tr>
+<tr><th scope="row">Duplicazione</th><td>Raddoppia la Potenza apportata dal personaggio.</td><td>Un alleato casuale subisce −1 Controllo per quella risoluzione. <span class="pt">[PT]</span> Estrai tra gli alleati che devono ancora tirare Controllo.</td></tr></tbody></table></div>
+<h3>Studenti da copiare</h3>
+<p>Conserva il nome, il Talento, i valori e la categoria di potere. Il prezzo minimo dipende dal Talento (vedi <a href="#sezione-4">§4</a>). L’abbinamento fra personaggio e categoria è una convenzione di scenario <span class="pt">[PT]</span>. Pregi, difetti e tratti descrittivi non hanno effetti aggiuntivi in questo scenario.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-10" tabindex="0">
+<table><caption id="tabella-10">Schede degli Studenti</caption><thead><tr><th scope="col">Studente</th><th scope="col">Talento</th><th scope="col">Pot.</th><th scope="col">Contr.</th><th scope="col">Disc.</th><th scope="col">Coop.</th><th scope="col">Potere</th></tr></thead>
+<tbody><tr><th scope="row">Cannonball</th><td>Alpha</td><td>3</td><td>3</td><td>5</td><td>5</td><td>Mobilità</td></tr>
+<tr><th scope="row">Sunspot</th><td>Alpha</td><td>4</td><td>3</td><td>2</td><td>3</td><td>Emissione</td></tr>
+<tr><th scope="row">Wolfsbane</th><td>Beta</td><td>3</td><td>3</td><td>6</td><td>4</td><td>Potenziamento fisico</td></tr>
+<tr><th scope="row">Mirage</th><td>Alpha</td><td>3</td><td>4</td><td>5</td><td>5</td><td>Mentale</td></tr>
+<tr><th scope="row">Magik</th><td>Omega</td><td>4</td><td>2</td><td>2</td><td>3</td><td>Mobilità</td></tr>
+<tr><th scope="row">Cypher</th><td>Delta</td><td>1</td><td>6</td><td>5</td><td>6</td><td>Mentale</td></tr>
+<tr><th scope="row">Magma</th><td>Alpha</td><td>4</td><td>2</td><td>4</td><td>3</td><td>Elemento o forza</td></tr>
+<tr><th scope="row">Karma</th><td>Alpha</td><td>3</td><td>5</td><td>5</td><td>4</td><td>Mentale</td></tr>
+<tr><th scope="row">Empath</th><td>Alpha</td><td>3</td><td>5</td><td>1</td><td>2</td><td>Mentale</td></tr>
+<tr><th scope="row">Tarot</th><td>Alpha</td><td>3</td><td>4</td><td>4</td><td>4</td><td>Telecinesi</td></tr>
+<tr><th scope="row">Roulette</th><td>Alpha</td><td>3</td><td>3</td><td>3</td><td>4</td><td>Elemento o forza</td></tr>
+<tr><th scope="row">Catseye</th><td>Beta</td><td>3</td><td>4</td><td>2</td><td>3</td><td>Potenziamento fisico</td></tr>
+<tr><th scope="row">Jetstream</th><td>Alpha</td><td>4</td><td>2</td><td>4</td><td>4</td><td>Mobilità</td></tr>
+<tr><th scope="row">Thunderbird (James Proudstar)</th><td>Alpha</td><td>4</td><td>5</td><td>3</td><td>4</td><td>Potenziamento fisico</td></tr>
+<tr><th scope="row">Firestar</th><td>Omega</td><td>3</td><td>2</td><td>5</td><td>4</td><td>Emissione</td></tr>
+<tr><th scope="row">Warpath</th><td>Alpha</td><td>4</td><td>5</td><td>4</td><td>4</td><td>Potenziamento fisico</td></tr></tbody></table></div>
+<h3>Professori da copiare</h3>
+<p>Le capacità dipendono dalla Didattica (vedi <a href="#sezione-4">§4</a>). Per i docenti senza un prezzo individuale recuperato, il minimo d’asta è 3 con Didattica 1–2, 5 con 3–4, 7 con 5–6 <span class="pt">[PT]</span>. Nello scenario i Professori non usano anche la tabella Poteri degli Studenti. Si applicano le abilità seguenti e non altre abilità dei prototipi non ancora convertite.</p>
+<div class="table-wrap" role="region" aria-labelledby="tabella-11" tabindex="0">
+<table><caption id="tabella-11">Schede dei Professori</caption><thead><tr><th scope="col">Professore</th><th scope="col">Did.</th><th scope="col">Pot.</th><th scope="col">Contr.</th><th scope="col">Disc.</th><th scope="col">Coop.</th><th scope="col">Minimo</th></tr></thead>
+<tbody><tr><th scope="row">Cyclops</th><td>5</td><td>5</td><td>6</td><td>6</td><td>6</td><td>6</td></tr>
+<tr><th scope="row">Wolverine</th><td>2</td><td>4</td><td>5</td><td>2</td><td>3</td><td>4</td></tr>
+<tr><th scope="row">Beast</th><td>6</td><td>4</td><td>6</td><td>5</td><td>4</td><td>6</td></tr>
+<tr><th scope="row">Storm</th><td>5</td><td>6</td><td>6</td><td>6</td><td>5</td><td>7</td></tr>
+<tr><th scope="row">Nightcrawler</th><td>4</td><td>3</td><td>6</td><td>5</td><td>6</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Kitty Pryde</th><td>5</td><td>3</td><td>6</td><td>5</td><td>5</td><td>7 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Colossus</th><td>3</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Jean Grey</th><td>5</td><td>6</td><td>6</td><td>5</td><td>5</td><td>7 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Gambit</th><td>3</td><td>4</td><td>5</td><td>3</td><td>4</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Rogue</th><td>4</td><td>5</td><td>4</td><td>4</td><td>4</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Psylocke</th><td>4</td><td>4</td><td>6</td><td>5</td><td>4</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Forge</th><td>6</td><td>2</td><td>6</td><td>5</td><td>4</td><td>7 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Banshee</th><td>4</td><td>4</td><td>5</td><td>5</td><td>5</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Cable</th><td>4</td><td>5</td><td>5</td><td>6</td><td>5</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Jubilee</th><td>3</td><td>3</td><td>5</td><td>4</td><td>5</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Iceman</th><td>3</td><td>6</td><td>5</td><td>3</td><td>4</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Mystique</th><td>4</td><td>2</td><td>6</td><td>4</td><td>5</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Blob</th><td>2</td><td>4</td><td>5</td><td>2</td><td>2</td><td>3 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Pyro</th><td>3</td><td>4</td><td>5</td><td>2</td><td>3</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Exodus</th><td>3</td><td>6</td><td>5</td><td>6</td><td>3</td><td>5 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Sabretooth</th><td>1</td><td>4</td><td>4</td><td>1</td><td>1</td><td>3 <span class="pt">[PT]</span></td></tr>
+<tr><th scope="row">Selene</th><td>4</td><td>6</td><td>6</td><td>4</td><td>2</td><td>5 <span class="pt">[PT]</span></td></tr></tbody></table></div>
+<p>Cyclops. Se insegna Cooperazione, ritira il primo fallimento di Didattica della fase. Se supera Cooperazione in Crisi dà +2 anziché +1.</p>
+<p>Wolverine. Insegnando Potenza dà 2 progressi per successo. Se fallisce non dà progressi e lo Studente subisce −1 Controllo fino a fine Anno. In Crisi può annullare il proprio KO una volta.</p>
+<p>Beast. Insegnando Controllo, con 1 naturale dà 2 progressi. In Crisi aggiunge +2 al risultato se schierato.</p>
+<p>Storm. Il primo Studente che riceve un progresso da lei in ogni Fase di Insegnamento ottiene +1 Cooperazione fino a fine Anno, massimo 6. In Crisi aggiunge +2 al risultato se schierata.</p>
+</section>
+<section aria-labelledby="sezione-10"><h2 id="sezione-10">10. Promemoria da tavolo</h2>
+<ul>
+<li>Inizio Anno → Upgrade → Aste → Insegnamento I → Prova → Insegnamento II → Crisi e recupero.</li>
+<li>Prova: 1 Piano gratuito, massimo 4 Studenti. Disciplina → Controllo → Cooperazione → totale. Premi: 7 / 5 / 4 / 3 Prestigio.</li>
+<li>Valori dei test: d6 uguale o sotto la caratteristica. Addestramento: 3 progressi per Potenza, Controllo e Disciplina, 2 per Cooperazione. Gli Upgrade indicati riducono la soglia a 2.</li>
+<li>Paranoia: +1 a Inizio Anno, +1 per costruzione, +1 per perdita di Controllo di un Beta, +2 per Alpha o Omega. Soglie 5 / 15 / 25 / 30.</li>
+<li>Crisi non Estrema: prima scuola per Prestigio, oppure tutte le prime a pari merito. Crisi Estrema: tutte le scuole. In combattimento si possono schierare anche i Professori.</li>
+<li>Prima del rilascio finale vanno verificati durata, rendita, valori delle Crisi, casi limite delle alleanze, poteri e schede provvisorie. Durante il test annotate durata della partita, tempi d’attesa e spese di Prestigio che hanno cambiato l’esito.</li>
+</ul>
+<p>Prototipo amatoriale della Compagnia della Fenice. I personaggi dei fumetti sono riferimenti del playtest. I componenti grafici definitivi non sono inclusi in questa edizione.</p>
+</section>
+<p class="back"><a href="#inizio">Torna all’inizio</a></p>
+</main>
+</body>
+</html>
