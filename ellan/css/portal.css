@@ -60,3 +60,7 @@
 .atlas-card p:last-child{margin-top:auto}
 .atlas-card .button{font-size:.94rem}
 @media(max-width:650px){.atlas-grid{grid-template-columns:1fr}.atlas-card img{height:330px}}
+
+/* Guida alla navigazione e suggerimenti al passaggio del mouse. */
+.ellan-guide-entry{text-align:center;margin:0 auto 1.5rem}
+@media (hover:hover) and (pointer:fine){.portal-nav a[data-guide-tooltip]{position:relative}.portal-nav a[data-guide-tooltip]:hover::after,.portal-nav a[data-guide-tooltip]:focus-visible::after{content:attr(data-guide-tooltip);position:absolute;z-index:100;bottom:calc(100% + 12px);left:50%;transform:translateX(-50%);width:max-content;max-width:min(320px,80vw);white-space:normal;text-align:center;padding:10px 13px;border:1px solid var(--ellan-gold);border-radius:9px;background:#15141c;color:#f5ead6;box-shadow:0 8px 24px #0009;font-size:.87rem;line-height:1.45;font-weight:400;pointer-events:none}}
