@@ -1,6 +1,10 @@
 /* Ellan: navigazione interna senza ricaricare il documento, così l'audio rimane attivo. */
 (() => {
   'use strict';
+  for (const item of (window.ELLAN_GUIDE_SECTIONS || [])) {
+    const link = [...document.querySelectorAll('.portal-nav a')].find(el => el.textContent.trim() === item.label);
+    if (link) { link.dataset.guideTooltip = item.description; link.setAttribute('title', item.description); }
+  }
   const sections = new Set(['inizio','atlante','gazzettini','personaggi','stirpi','miti','religioni','ordini','magia','naturalistico','biblioteca']);
   const panels = [...document.querySelectorAll('[data-portal-panel]')];
   const links = [...document.querySelectorAll('[data-portal-link]')];
